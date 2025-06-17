@@ -1,0 +1,199 @@
+@use 'index' as *;
+
+header{
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    .header-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 90vh;
+        z-index: 2;
+        object-fit: cover;
+    }
+    .text-box{
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        right: 25%;
+        transform: translate(50%, -50%);
+        overflow: hidden;
+        h1{
+            color: $branco;
+            font-size: 2.6rem;
+            line-height: 3.6rem;
+            letter-spacing: 5%;
+            font-family: $articulat;
+            font-weight: 400;
+            animation: disappear 13s both;
+            position: absolute;
+        }
+        img{
+            animation: show 6s ease-in;
+        }
+        &:hover{
+            h1{
+                animation: appear 4s;
+            }
+            img{
+                animation: noshow 4s both;
+            }
+        }
+    }
+   
+    @media screen and (max-width: 700px){
+        width: 100vw;
+        height: 60vh;
+        position: relative;
+        .header-img{
+            height: 60vh;
+            object-fit: cover;
+        }
+        .header-title{
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            z-index: 10;
+            text-shadow: 1px 1px 2px $preto;
+            h1{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                width: 65%;
+                margin-top: 1.6rem;
+            }
+        }
+    }
+    @media screen and (min-width:701px) and (max-width:1260px){
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+        .header-img{
+            height: 80vh;
+            object-fit: cover;
+        }
+    .header-title{
+        position: absolute;
+        top: 45%;
+        left: 7%;
+        z-index: 10;
+        text-shadow: 1px 1px 2px $preto;
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+        p{
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+            width: 70%;
+            margin-top: 2rem;
+        }
+    }
+    }
+}
+
+.right-image{
+    position: absolute;
+    right: 0;
+}
+
+.pre-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 7rem auto;
+    align-items: flex-end;
+    .pre-left{
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+        margin-left: 7%;
+        width: 50rem;
+        h1{
+            font-size: 6rem;
+            line-height: 6.2rem;
+            font-weight: 700;
+        }
+        p{
+            font-size: 2.2rem;
+            line-height: 3rem;
+            font-weight: 300;
+        }
+        .left-info{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+    @media screen and (max-width: 700px){
+        flex-direction: column;
+        gap: 6.8rem;
+        margin: 6rem auto;
+        width: 85%;
+        position: relative;
+        .pre-left{
+            margin: 0;
+            width: 100%;
+            gap: 6rem;
+            h1{
+                font-size: 3.2rem;
+                line-height: 3.2rem;
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }
+            .left-info{
+                gap: 2.5rem;
+            }
+        }
+        img{
+            width: 100%;  
+            margin-right: -10%;          
+        }
+    }
+}
+
+@keyframes show {
+    from{
+        transform: translateY(110%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes noshow{
+    from{
+        transform: translateY(0)
+    }
+    to{
+        transform: translateY(110%);
+        opacity: 0;
+    }
+}
+@keyframes disappear{
+    from{
+        opacity: 1;
+        transform: translateY(10%);
+
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-130%);
+    }
+}
+@keyframes appear {
+    from{
+        transform: translateY(-110%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,114 @@
+@use "./colors" as *;
+
+$jost: bookmania, serif;
+$bookmania: bookmania, serif;
+$articulat: articulat-cf, sans-serif;
+$seasons: the-seasons, sans-serif;
+
+strong {
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body,
+#root {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: $seasons;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+ul {
+  list-style: none;
+
+  li {
+    font-family: $articulat;
+  }
+}
+
+h1, h2, h3{
+  font-family: $seasons;
+}
+
+button {
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: $preto;
+}
+.only-mobile {
+  display: none !important;
+}
+.mobile-tablet{
+  display: none !important;
+}
+.only-tablet{
+  display: none !important;
+}
+@media screen and (max-width: 700px) {
+  .only-mobile {
+    display: inline-block !important;
+  }
+  .mobile-tablet{
+    display: inline-block !important;
+  }
+  .tablet-desktop{
+    display: none !important;
+  }
+  .only-desktop {
+    display: none !important;
+  }
+  .only-tablet{
+    display: none !important;
+  }
+}
+@media screen and (min-width:701px) and (max-width:1260px){
+  .mobile-tablet{
+    display: inline-block !important;
+  }
+  .only-desktop{
+    display: none !important;
+  }
+  .only-tablet{
+    display: inline-block !important;
+  }
+}
+
+.whatsapp {
+  position: fixed;
+  z-index: 10;
+  bottom: 3rem;
+  right: 8rem;
+  height: 8rem;
+
+  @media screen and (max-width: 700px) {
+  bottom: 2.5rem;
+  left: 80%;
+  height: 6rem;
+  }
+}

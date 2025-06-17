@@ -1,0 +1,115 @@
+@use "./colors" as *;
+@use "./global" as *;
+
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 11rem;
+  border-top: 1px solid $preto;
+  border-left: 1px solid $preto;
+  border-right: 1px solid $preto;
+  border-radius: 20px 20px 0 0 ;
+  width: 90%;
+  margin: auto;
+  .left-ball{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+  .right-ball{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
+  .left{
+    padding-left: 3rem;
+  }
+  .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 17rem;
+    height: 28.8rem;
+    .info-footer{
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+      p{
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
+      .icons{
+        display: flex;
+        gap: 1.6rem;
+        a{
+          width: 3rem;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+    a{
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      font-family: $jost;
+      padding-bottom: 1rem;
+    }
+  }
+  @media screen and (max-width: 700px){
+    padding-top: 6rem;
+    flex-direction: column;
+    align-items: center;
+    .left-ball{
+      top: 1.3rem;
+      left: 1.3rem;
+      width: .8rem;
+    }
+    .right-ball{
+      top: 1.3rem;
+      right: 1.3rem;
+      width: .8rem;
+    }
+    .left{
+      padding-left: 0;
+      order: 2;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+    .right{
+      padding-right: 0rem;
+      order: 1;
+      justify-content: center;
+      height: auto;
+      align-items: center;
+      gap: 2.5rem;
+      .info-footer{
+        align-items: center;
+        p{
+          font-size: 1.4rem;
+          line-height: 2rem;
+          text-align: center;
+        }
+        .icons{
+          a{
+            width: 2rem;
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    > a{
+      order: 3;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+}
