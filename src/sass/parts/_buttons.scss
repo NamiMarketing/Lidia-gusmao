@@ -2,42 +2,26 @@
 @use "./global" as *;
 
 
-.transparentButton {
-  background-color: transparent;
+.blueButton {
+  background-color: $azul500;
   padding: 0;
-  border: 1px solid $preto;
-  color: $preto;
-  font-size: 1.6rem;
+  color: $branco;
+  font-size: 2.2rem;
   font-weight: 400;
   line-height: 100%;
+  letter-spacing: 10%;
   transition: all 0.4s;
   border-radius: 25px;
-  text-transform: uppercase;
   display: flex;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
   z-index: 50;
-  width: 27rem;
-  height: 5rem;
-  img{
-    width: 6px;
-    height: 6px;
-  }
-  p{
-    margin-bottom: -5px;
-  }
-  &:hover {
-    background-color: $gelo2;
-  }
+  width: 25rem;
+  height: 5.5rem;
   @media screen and (max-width: 700px){
     padding: 1.2rem 0;
     font-size: 1.4rem;
     width: 20rem;
-    gap: 6px;
-    img{
-        width: 4px;
-    }
   }
 }
 .transparentButton2 {

@@ -97,11 +97,65 @@ header{
     }
 }
 
-.right-image{
-    position: absolute;
-    right: 0;
+.realce{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12rem 0;
+    h2{
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 3.6rem;
+        letter-spacing: 5%;
+        color: $marrom;
+        width: 61rem;
+        text-align: center;
+        margin-bottom: 5.5rem;
+    }
+    .right-image{
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-50%);
+    }
+    a{
+        margin-bottom: 12rem;
+    }
+    p{
+        font-size: 2rem;
+        line-height: 3.2rem;
+        font-weight: 400;
+        color: $marrom;
+        width: 82rem;
+        text-align: center;
+        margin-top: 7rem;
+    }
 }
 
+.setores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 6rem;
+        line-height: 6rem;
+        letter-spacing: 5%;
+        font-weight: 700;
+        color: $marrom;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+    }
+    p{
+        font-size: 2.3rem;
+        line-height: 3rem;
+        color: $marrom;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+}
 .pre-footer{
     display: flex;
     justify-content: space-between;
