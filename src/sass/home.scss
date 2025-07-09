@@ -157,28 +157,43 @@ header{
     }
 }
 .pre-footer{
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    aspect-ratio: 144/80;
     width: 100%;
-    margin: 7rem auto;
-    align-items: flex-end;
-    .pre-left{
+    height: auto;
+    img{
+        position:absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        
+    }
+    .pre-right{
+        aspect-ratio: 94/80;
         display: flex;
+        position: absolute;
+        right: 0;
+        z-index: 3;
         flex-direction: column;
-        gap: 15rem;
-        margin-left: 7%;
-        width: 50rem;
+        justify-content: center;
+        gap: 9rem;
+        width: auto;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(246, 237, 226, 0.7) 32%, #F5ECDE 100%);
+        padding: 9rem 7% 9rem 25%;
         h1{
-            font-size: 6rem;
-            line-height: 6.2rem;
-            font-weight: 700;
+            font-size: 5rem;
+            line-height: 5.6rem;
+            font-weight: 400;
         }
         p{
-            font-size: 2.2rem;
+            font-size: 2rem;
             line-height: 3rem;
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: 8%;
         }
-        .left-info{
+        .right-info{
             display: flex;
             flex-direction: column;
             gap: 3rem;
