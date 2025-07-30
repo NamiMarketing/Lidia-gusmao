@@ -28,8 +28,121 @@ cssPath: "/css/home.css"
 <section class="setores">
   <h1>Setores</h1>
   <p>Soluções personalizadas para cada necessidade, da estética à saúde da pele.</p>
+  <div class="swiper1">
+    <div class="left-back"></div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="">
+          <img src="../img/dermatologia.png" alt="">
+          <h2>Dermatologia clínica e cirúrgica</h2>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="">
+          <img src="../img/tricologia.png" alt="">
+          <h2>Tricologia</h2>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="">
+          <img src="../img/cosmiatria.png" alt="">
+          <h2>Cosmiatria</h2>
+        </a>
+      </div>
+    </div>
+    <div class="right-back"></div>
+    <div class="swiper-button swiper-button-prev1">
+      <img src="../img/svg/back.svg" alt="">
+    </div>
+    <div class="swiper-button swiper-button-next1">
+      <img src="../img/svg/next.svg" alt="">
+    </div>
+  </div>
+  <a href="" class="blueButton">conheça nossos setores</a>
 </section>
 
+<section class="equipe">
+  <img src="../img/equipe.png" alt="">
+  <div class="right-equipe">
+    <h1>Nossa equipe</h1>
+    <p>Sua pele merece um cuidado especializado e personalizado. Nossa clínica reúne um time de médicas especialistas que atende a todas as peles e gêneros, oferecendo tratamentos focados no gerenciamento do envelhecimento, com resultados naturais e baseados na dermatologia regenerativa, para restaurar e preservar a saúde da sua pele.</p>
+    <a href="" class="blueButton">conheça nossa equipe</a>
+  </div>
+</section>
+
+<section class="depoimentos">
+  <div class="depoimentos-left">
+      <h2>
+        O cuidado que faz a diferença
+      </h2>
+  </div>
+  <div class="depoimentos-right">
+      <div class="depoimentos-meio">
+        <img src="../img/svg/aspas.svg" alt="">
+      </div>
+      <div class="swiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p>Experiência excelente na Clínica Lídia Gusmão! Atendimento de alto nível, equipe atenciosa e estrutura moderna que transmite confiança e conforto. Fui muito bem recebido e tive um acompanhamento profissional impecável. Recomendo a todos que buscam cuidado e qualidade em dermatologia. Parabéns à equipe!</p>
+            <h4>Marcelo</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>Clínica muito bem montada e com uma equipe de médicas, esteticista e atendentes maravilhosa! Minha médica é a Dra. Lídia Gusmão, que é super capacitada e nos atende com muito carinho. Ela é minha dermatologista há mais de quinze anos. Para quem deseja ser atendido com médicas super capacitadas, com os tratamentos mais modernos e eficientes na área da dermatologia e estética, super recomendo a clínica</p>
+            <h4>Ana Paula</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>Adoro a clínica, médicas humanas e sinceras.. as meninas da equipe sempre muito atenciosas e pró ativas!! Sempre uma ótima experiência..bem localizada, ainda tem uma vista linda!!! Super recomendo!</p>
+            <h4>Raisa</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>A clínica é linda! Fácil acesso, prédio histórico..lindo, a vista é incrível, a equipe é bem afetuosa e as médicas atenciosas! Recomendo!</p>
+            <h4>Nathalia</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>A clínica é bem localizada, em um prédio histórico no centro do Rio, com uma vista linda. A equipe é muito profissional e competente. Te trataram com carinho e você se sente especial. A Dra Lídia Gusmão é incrível. Muito gentil, atenciosa sempre presa pelo melhor resultado para o paciente. Gosto demais dessa clínica e super recomendo!</p>
+            <h4>César</h4>
+          </div>
+          <div class="swiper-slide">
+            <p>Gostaria de agradecer pelo atendimento que recebi na clínica. Além de ser um lugar lindo, com uma vista maravilhosa, me senti super acolhido por toda equipe, todos muito cordiais e prestativos. Gostaria de agradecer em especial o atendimento que recebi da Dra. Bárbara Machado, profissional excelente e muito atualizada!</p>
+            <h4>Lucas</h4>
+          </div>
+        </div>
+        <div class="swiper-nav">
+          <img class="swiper-button-prev2" src="../img/svg/before.svg" alt="">
+          <img  class="swiper-button-next2"src="../img/svg/after.svg" alt="">
+        </div>  
+      </div>
+  </div>     
+</section>
+
+<section class="voce">
+  <p>Você merece o melhor. Agende sua consulta e viva a experiência de cuidados dermatológicos de qualidade.</p>
+  <a href="" class="blueButton">entre em contato</a>
+</section>
+
+<section class="espaco">
+  <h1>nosso espaço</h1>
+  <div class="swiper3">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../img/espaco1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/espaco1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/espaco1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/espaco1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../img/espaco1.png" alt="">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
 
 <div class="pre-footer">
   <img src="../../img/pre-footer.png" alt="">
@@ -51,26 +164,50 @@ cssPath: "/css/home.css"
     
     {% include 'footer.njk' %}
 
-    <!-- <script>
-        const swiper = new Swiper(".swiper", {
-          spaceBetween: 67,
-          slidesPerView: "auto",
-          grabCursor: true,
-          pagination: {
-            el: '.swiper-pagination',
+    <!-- script swiper tratamentos -->
+    <script>
+      const swiper = new Swiper(".swiper1", {
+        spaceBetween: 20,
+        slidesPerView: "auto",
+        grabCursor: true,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next1",
+          prevEl: ".swiper-button-prev1",
+        },
+      });
+    </script>
+
+    <!-- script swiper depoimentos -->
+    <script>
+      const swiper2 = new Swiper(".swiper2", {
+        grabCursor: true,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next2',
+          prevEl: '.swiper-button-prev2',
           },
-          breakpoints: {
-            300: {
-              slidesPerView: "auto",
-              spaceBetween: 8,
-            },
-            701:{
-                spaceBetween: 30,
-            },
-            1260: {
-              slidesPerView: 5,
-              spaceBetween: 67,
-            },
-          },
+          // breakpoints: {
+          //   300: {
+          //     slidesPerView: "auto",
+          //     spaceBetween: 20,
+          //   },
+          //   1260: {
+          //     slidesPerView: "auto",
+          //   },
+          // },
         });
-      </script> -->
+    </script>
+
+    <!-- script swiper espaco -->
+     <script>
+      const swiper3 = new Swiper(".swiper3", {
+        slidesPerView: "auto",
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>

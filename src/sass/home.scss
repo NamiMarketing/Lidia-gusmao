@@ -27,18 +27,18 @@ header{
             letter-spacing: 5%;
             font-family: $articulat;
             font-weight: 400;
-            animation: disappear 13s both;
+            animation: show 9s ease-in;
             position: absolute;
         }
         img{
-            animation: show 6s ease-in;
+            animation: disappear 5s both;
         }
         &:hover{
             h1{
-                animation: appear 4s;
+                animation: noshow 4s both;
             }
             img{
-                animation: noshow 4s both;
+                animation: appear 4s;
             }
         }
     }
@@ -135,10 +135,6 @@ header{
 }
 
 .setores{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     h1{
         font-size: 6rem;
         line-height: 6rem;
@@ -146,7 +142,8 @@ header{
         font-weight: 700;
         color: $marrom;
         text-transform: uppercase;
-        margin-bottom: 3rem;
+        margin:0 auto 3rem;
+        text-align: center;
     }
     p{
         font-size: 2.3rem;
@@ -155,12 +152,306 @@ header{
         text-align: center;
         margin-bottom: 8rem;
     }
+    >a{
+        margin: 8rem auto 17rem;
+    }
+    .swiper1{
+        position: relative;
+        .left-back{
+            height: 100%;
+            width: 18rem;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(236, 228, 214, 0.8) 100%);
+            z-index: 3;
+        }
+        .right-back{
+            height: 100%;
+            width: 18rem;
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(236, 228, 214, 0.8) 100%);
+            z-index: 3;
+        }
+        .swiper-button-prev1{
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 8rem;
+            height: 8rem;
+            border: 2px solid $marrom;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img{
+                width: 4rem;
+            }
+        }
+        .swiper-button-next1{
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 8rem;
+            height: 8rem;
+            border: 2px solid $marrom;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img{
+                width: 4rem;
+            }
+        }
+        .swiper-slide{
+            width: 71rem;
+            height: 76rem;
+            a{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                h2{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    font-size: 4.2rem;
+                    line-height: 5rem;
+                    letter-spacing: 10%;
+                    color: $branco;
+                    height: 18rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    text-align: center;
+                    background-color: #64453f33;
+                }
+    
+            }
+    
+        }
+    }
 }
+
+.equipe{
+    display: flex;
+    gap: 12.5rem;
+    margin-bottom: 18rem;
+    .right-equipe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            font-size: 6rem;
+            line-height: 6rem;
+            color: $marrom;
+            text-transform: uppercase;
+            width: 20rem;
+            letter-spacing: 5%;
+        }
+        p{
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 5%;
+            width: 50rem;
+            margin: 12rem 0 6.5rem;
+        }
+    }
+}
+
+.depoimentos{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  .depoimentos-left{
+    h2{
+      font-size: 6rem;
+      line-height: 6rem;
+      width: 50rem;
+      letter-spacing: 5%;
+    }
+  }
+  .depoimentos-right{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        width: 50%;
+        height: 60rem;
+        overflow: hidden;
+        position: relative;
+      .depoimentos-meio{
+        width: 7.7rem;
+        height: 10rem;
+        img{
+            width: 100%;
+        }
+      }
+      .swiper2{
+          width: 100%;
+          height: 100%;
+          margin-top: 1.5rem;
+      }
+      p{
+            font-size: 2rem;
+            line-height: 3rem;
+            width: 50rem;
+            letter-spacing: 5%;
+      }
+      h4{
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 5%;
+            margin-top: 4rem;
+        }
+        .swiper-nav{
+            display: flex;
+            gap: 5rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 4;
+            .swiper-button-next2, .swiper-button-prev2{
+              width: 1.6rem;
+              height: 3rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+  }
+//   @media screen and (max-width:700px) {
+//     display: flex;
+//     flex-direction: column;
+//     padding: 9rem 0 8rem;
+//     gap: 5rem;
+//     .depoimentos-left{
+//       display: flex;
+//       flex-direction: column;
+//       gap: 1.6rem;
+//       h3{
+//         font-size: 1.4rem;
+//         line-height: 1.5rem;
+//       }
+//       h2{
+//         font-size: 2.1rem;
+//         line-height: 2.8rem;
+//         text-transform: uppercase;
+//       }
+//       strong{
+//         font-weight: 600;
+//       }
+//     }
+//     .depoimentos-right{
+//         display: flex;
+//         gap: 5rem;
+//         width: 100%;
+//         height: 30rem;
+//         .swiper{
+//             width: 100%;
+//             height: 100%;
+//             margin-top: 1.5rem;
+//         }
+//         p{
+//               font-size: 1.6rem;
+//               line-height: 2.4rem;
+//         }
+//         h4{
+//               font-size: 1.6rem;
+//               line-height: 1.5rem;
+//               letter-spacing: 0%;
+//               margin-top: 3rem;
+//         }
+//         .swiper-nav{
+//             gap: 2rem;
+//             .swiper-button-next, .swiper-button-prev{
+//               width: 1.6rem;
+//               height: 1.3rem;
+//               position: unset;
+//             }
+//         }
+//     }
+//   }
+}
+
+.voce{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    margin-bottom: 13rem;
+    p{
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        letter-spacing: 5%;
+        width: 82rem;
+    }
+}
+
+.espaco{
+    position: relative;
+    aspect-ratio: 144/62;
+    width: 100vw;
+    height: auto;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    };
+    h1{
+        position: absolute;
+        top: 5rem;
+        left: 10rem;
+        font-size: 4rem;
+        line-height: 5.6rem;
+        letter-spacing: 5%;
+        color: $gelo;
+        z-index: 3;
+    }
+    .swiper-pagination{
+        position: absolute;
+        top: 12rem !important;
+        left: 10rem !important;
+        bottom: unset !important;
+        z-index: 3;
+        width: 80%  !important;
+        .swiper-pagination-bullet{
+            width: 190px;
+            height: 4px;
+            background-color: #FCF4E8CC;
+            border-radius: 0;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: $gelo;
+        }
+    }
+}
+
 .pre-footer{
     position: relative;
     aspect-ratio: 144/80;
     width: 100%;
     height: auto;
+    margin-top: -5px;
     img{
         position:absolute;
         width: 100%;
@@ -230,7 +521,6 @@ header{
 
 @keyframes show {
     from{
-        transform: translateY(110%);
         opacity: 0;
     }
     to{
@@ -239,27 +529,22 @@ header{
 }
 @keyframes noshow{
     from{
-        transform: translateY(0)
+        opacity: 1;
     }
     to{
-        transform: translateY(110%);
         opacity: 0;
     }
 }
 @keyframes disappear{
     from{
         opacity: 1;
-        transform: translateY(10%);
-
     }
     to{
         opacity: 0;
-        transform: translateY(-130%);
     }
 }
 @keyframes appear {
     from{
-        transform: translateY(-110%);
         opacity: 0;
     }
     to{

@@ -13,10 +13,11 @@
   transition: all 0.4s;
   border-radius: 25px;
   display: flex;
+  padding: 1.6rem 2.6rem;
   justify-content: center;
   align-items: center;
   z-index: 50;
-  width: 25rem;
+  width: fit-content;
   height: 5.5rem;
   @media screen and (max-width: 700px){
     padding: 1.2rem 0;
@@ -24,31 +25,22 @@
     width: 20rem;
   }
 }
-.transparentButton2 {
+.transparentButton {
   background-color: transparent;
-  padding: 0;
-  border: 1px solid $preto;
-  color: $preto;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 100%;
+  border: 1px solid $branco;
+  color: $branco;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  letter-spacing: 8%;
   transition: filter 0.2s;
   border-radius: 25px;
-  text-transform: uppercase;
   display: flex;
-  gap: 2rem;
+  padding: 1.6rem 3rem;
   justify-content: center;
   align-items: center;
   z-index: 50;
-  width: 24rem;
-  height: 5rem;
-  img{
-    width: 6px;
-    height: 6px;
-  }
-  p{
-    margin-bottom: -5px;
-  }
+  width: fit-content;
   &:hover {
     filter: brightness(0.7);
   }
@@ -60,34 +52,5 @@
     img{
       width: 4px;
   }
-  }
-}
-
-
-.redButton {
-  background-color: $vermelho;
-  border: 1px solid $preto;
-  color: $branco;
-  padding: 2rem 3rem;
-  font-size: 2.2rem;
-  font-weight: 400;
-  transition: filter 0.2s;
-  border-radius: 8px;
-  text-transform: uppercase;
-  display: flex;
-  place-items: center;
-  justify-content: center;
-  z-index: 50;
-  width: 34rem;
-  height: 6rem;
-
-  &:hover {
-    filter: brightness(0.7);
-  }
-  @media screen and (max-width: 700px){
-    padding: 1.2rem 0;
-    font-size: 1.4rem;
-    width: 20rem;
-    height: 4rem;
   }
 }
