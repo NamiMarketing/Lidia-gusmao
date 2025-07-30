@@ -1,0 +1,591 @@
+---
+title: Lídia Gusmão - Médicos da pele. De verdade.
+layout: "base.njk"
+cssPath: "/css/dermatologia.css"
+---
+
+{% include 'nav2.njk' %}
+<header>
+    <div class="header-title">
+        <img src="../img/dermatologia/dermatologia-header.svg" alt="">
+        <h1>dermatologia clínica e cirúrgica</h1>
+    </div>
+</header>
+
+<h1 id="changeTitle">Consulta Dermatológica</h1>
+
+<div class="wrap-content">
+    <!-- Não alterar essa parte -->
+<aside class="left-table">
+    <h3>Dermatologia clínica e cirúrgica</h3>
+    <div class="table-itens">
+        <button class="select selected" id="consulta">
+            <p>Consulta dermatológica</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="cirurgia">
+            <p>Cirurgia dermatológica</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="dermatoscopia">
+            <p>Dermatoscopia</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="lobuloplastia">
+            <p>Lobuloplastia</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="xantelasma">
+            <p>Xantelasma</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="blefaroplastia">
+            <p>Blefaroplastia ??</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="eletrocoagulacao">
+            <p>Eletrocoagulação ??</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="criocirurgia">
+            <p>Criocirurgia ??</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="cisto">
+            <p>Exérese de cisto / lipoma / tumor ??</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="pintas">
+            <p>Exérese de nervo (remoção de pintas) ??</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="biopsia">
+            <p>Biópsia ??</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+    </div>
+    <a href="/tratamentos" class="blueButton"> 
+        <img src="../img/flecha-voltar.png" alt="">
+        <p>ver todos os tratamentos</p>
+    </a>
+</aside>
+
+<section class="content" id="content">
+    <div class="right-content">
+        <img src="../img/dermatologia/xantelasma.png" alt="">
+        <div class="info-text">
+            <p>
+                Tanto o xantelasma, quanto o siringoma são pequenos tumores benignos que costumam aparecer nas pálpebras. Ambos são relativamente frequentes e muitas vezes podem passar despercebidos.
+            </p>  
+            <p>
+                O xantelasma se caracteriza como uma marca branco amarelada, bem delimitada, que vai crescendo num formato ovalado ao longo da pálpebra. Normalmente, o xantelasma ocorre no canto interno da pálpebra superior, mas também pode aparecer na pálpebra inferior.
+            </p>
+            <p>
+                Já o siringoma consiste em um tumor também benigno, decorrente do aumento do ducto de glândulas responsáveis pela produção de suor. É mais comumente observado em mulheres de pele clara e, aparentemente, está ligado a fatores genéticos. Os siringomas são pequenas pápulas, de aproximadamente 5mm, da mesma cor da pele. Tipicamente, os siringomas estão localizados nas pálpebras, porém também podem afetar a face, o tórax e o pescoço .
+            </p>
+            <h2>
+                Como é o tratamento para os xantelasmas e siringomas?
+            </h2>
+            <p>
+                O tratamento dessas lesões tem finalidade estética, pois ambos não apresentam riscos a quem os possui. Podem-se usar ácidos ou eletrocoagulação para queimar os xantelasmas e siringomas, mas se esses sinais forem grandes podem voltar a aparecer. O tratamento cirúrgico é o ideal para que sejam definitivamente erradicadas essas lesões. Como a pele da pálpebra é bem fininha, quase não deixa cicatriz.
+            </p>
+            <h2>
+                Como é a recuperação após a cirurgia?
+            </h2>
+            <p>
+                Após a cirurgia, o paciente pode voltar às suas atividades normais imediatamente. Pode haver uma dor, mas bem leve no primeiro dia. Os pontos serão retirados sete dias após a cirurgia (quando forem dados pontos, visto que no caso dos siringomas, nem sempre são necessários). É muito importante não haver exposição solar após a cirurgia para que não fiquem marcas.
+            </p>
+            <p>
+                Quando há detecção da alteração dos níveis de colesterol, o seu tratamento clínico é imperativo. No entanto, o fato de o colesterol estar controlado não necessariamente influencia no controle ou diminuição do xantelasma.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+</section>
+</div>
+
+{% include 'footer.njk' %}
+
+<!-- Script que altera as paginas -->
+
+<script>
+  const section = document.getElementById("content");
+  const urlParams = new URLSearchParams(window.location.search);
+  let selected = urlParams.get("selection");
+  let padrao = "consulta"
+  const title = document.getElementById("changeTitle")
+
+ window.onload = () => {
+    if (selected) {
+      selectById(selected);
+    } else {
+      selectById(padrao); // Carregar o padrão (miopia)
+    }
+};
+
+  // Função para resetar a seleção
+  function resetSelection() {
+    const items = document.querySelectorAll(".selected");
+    items.forEach((item) => item.classList.remove("selected"));
+  }
+
+  // Função para atualizar a seleção
+  const consulta = document.getElementById("consulta");
+  consulta.addEventListener("click", () => {
+    resetSelection();
+    selected = "consulta";
+    consulta.classList.add("selected");
+    updateSection();
+  });
+
+  const cirurgia = document.getElementById("cirurgia");
+  cirurgia.addEventListener("click", () => {
+    resetSelection();
+    selected = "cirurgia";
+    cirurgia.classList.add("selected");
+    updateSection();
+  });
+
+  const dermatoscopia = document.getElementById("dermatoscopia");
+  dermatoscopia.addEventListener("click", () => {
+    resetSelection();
+    selected = "dermatoscopia";
+    dermatoscopia.classList.add("selected");
+    updateSection();
+  });
+
+  const lobuloplastia = document.getElementById("lobuloplastia");
+  lobuloplastia.addEventListener("click", () => {
+    resetSelection();
+    selected = "lobuloplastia";
+    lobuloplastia.classList.add("selected");
+    updateSection();
+  });
+
+  const xantelasma = document.getElementById("xantelasma");
+  xantelasma.addEventListener("click", () => {
+    resetSelection();
+    selected = "xantelasma";
+    xantelasma.classList.add("selected");
+    updateSection();
+  });
+
+  const blefaroplastia = document.getElementById("blefaroplastia");
+  blefaroplastia.addEventListener("click", () => {
+    resetSelection();
+    selected = "blefaroplastia";
+    blefaroplastia.classList.add("selected");
+    updateSection();
+  });
+
+  const eletrocoagulacao = document.getElementById("eletrocoagulacao");
+  eletrocoagulacao.addEventListener("click", () => {
+    resetSelection();
+    selected = "eletrocoagulacao";
+    eletrocoagulacao.classList.add("selected");
+    updateSection();
+  });
+
+  const criocirurgia = document.getElementById("criocirurgia");
+  criocirurgia.addEventListener("click", () => {
+    resetSelection();
+    selected = "criocirurgia";
+    criocirurgia.classList.add("selected");
+    updateSection();
+  });
+
+  const cisto = document.getElementById("cisto");
+  cisto.addEventListener("click", () => {
+    resetSelection();
+    selected = "cisto";
+    cisto.classList.add("selected");
+    updateSection();
+  });
+
+  const pintas = document.getElementById("pintas");
+  pintas.addEventListener("click", () => {
+    resetSelection();
+    selected = "pintas";
+    pintas.classList.add("selected");
+    updateSection();
+  });
+
+  const biopsia = document.getElementById("biopsia");
+  biopsia.addEventListener("click", () => {
+    resetSelection();
+    selected = "biopsia";
+    biopsia.classList.add("selected");
+    updateSection();
+  });
+
+  function selectById(id) {
+    resetSelection();
+    selected = id;
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("selected");
+      updateSection();
+    }
+  }
+
+  // Função para atualizar o conteúdo da seção
+  function updateSection() {
+    switch (selected) {
+      case "consulta":
+        title.innerText = "Consulta dermatológica"
+        section.innerHTML = `
+ <div class="right-content">
+        <img src="../img/dermatologia/consulta.png" alt="">
+        <h2>Como é a Consulta Dermatológica?</h2>
+        <div class="info-text">
+            <p>
+                O dermatologista é o médico especializado no cuidado da pele e seus anexos, como cabelos e unhas. Esse cuidado abrange ações de prevenção, tratamento e promoção da saúde e do bem-estar.
+                <br/>
+                Atualmente, a dermatologia se divide em duas grandes áreas:    
+            </p>
+            <ul>
+                <li>Dermatologia clínica, voltada ao diagnóstico e tratamento de doenças;</li>
+                <li>Dermatologia estética, focada na promoção da beleza e autoestima.</li>
+            </ul>
+            <p>Na área clínica, o dermatologista está apto a tratar todas as doenças que acometem o tegumento (pele, mucosas, cabelos e unhas). No entanto, sua atuação vai além da superfície: muitas doenças internas, inclusive graves, podem se manifestar por meio de sinais cutâneos. Neoplasias, doenças inflamatórias, reumatológicas e diversas outras condições podem ser identificadas precocemente através de alterações na pele. Além disso, a pele frequentemente reflete o estado emocional do paciente, oferecendo ao médico uma oportunidade valiosa de intervir de forma integral, promovendo qualidade de vida.</p>
+            <p>Já na área estética, a dermatologia moderna adota novos conceitos de rejuvenescimento e harmonização facial e corporal. Com um arsenal de produtos e procedimentos — dos mais simples aos minimamente invasivos — é possível resgatar a autoestima em todas as fases da vida. A escolha do tratamento é sempre personalizada, respeitando o perfil e os desejos de cada paciente.</p>
+            <p>A consulta dermatológica é um momento essencial de avaliação global do paciente. Ela se inicia com a anamnese (entrevista médica detalhada) e segue com o exame físico. A visão é o principal instrumento do dermatologista, mas hoje ele também conta com recursos como lupas e dermatoscópios, que auxiliam no diagnóstico preciso.</p>
+            <p>É importante lembrar que o dermatologista examina a pele de todo o corpo. Por isso, ao ser solicitado a retirar partes da vestimenta durante a consulta, saiba que se trata de um procedimento padrão e necessário para uma avaliação completa.</p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+  `
+  ;
+        break;
+      case "cirurgia":
+        title.innerText = "Cirurgia dermatológica"
+        section.innerHTML = `
+<div class="right-content">
+        <img src="../img/dermatologia/cirurgia.png" alt="">
+        <h2>O que é a Cirurgia Dermatológica?</h2>
+        <div class="info-text">
+            <p>
+                A cirurgia dermatológica é a área da Dermatologia especializada em procedimentos cirúrgicos, estéticos e oncológicos realizados na pele, que têm por objetivo prevenir, restaurar e manter a saúde de sua pele, cabelo ou unhas.
+            </p>
+            <h2>
+                Quem é o cirurgião dermatológico?
+            </h2>
+            <p>
+                Um cirurgião dermatológico é sempre um médico com título de especialista em Dermatologia, conferido pela Sociedade Brasileira de Dermatologia (SBD) e também da Sociedade Brasileira de Cirurgia Dermatológica (SBCD).
+            </p>
+            <p>
+                Nem todos os procedimentos realizados pelo cirurgião dermatológico são procedimentos cirúrgicos grandes. Técnicas minimamente invasivas cada vez mais fazem parte do arsenal terapêutico do dia a dia do dermatologista. Logo, um cirurgião dermatológico da SBCD pode ter foco de atuação em cirurgia dermatológica geral, oncologia cutânea e também em cosmiatria ou em procedimentos estéticos minimamente invasivos.
+            </p>
+            <h2>
+                Quais os segmentos da cirurgia dermatológica?
+            </h2>
+            <ul>
+                <li>Tumores benignos e câncer de pele;</li>
+                <li>Tratamento de cicatrizes;</li>
+                <li>Biópsias de pele;</li>
+                <li>Retirada de pintas ou verrugas.</li>
+            </ul>
+            <h2>Como escolher um cirurgião dermatológico?</h2>
+            <p>A escolha de um profissional qualificado é o primeiro passo para assegurar a saúde e beleza da pele, o maior órgão do corpo humano. Alguns procedimentos dermatológicos aparentam ser simples, mas podem provocar problemas sérios quando realizados por profissionais sem qualificação. Além disso, caso ocorram complicações durante o procedimento, o dermatologista dispõe dos conhecimentos necessários para tratá-las.</p>
+            <p>Ao escolher um médico dermatologista, certifique-se de que seja devidamente certificado e que possua o Registro de Qualificação de Especialista (RQE), o registro que comprova que ele se especializou em uma determinada área da medicina, como a Dermatologia. Apenas médicos detentores do RQE podem se denominar especialistas. O RQE de cada médico pode ser consultado no site do Conselho Federal de Medicina (CFM).</p>
+            <p>Verifique também as afiliações do médico e as entidades das quais ele faz parte. Verifique se seu dermatologista é membro da SBCD.</p>
+            <h2>Quais cuidados tomar antes de se submeter a um procedimento de cirurgia dermatológica?</h2>
+            <ul>
+                <li>Avaliar com o médico a indicação do procedimento e esclarecer todas as suas dúvidas.</li>
+                <li>Perguntar ao médico sobre os eventuais riscos associados ao procedimento e como podem ser evitados.</li>
+                <li>Discutir suas expectativas quanto ao procedimento, lembrando que devem ser realistas, para evitar frustração ou arrependimento.</li>
+                <li>Informar ao médico sobre qualquer problema de saúde existente e os medicamentos que esteja tomando.</li>
+                <li>Registrar os cuidados pré e pós-procedimento a serem tomados e obedecer rigorosamente as recomendações do médico.</li>
+            </ul>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+`;
+        break;
+      case "dermatoscopia":
+        title.innerText = "Dermatoscopia"
+        section.innerHTML = `
+             <div class="right-content">
+        <img src="../img/dermatologia/dermatoscopia.png" alt="">
+        <h2>O que é Dermatoscopia?</h2>
+        <div class="info-text">
+            <p>
+                A dermatoscopia é a principal ferramenta diagnóstica para o dermatologista. Hoje em dia, trata-se de um exame quase que indispensável durante uma consulta dermatológica. É um exame que, de forma não invasiva, avalia as pintas do corpo e pode identificar precocemente alguns tipos de câncer de pele, diferenciando as lesões benignas das lesões de risco. Para realizar esse exame é usado o dermatoscópio, um aparelho similar a uma lupa que permite ampliar a imagem da pele em cerca de 30 vezes, proporcionando uma visão em profundidade, facilitando a análise e documentação das manchas e ou pintas, especialmente quando existe a necessidade de acompanhar a evolução do quadro clínico.
+                <br/><br/>
+                Existem diversos tipos e marcas de dermatoscópios, mas todos são capazes de oferecer a ampliação necessária à observação do padrão e das estruturas sugestivas de malignidade das lesões. Além disso, o dermatoscópio também pode ser utilizado no diagnóstico de doenças dos fios e couro cabeludo, micoses de unha e outras doenças de pele em que é necessário um aumento das estruturas para facilitar o diagnóstico. 
+                <br/><br/>
+                O exame dermatoscópico é realizado encostando-se o aparelho na pele a ser examinada, diretamente ou com uma lâmina de gel de contato entre o aparelho e a pele do paciente, na dependência do que se pretende observar. O aparelho é facilmente higienizado com álcool entre o exame de cada pessoa de forma a garantir a segurança e a saúde do paciente.
+                <br/><br/>
+                Com o advento da dermatoscopia foi possível reduzir muito a quantidade de lesões com necessidade de remoção cirúrgica e envio à biópsia para análise, pois ela permite que as imagens sejam avaliadas com muito mais detalhamento. No caso de lesões suspeitas, é possível inclusive salvar as imagens geradas e realizar avaliações sucessivas e, dessa forma, acompanhar as modificações das pintas antes de se optar por sua retirada.
+            </p>  
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "lobuloplastia":
+        title.innerText = "Lobuloplastia"
+        section.innerHTML = `
+                <div class="right-content">
+        <img src="../img/dermatologia/lobuloplastia.png" alt="">
+        <div class="info-text">
+            <p>
+                O uso de brincos muito pesados repetidas vezes ao longo da vida ou alargadores grandes podem levar ao alargamento dos furos da orelha. Em casos mais graves, a consequência não é  apenas um furo alargado, mas pode haver ruptura total, com a orelha ficando dividida em duas partes.
+            </p>  
+            <h2>
+                Por que é tão comum o lóbulo alargar?
+            </h2>
+            <p>
+                O lóbulo da orelha é uma área muito sensível, fina, formada apenas por pele e gordura. Não havendo músculo e nem cartilagem, não há nenhuma sustentação. Além disso, outra causa frequente e que tornam o lóbulo da orelha ainda mais frágil são as alergias nesta região. Muitas pessoas têm alergia a bijuterias e insistem no uso de brincos inadequados e, desta maneira, estão sempre com a orelha inflamada. Ela fica mais frágil ainda e friável, podendo romper.
+            </p>
+            <h2>
+                Como é feita a reconstrução do furo da orelha?
+            </h2>
+            <p>
+                Lobuloplastia é a cirurgia para corrigir o lóbulo da orelha rasgado, seja total ou parcialmente. A anestesia utilizada na lobuloplastia é local, sem necessidade de sedação. A operação é bem simples, rápida e dura cerca de 40 minutos.
+            </p>
+            <p>
+               Primeiro, é retirada uma parte da pele em volta do furo rasgado e, em seguida, a orelha é suturada, juntando-se as duas partes. No lugar do rasgo restará uma cicatriz discreta, sendo possível o uso de brincos novamente. 
+            </p>
+            <h2>
+                Recuperação após a reconstrução do lóbulo da orelha
+            </h2>
+            <p>
+                Após a cirurgia, a região pode ficar um pouco dolorida e inchada.  Em casos raros podem surgir algumas manchas roxas. Devido à recuperação ser bem tranquila, o paciente pode voltar ao trabalho no dia seguinte.
+            </p>
+            <p>
+                Inicialmente, a cicatriz fica com a aparência avermelhada. Mas, com o passar dos meses, a cor se aproxima da sua pele e fica quase imperceptível. Em alguns casos em que a orelha é muito flácida e molinha, pode ser necessário associar-se à cirurgia o procedimento de preenchimento do lobo de orelha com ácido hialurônico para que ela fique mais firme, evitando assim que ela rasgue novamente.
+            </p>
+            <h2>
+                Quando a orelha poderá ser furada novamente após a cirurgia?
+            </h2>
+            <p>
+                Para fazer um novo furo na orelha, é preciso aguardar um mês após a cirurgia. Não é recomendável fazer o furo novo na mesma região operada. Já que a pele estará mais fina e sensível, podendo rasgar novamente
+            </p>
+            <h2>
+                Quais são os cuidados após a cirurgia?
+            </h2>
+            <p>
+                Após a cirurgia é muito importante evitar o uso frequente de brincos pesados, evitar dormir ou praticar atividades físicas usando brincos e sempre tratar as alergias, caso elas ocorram. Se não forem tomados esses cuidados, a orelha pode rasgar novamente.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "xantelasma":
+        title.innerText = "Xantelasma"
+        section.innerHTML = `
+                <div class="right-content">
+                <img src="../img/dermatologia/xantelasma.png" alt="">
+                <div class="info-text">
+                    <p>
+                        Tanto o xantelasma, quanto o siringoma são pequenos tumores benignos que costumam aparecer nas pálpebras. Ambos são relativamente frequentes e muitas vezes podem passar despercebidos.
+                    </p>  
+                    <p>
+                        O xantelasma se caracteriza como uma marca branco amarelada, bem delimitada, que vai crescendo num formato ovalado ao longo da pálpebra. Normalmente, o xantelasma ocorre no canto interno da pálpebra superior, mas também pode aparecer na pálpebra inferior.
+                    </p>
+                    <p>
+                        Já o siringoma consiste em um tumor também benigno, decorrente do aumento do ducto de glândulas responsáveis pela produção de suor. É mais comumente observado em mulheres de pele clara e, aparentemente, está ligado a fatores genéticos. Os siringomas são pequenas pápulas, de aproximadamente 5mm, da mesma cor da pele. Tipicamente, os siringomas estão localizados nas pálpebras, porém também podem afetar a face, o tórax e o pescoço .
+                    </p>
+                    <h2>
+                        Como é o tratamento para os xantelasmas e siringomas?
+                    </h2>
+                    <p>
+                        O tratamento dessas lesões tem finalidade estética, pois ambos não apresentam riscos a quem os possui. Podem-se usar ácidos ou eletrocoagulação para queimar os xantelasmas e siringomas, mas se esses sinais forem grandes podem voltar a aparecer. O tratamento cirúrgico é o ideal para que sejam definitivamente erradicadas essas lesões. Como a pele da pálpebra é bem fininha, quase não deixa cicatriz.
+                    </p>
+                    <h2>
+                        Como é a recuperação após a cirurgia?
+                    </h2>
+                    <p>
+                        Após a cirurgia, o paciente pode voltar às suas atividades normais imediatamente. Pode haver uma dor, mas bem leve no primeiro dia. Os pontos serão retirados sete dias após a cirurgia (quando forem dados pontos, visto que no caso dos siringomas, nem sempre são necessários). É muito importante não haver exposição solar após a cirurgia para que não fiquem marcas.
+                    </p>
+                    <p>
+                        Quando há detecção da alteração dos níveis de colesterol, o seu tratamento clínico é imperativo. No entanto, o fato de o colesterol estar controlado não necessariamente influencia no controle ou diminuição do xantelasma.
+                    </p>
+                </div>
+            
+                <!-- não retirar -->
+                <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+                <div class="adress">
+                    <p>
+                        <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                        Rio de Janeiro, RJ | 20031-100
+                    </p>
+                    <p>
+                        <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                        Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+                    <p>
+                        <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                        +55 21 2232-5778 | +55 2 3852-4678
+                    </p>
+            
+                </div>
+            </div>
+            `;
+        break;
+      case "blefaroplastia":
+        title.innerText = "Blefaroplastia"
+        section.innerHTML = `
+
+            `;
+        break;
+      case "eletrocoagulacao":
+        title.innerText = "Eletrocoagulação"
+        section.innerHTML = `
+
+            `;
+        break;
+      case "criocirurgia":
+        title.innerText = "Criocirurgia"
+        section.innerHTML = `
+
+            `;
+        break;
+      case "cisto":
+        title.innerText = "Exérese de cisto / lipoma / tumor"
+        section.innerHTML = `
+
+            `;
+        break;
+      case "pintas":
+        title.innerText = "Exérese de nervo (remoção de pintas)"
+        section.innerHTML = `
+
+            `;
+        break;
+      case "biopsia":
+        title.innerText = "Biópsia"
+        section.innerHTML = `
+
+            `;
+        break;
+      default:
+        title.innerText = "Consulta dermatológica"
+        section.innerHTML = `<div class="right-content">
+        <img src="../img/dermatologia/consulta.png" alt="">
+        <h2>Como é a Consulta Dermatológica?</h2>
+        <div class="info-text">
+            <p>
+                O dermatologista é o médico especializado no cuidado da pele e seus anexos, como cabelos e unhas. Esse cuidado abrange ações de prevenção, tratamento e promoção da saúde e do bem-estar.
+                <br/>
+                Atualmente, a dermatologia se divide em duas grandes áreas:    
+            </p>
+            <ul>
+                <li>Dermatologia clínica, voltada ao diagnóstico e tratamento de doenças;</li>
+                <li>Dermatologia estética, focada na promoção da beleza e autoestima.</li>
+            </ul>
+            <p>Na área clínica, o dermatologista está apto a tratar todas as doenças que acometem o tegumento (pele, mucosas, cabelos e unhas). No entanto, sua atuação vai além da superfície: muitas doenças internas, inclusive graves, podem se manifestar por meio de sinais cutâneos. Neoplasias, doenças inflamatórias, reumatológicas e diversas outras condições podem ser identificadas precocemente através de alterações na pele. Além disso, a pele frequentemente reflete o estado emocional do paciente, oferecendo ao médico uma oportunidade valiosa de intervir de forma integral, promovendo qualidade de vida.</p>
+            <p>Já na área estética, a dermatologia moderna adota novos conceitos de rejuvenescimento e harmonização facial e corporal. Com um arsenal de produtos e procedimentos — dos mais simples aos minimamente invasivos — é possível resgatar a autoestima em todas as fases da vida. A escolha do tratamento é sempre personalizada, respeitando o perfil e os desejos de cada paciente.</p>
+            <p>A consulta dermatológica é um momento essencial de avaliação global do paciente. Ela se inicia com a anamnese (entrevista médica detalhada) e segue com o exame físico. A visão é o principal instrumento do dermatologista, mas hoje ele também conta com recursos como lupas e dermatoscópios, que auxiliam no diagnóstico preciso.</p>
+            <p>É importante lembrar que o dermatologista examina a pele de todo o corpo. Por isso, ao ser solicitado a retirar partes da vestimenta durante a consulta, saiba que se trata de um procedimento padrão e necessário para uma avaliação completa.</p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>`;
+        break;
+    }
+  }
+</script>

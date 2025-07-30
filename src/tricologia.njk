@@ -1,0 +1,517 @@
+---
+title: Lídia Gusmão - Médicos da pele. De verdade.
+layout: "base.njk"
+cssPath: "/css/dermatologia.css"
+---
+
+{% include 'nav2.njk' %}
+<header>
+    <div class="header-title">
+        <img src="../img/tricologia/tricologia-header.svg" alt="">
+        <h1>Tricologia</h1>
+    </div>
+</header>
+
+<h1 id="changeTitle">Exame de tricoscopia</h1>
+
+<div class="wrap-content">
+    <!-- Não alterar essa parte -->
+<aside class="left-table">
+    <h3>Tricologia</h3>
+    <div class="table-itens">
+        <button class="select selected" id="tricoscopia">
+            <p>Exame de Tricoscopia</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="capilar">
+            <p>MMP Capilar</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="mesoterapia">
+            <p>Mesoterapia Capilar</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="lllt">
+            <p>LLLT (IGROW)</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="infiltracao">
+            <p>Infiltração para alopecia ????</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="laser">
+            <p>Laser ????</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+    </div>
+    <a href="/tratamentos" class="blueButton"> 
+        <img src="../img/flecha-voltar.png" alt="">
+        <p>ver todos os tratamentos</p>
+    </a>
+</aside>
+
+<section class="content" id="content">
+    <div class="right-content">
+        <img src="../img/tricologia/lllt.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é Low Level Light Therapy?
+            </h2>
+            <p>
+                Tratam-se dispositivos de fototerapia, no formato de um capacete, constituído por luzes de LED (diodo emissor de luz) e laser com comprimento de onda de 655nm que visam a fotobiomodulação.
+            </p>
+            <h2>
+                Como o LLLT funciona?
+            </h2>
+            <p>
+                A luz emitida pelo capacete penetra a membrana celular das células dos folículos pilosos e estimula as mitocôndrias a produzirem fatores de crescimento, como ATP e óxido nítrico, substâncias que otimizam a oxigenação dos fios de cabelo. As células ganham uma dose extra de energia e funcionam de forma mais ativa. A luz de LED atinge todo o couro cabeludo, de forma homogênea e singular. Esses fatores visam estimular a saúde dos folículos, prolongando o ciclo de vida e a qualidade dos fios.
+            </p>
+            <h2>
+                Em que situações o Capacete é indicado?
+            </h2>
+            <p>
+                A maioria dos casos de queda de cabelo são beneficiados pela terapia de laser de baixa potência. A perda de brilho, força e afinamento também são indicações para o uso da LLLT. Aqui estão alguns exemplos:
+            </p>
+            <ul>
+                <li>Queda progressiva hereditária em homens e mulheres (alopecia androgenética);</li>
+                <li>Queda em mulheres na pós-menopausa;</li>
+                <li>Quedas de cabelo pós-parto;</li>
+                <li>Pós cirurgia bariátrica;</li>
+                <li>Pós quimioterapia;</li>
+                <li>Pós cirurgia de implante capilar;</li>
+            </ul>
+            <p>
+                O objetivo do tratamento é interromper a queda, recuperar os fios que ainda não atrofiaram completamente, fazer os cabelos fracos e finos engrossarem. É um dispositivo confortável, fácil de usar e sobretudo eficiente.
+            </p>
+            <p>
+                Ele é um ótimo aliado aos tratamentos de calvície no consultório do dermatologista e também pode ser usado pelos pacientes em domicílio, sob orientação médica, otimizando o resultado dos tratamentos capilares.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+</section>
+</div>
+
+{% include 'footer.njk' %}
+
+<!-- Script que altera as paginas -->
+
+<script>
+  const section = document.getElementById("content");
+  const urlParams = new URLSearchParams(window.location.search);
+  let selected = urlParams.get("selection");
+  let padrao = "tricoscopia"
+  const title = document.getElementById("changeTitle")
+
+ window.onload = () => {
+    if (selected) {
+      selectById(selected);
+    } else {
+      selectById(padrao); // Carregar o padrão (miopia)
+    }
+};
+
+  // Função para resetar a seleção
+  function resetSelection() {
+    const items = document.querySelectorAll(".selected");
+    items.forEach((item) => item.classList.remove("selected"));
+  }
+
+  // Função para atualizar a seleção
+  const tricoscopia = document.getElementById("tricoscopia");
+  tricoscopia.addEventListener("click", () => {
+    resetSelection();
+    selected = "tricoscopia";
+    tricoscopia.classList.add("selected");
+    updateSection();
+  });
+
+  const capilar = document.getElementById("capilar");
+  capilar.addEventListener("click", () => {
+    resetSelection();
+    selected = "capilar";
+    capilar.classList.add("selected");
+    updateSection();
+  });
+
+  const mesoterapia = document.getElementById("mesoterapia");
+  mesoterapia.addEventListener("click", () => {
+    resetSelection();
+    selected = "mesoterapia";
+    mesoterapia.classList.add("selected");
+    updateSection();
+  });
+
+  const lllt = document.getElementById("lllt");
+  lllt.addEventListener("click", () => {
+    resetSelection();
+    selected = "lllt";
+    lllt.classList.add("selected");
+    updateSection();
+  });
+
+  const infiltracao = document.getElementById("infiltracao");
+  infiltracao.addEventListener("click", () => {
+    resetSelection();
+    selected = "infiltracao";
+    infiltracao.classList.add("selected");
+    updateSection();
+  });
+
+  const laser = document.getElementById("laser");
+  laser.addEventListener("click", () => {
+    resetSelection();
+    selected = "laser";
+    laser.classList.add("selected");
+    updateSection();
+  });
+
+  function selectById(id) {
+    resetSelection();
+    selected = id;
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("selected");
+      updateSection();
+    }
+  }
+
+  // Função para atualizar o conteúdo da seção
+  function updateSection() {
+    switch (selected) {
+      case "tricoscopia":
+        title.innerText = "Exame de Tricoscopia"
+        section.innerHTML = `
+ <div class="right-content">
+        <img src="../img/tricologia/tricoscopia.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é Tricoscopia?
+            </h2>
+            <p>
+                A tricoscopia revolucionou o diagnóstico das doenças do couro cabeludo. Trata-se de uma evolução da já consagrada dermatoscopia, amplamente utilizada na dermatologia para examinar lesões cutâneas. Assim como a análise de pintas e manchas já faz parte da rotina dermatológica, a tricoscopia tornou-se um exame essencial nas consultas voltadas para a saúde capilar.
+            </p>  
+            <p>
+                Esse método permite identificar, de forma precisa, alterações como a perda de fios por unidade folicular, afinamento ou fragilidade dos cabelos, variações no diâmetro das hastes, além de lesões eritêmato-descamativas, inflamações e infecções no couro cabeludo. É um exame rápido, indolor, não invasivo e indicado para pacientes de todas as idades e de ambos os sexos, sem necessidade de preparo prévio ou cuidados posteriores.
+            </p>
+            <p>
+                A tricoscopia é realizada com o auxílio de um equipamento chamado fotovideodermatoscópio — uma lente de aumento com luzes de LED que permite ampliar em até 20 a 30 vezes as estruturas do couro cabeludo, incluindo os óstios foliculares e as hastes capilares. O exame pode ser feito com ou sem luz polarizada, dependendo da avaliação do dermatologista.
+            </p>
+            <p>
+                Entre suas principais vantagens, destacam-se a possibilidade de capturar imagens seriadas e armazená-las, o que permite acompanhar a evolução do tratamento ao longo do tempo. Isso é especialmente útil para avaliar a resposta terapêutica em casos de queda de cabelo e calvície, possibilitando verificar sinais de melhora e repilação.
+            </p>
+            <p>
+                A tricoscopia é considerada, atualmente, uma ferramenta diagnóstica indispensável para investigar queixas relacionadas aos cabelos, como queda capilar e doenças do couro cabeludo — incluindo lúpus, alopecia areata e alopecia androgenética (calvície masculina e feminina). Muitas vezes, a causa da queda de cabelo não é facilmente perceptível a olho nu, e a tricoscopia permite esclarecer dúvidas diagnósticas e iniciar o tratamento em fases precoces.
+            </p>
+            <p>
+                Quanto mais cedo o problema for identificado, maiores são as chances de um tratamento eficaz. Isso facilita a estabilização da queda, retarda sua progressão e, em alguns casos, possibilita a recuperação dos fios perdidos. Por esse motivo, é fundamental procurar um dermatologista especializado em tricologia assim que os primeiros sinais forem percebidos. A perda capilar, especialmente nas fases iniciais, costuma ser subestimada, muitas vezes confundida com uma condição temporária. Por isso, é essencial evitar conclusões precipitadas antes de um diagnóstico adequado.
+            </p>
+          
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+  `
+  ;
+        break;
+      case "capilar":
+        title.innerText = "MMP Capilar"
+        section.innerHTML = `
+            <div class="right-content">
+                <img src="../img/tricologia/capilar.png" alt="">
+                <div class="info-text">
+                    <h2>
+                        O que é microagulhamento do couro cabeludo?
+                    </h2>
+                    <p>
+                        É um procedimento feito com dispositivo de pequena dimensão constituído por microagulhas que provocam perfurações superficiais no couro cabeludo – o Dermaroller.
+                        <br/><br/>
+                        As injúrias geradas no local vão cicatrizar por meio da ação dos fatores de crescimento liberados pelas plaquetas que migram para o local, estimulando a produção de colágeno, principalmente do tipo XVII, que é importante para aumentar a sobrevida e o tamanho do fio.
+                        <br/><br/>
+                        Essa técnica promissora, além de ser indicada para o tratamento da alopecia androgenética também é utilizada em outras patologias dermatológicas, com ótimos resultados, como cicatrizes de acne, estrias, melasma e rejuvenescimento. Portanto, já se mostrou segura e eficaz previamente.
+                        <br/><br/>
+                        O tratamento é indicado principalmente para a calvície masculina, com bons resultados, especialmente nas fases mais iniciais.  Nas mulheres, que costumam ter os fios mais compridos, pode acabar causando ruptura de alguns fios e por isso preferimos outras técnicas nesses casos: mesoterapia capilar ou Drug Delivery.
+                        <br/><br/>
+                        É importante frisar que é necessário um exame dermatoscópico (tricoscopia) feito previamente pelo dermatologista especialista em cabelos para avaliar a indicação do procedimento, bem como a correta técnica e dimensão da agulha a ser utilizada.
+                        <br/><br/>
+                        A associação com ativos estimulatórios, técnica conhecida por drug delivery, pode ser considerada para melhor resposta em casos específicos de acordo com a necessidade de cada paciente.
+                    </p>
+                
+                </div>
+            
+                <!-- não retirar -->
+                <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+                <div class="adress">
+                    <p>
+                        <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                        Rio de Janeiro, RJ | 20031-100
+                    </p>
+                    <p>
+                        <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                        Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+                    <p>
+                        <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                        +55 21 2232-5778 | +55 2 3852-4678
+                    </p>
+            
+                </div>
+            </div>
+`;
+        break;
+      case "mesoterapia":
+        title.innerText = "Mesoterapia Capilar"
+        section.innerHTML = `
+             <div class="right-content">
+                <img src="../img/tricologia/mesoterapia.png" alt="">
+                <div class="info-text">
+                    <h2>
+                        O que é Mesoterapia Capilar?
+                    </h2>
+                    <p>
+                        A mesoterapia capilar consiste na injeção de ativos diretamente no couro cabeludo. Esses ativos estimulam o crescimento de fios novos. Para isso, são utilizadas agulhas bem finas e substâncias que minimizam a queda e aceleram o processo de repilação.
+                    </p>
+                    <p>
+                        O dermatologista especialista em tricologia, primeiro faz o exame de tricoscopia (um exame minucioso do couro cabeludo) e mapeia as áreas específicas onde serão feitas as aplicações.
+                    </p>
+                    <p>
+                        Como os shampoos antiqueda não conseguem atravessar o couro cabeludo adequadamente e as loções comumente prescritas pelos dermatologistas têm penetração parcial, a aplicação de estimulantes capilares direto nos folículos pilosos otimiza a resposta ao tratamento. Isso não significa que a mesoterapia deva ser feita de forma isolada. Os pacientes devem manter todos os medicamentos prescritos para uso domiciliar.
+                    </p>
+                    <h2>
+                        Quais são as substâncias mais utilizadas?
+                    </h2>
+                    <ul>
+                        <li>Minoxidil;</li>
+                        <li>Finasterida;</li>
+                        <li>Biotina;</li>
+                        <li>Peptídios;</li>
+                        <li>Pill Food.</li>
+                    </ul>
+                    <h2>
+                        Em que casos a mesoterapia é indicada?
+                    </h2>
+                    <p>
+                        Ela é usada principalmente para os casos de alopecia androgenética (calvície feminina ou masculina). Quanto mais inicial o quadro, mais promissores são os resultados.
+                    </p>
+                    <h2>
+                        Quantas sessões são necessárias e qual intervalo entre elas?
+                    </h2>
+                    <p>
+                        O número de sessões varia de acordo com a severidade de cada caso, mas, em geral, recomenda-se um mínimo de seis sessões. Os intervalos são geralmente quinzenais ou mensais.
+                    </p>
+                </div>
+            
+                <!-- não retirar -->
+                <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+                <div class="adress">
+                    <p>
+                        <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                        Rio de Janeiro, RJ | 20031-100
+                    </p>
+                    <p>
+                        <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                        Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+                    <p>
+                        <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                        +55 21 2232-5778 | +55 2 3852-4678
+                    </p>
+            
+                </div>
+            </div>
+        `;
+        break;
+      case "lllt":
+        title.innerText = "LLLT (IGROW)"
+        section.innerHTML = `
+                <div class="right-content">
+                    <img src="../img/tricologia/lllt.png" alt="">
+                    <div class="info-text">
+                        <h2>
+                            O que é Low Level Light Therapy?
+                        </h2>
+                        <p>
+                            Tratam-se dispositivos de fototerapia, no formato de um capacete, constituído por luzes de LED (diodo emissor de luz) e laser com comprimento de onda de 655nm que visam a fotobiomodulação.
+                        </p>
+                        <h2>
+                            Como o LLLT funciona?
+                        </h2>
+                        <p>
+                            A luz emitida pelo capacete penetra a membrana celular das células dos folículos pilosos e estimula as mitocôndrias a produzirem fatores de crescimento, como ATP e óxido nítrico, substâncias que otimizam a oxigenação dos fios de cabelo. As células ganham uma dose extra de energia e funcionam de forma mais ativa. A luz de LED atinge todo o couro cabeludo, de forma homogênea e singular. Esses fatores visam estimular a saúde dos folículos, prolongando o ciclo de vida e a qualidade dos fios.
+                        </p>
+                        <h2>
+                            Em que situações o Capacete é indicado?
+                        </h2>
+                        <p>
+                            A maioria dos casos de queda de cabelo são beneficiados pela terapia de laser de baixa potência. A perda de brilho, força e afinamento também são indicações para o uso da LLLT. Aqui estão alguns exemplos:
+                        </p>
+                        <ul>
+                            <li>Queda progressiva hereditária em homens e mulheres (alopecia androgenética);</li>
+                            <li>Queda em mulheres na pós-menopausa;</li>
+                            <li>Quedas de cabelo pós-parto;</li>
+                            <li>Pós cirurgia bariátrica;</li>
+                            <li>Pós quimioterapia;</li>
+                            <li>Pós cirurgia de implante capilar;</li>
+                        </ul>
+                        <p>
+                            O objetivo do tratamento é interromper a queda, recuperar os fios que ainda não atrofiaram completamente, fazer os cabelos fracos e finos engrossarem. É um dispositivo confortável, fácil de usar e sobretudo eficiente.
+                        </p>
+                        <p>
+                            Ele é um ótimo aliado aos tratamentos de calvície no consultório do dermatologista e também pode ser usado pelos pacientes em domicílio, sob orientação médica, otimizando o resultado dos tratamentos capilares.
+                        </p>
+                    </div>
+                
+                    <!-- não retirar -->
+                    <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+                    <div class="adress">
+                        <p>
+                            <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                            Rio de Janeiro, RJ | 20031-100
+                        </p>
+                        <p>
+                            <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                            Sala 313 | Rio de Janeiro, RJ | 22410-002
+                        </p>
+                        <p>
+                            <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                            +55 21 2232-5778 | +55 2 3852-4678
+                        </p>
+                
+                    </div>
+                </div>
+            `;
+        break;
+      case "infiltracao":
+        title.innerText = "Xantelasma"
+        section.innerHTML = `
+                <div class="right-content">
+                <img src="../img/dermatologia/xantelasma.png" alt="">
+                <div class="info-text">
+                    <p>
+                        Tanto o xantelasma, quanto o siringoma são pequenos tumores benignos que costumam aparecer nas pálpebras. Ambos são relativamente frequentes e muitas vezes podem passar despercebidos.
+                    </p>  
+                    <p>
+                        O xantelasma se caracteriza como uma marca branco amarelada, bem delimitada, que vai crescendo num formato ovalado ao longo da pálpebra. Normalmente, o xantelasma ocorre no canto interno da pálpebra superior, mas também pode aparecer na pálpebra inferior.
+                    </p>
+                    <p>
+                        Já o siringoma consiste em um tumor também benigno, decorrente do aumento do ducto de glândulas responsáveis pela produção de suor. É mais comumente observado em mulheres de pele clara e, aparentemente, está ligado a fatores genéticos. Os siringomas são pequenas pápulas, de aproximadamente 5mm, da mesma cor da pele. Tipicamente, os siringomas estão localizados nas pálpebras, porém também podem afetar a face, o tórax e o pescoço .
+                    </p>
+                    <h2>
+                        Como é o tratamento para os xantelasmas e siringomas?
+                    </h2>
+                    <p>
+                        O tratamento dessas lesões tem finalidade estética, pois ambos não apresentam riscos a quem os possui. Podem-se usar ácidos ou eletrocoagulação para queimar os xantelasmas e siringomas, mas se esses sinais forem grandes podem voltar a aparecer. O tratamento cirúrgico é o ideal para que sejam definitivamente erradicadas essas lesões. Como a pele da pálpebra é bem fininha, quase não deixa cicatriz.
+                    </p>
+                    <h2>
+                        Como é a recuperação após a cirurgia?
+                    </h2>
+                    <p>
+                        Após a cirurgia, o paciente pode voltar às suas atividades normais imediatamente. Pode haver uma dor, mas bem leve no primeiro dia. Os pontos serão retirados sete dias após a cirurgia (quando forem dados pontos, visto que no caso dos siringomas, nem sempre são necessários). É muito importante não haver exposição solar após a cirurgia para que não fiquem marcas.
+                    </p>
+                    <p>
+                        Quando há detecção da alteração dos níveis de colesterol, o seu tratamento clínico é imperativo. No entanto, o fato de o colesterol estar controlado não necessariamente influencia no controle ou diminuição do xantelasma.
+                    </p>
+                </div>
+            
+                <!-- não retirar -->
+                <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+                <div class="adress">
+                    <p>
+                        <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                        Rio de Janeiro, RJ | 20031-100
+                    </p>
+                    <p>
+                        <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                        Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+                    <p>
+                        <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                        +55 21 2232-5778 | +55 2 3852-4678
+                    </p>
+            
+                </div>
+            </div>
+            `;
+        break;
+      case "laser":
+        title.innerText = "Blefaroplastia"
+        section.innerHTML = `
+
+            `;
+        break;
+      default:
+        title.innerText = "Tricoscopia"
+        section.innerHTML = `<div class="right-content">
+        <img src="../img/dermatologia/consulta.png" alt="">
+        <h2>Como é a Consulta Dermatológica?</h2>
+        <div class="info-text">
+            <p>
+                O dermatologista é o médico especializado no cuidado da pele e seus anexos, como cabelos e unhas. Esse cuidado abrange ações de prevenção, tratamento e promoção da saúde e do bem-estar.
+                <br/>
+                Atualmente, a dermatologia se divide em duas grandes áreas:    
+            </p>
+            <ul>
+                <li>Dermatologia clínica, voltada ao diagnóstico e tratamento de doenças;</li>
+                <li>Dermatologia estética, focada na promoção da beleza e autoestima.</li>
+            </ul>
+            <p>Na área clínica, o dermatologista está apto a tratar todas as doenças que acometem o tegumento (pele, mucosas, cabelos e unhas). No entanto, sua atuação vai além da superfície: muitas doenças internas, inclusive graves, podem se manifestar por meio de sinais cutâneos. Neoplasias, doenças inflamatórias, reumatológicas e diversas outras condições podem ser identificadas precocemente através de alterações na pele. Além disso, a pele frequentemente reflete o estado emocional do paciente, oferecendo ao médico uma oportunidade valiosa de intervir de forma integral, promovendo qualidade de vida.</p>
+            <p>Já na área estética, a dermatologia moderna adota novos conceitos de rejuvenescimento e harmonização facial e corporal. Com um arsenal de produtos e procedimentos — dos mais simples aos minimamente invasivos — é possível resgatar a autoestima em todas as fases da vida. A escolha do tratamento é sempre personalizada, respeitando o perfil e os desejos de cada paciente.</p>
+            <p>A consulta dermatológica é um momento essencial de avaliação global do paciente. Ela se inicia com a anamnese (entrevista médica detalhada) e segue com o exame físico. A visão é o principal instrumento do dermatologista, mas hoje ele também conta com recursos como lupas e dermatoscópios, que auxiliam no diagnóstico preciso.</p>
+            <p>É importante lembrar que o dermatologista examina a pele de todo o corpo. Por isso, ao ser solicitado a retirar partes da vestimenta durante a consulta, saiba que se trata de um procedimento padrão e necessário para uma avaliação completa.</p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>`;
+        break;
+    }
+  }
+</script>
