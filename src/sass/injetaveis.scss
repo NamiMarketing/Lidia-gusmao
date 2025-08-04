@@ -4,19 +4,31 @@ header{
     width: 100vw;
     height: 35rem;
     position: relative;
-    background-color: $background3;
+    background-color: #A4867d;
     .header-title{
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 2.3rem;
-        margin-top: 19rem;
+        margin-top: 17.5rem;
         h1{
-            font-size: 3rem;
+            font-size: 4rem;
             line-height: 2.6rem;
-            letter-spacing: 5%;
+            letter-spacing: 10%;
             font-weight: 400;
+            color: $branco;
         }
+    }
+    h2{
+        position: absolute;
+        top: 23rem;
+        color: $branco;
+        font-size: 2.6rem;
+        line-height: 3rem;
+        letter-spacing: 15%;
+        font-weight: 300;
+        left: 50%;
+        transform: translateX(-50%);
     }
     @media screen and (max-width: 700px){
         width: 100vw;
@@ -70,9 +82,6 @@ header{
         }
     }
     }
-}
-.header-tricologia{
-    background-color: #d1b19d;
 }
 
 #changeTitle{

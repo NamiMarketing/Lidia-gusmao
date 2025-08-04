@@ -430,10 +430,10 @@ header{
     .swiper-pagination{
         position: absolute;
         top: 12rem !important;
-        left: 10rem !important;
+        left: 0 !important;
         bottom: unset !important;
         z-index: 3;
-        width: 80%  !important;
+        width: 100%  !important;
         .swiper-pagination-bullet{
             width: 190px;
             height: 4px;

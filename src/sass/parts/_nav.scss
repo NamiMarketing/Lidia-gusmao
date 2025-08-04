@@ -196,7 +196,7 @@
       display: flex;
       align-items: center;
       gap: 6rem;
-      background-color: #64453F0D;
+      background-color: #64453F1A;
       padding: 1rem 3rem;
       li{
         a{
@@ -344,4 +344,174 @@
     }
   }
 }
+.nav3 {
+  position: absolute;
+  display: flex;
+  height: 12rem;
+  align-items: flex-start;
+  width: 100%;
+  margin: auto;
+  z-index: 999;
+  background: transparent;
+  padding-left: 7%;
+  padding-right: 7%;
+  justify-content: space-between;
+  transition: 0.5s;
+  top: 5rem;
+  .nav-right{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: flex-end;
+    ul{
+      display: flex;
+      align-items: center;
+      gap: 6rem;
+      background-color: #ffffff1a;
+      padding: 1rem 3rem;
+      li{
+        a{
+          font-size: 2rem;
+          color: $branco;
+          letter-spacing: 8%;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 
+
+  @media screen and (max-width: 700px) {
+    height: 12rem;
+    padding-left: 5%;
+    .nav-right{
+      padding-right: 5%;
+    }
+    .hamburger{
+      .abrir{
+        font-size: 1.4rem;
+      }
+      .fechar{
+        display: none;
+      }
+    }
+    .banner-img {
+      width: 8rem;
+    }
+
+    label input:checked {
+      height: 100vh;
+    }
+
+    label input:checked + .menu .hamburger {
+      .fechar{
+        width: 2rem;
+      }
+    }
+    label input:checked + .menu + ul {
+      top: 0rem;
+      width: 50vw;
+      right: 0;
+      padding-top: 9vh;
+      padding-left: 2rem;
+      padding-bottom: 3vh;
+      gap: unset;
+      justify-content: space-between;
+      .icons{
+        display: flex;
+        gap: 1.6rem;
+        img{
+          height: 2rem;
+        }
+      }
+      p{
+        margin-top: 3vh;
+        font-size: 1.2rem;
+      }
+    }
+
+    label ul {
+      top: 50%;
+      left: 50%;
+      height: 60vh;
+    }
+
+    ul {
+      gap: 0;
+
+      li {
+        position: relative;
+        a {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+  }
+  @media screen and (min-width: 701px) and (max-width: 1260px) {
+    height: 16rem;
+    .banner-img {
+      width: 12rem;
+    }
+    .nav-right{
+      padding-right: 5%;
+    }
+    .hamburger{
+      .abrir{
+        font-size: 2rem;
+      }
+      .fechar{
+        display: none;
+      }
+    }
+
+    label input:checked {
+      height: 80vh;
+    }
+
+    label input:checked + .menu .hamburger {
+      .fechar{
+        width: 3rem;
+      }
+    }
+
+    label input:checked + .menu + ul {
+      top: 0rem;
+      width: 50vw;
+      right: 0;
+      padding-top: 7vh;
+      gap: 1.5vh;
+      .icons{
+        display: flex;
+        gap: 1.6rem;
+        img{
+          height: 2rem;
+        }
+      }
+      p{
+        margin-top: 2vh;
+        font-size: 1.6rem;
+      }
+    }
+
+    label ul {
+      top: 50%;
+      left: 50%;
+      height: 60vh;
+    }
+
+    ul {
+      gap: 0;
+
+      li {
+        position: relative;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+
+        a {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,849 @@
+---
+title: Lídia Gusmão - Médicos da pele. De verdade.
+layout: "base.njk"
+cssPath: "/css/queixas.css"
+---
+
+{% include 'nav3.njk' %}
+<header>
+    <div class="header-title">
+        <h1>queixas e áreas de tratamento</h1>
+    </div>
+</header>
+
+<h1 id="changeTitle">Tratamento para estrias</h1>
+
+<div class="wrap-content">
+    <!-- Não alterar essa parte -->
+<aside class="left-table">
+    <div class="table-itens">
+        <button class="select selected" id="flacidez">
+            <p>Flacidez ???</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="rugas">
+            <p>Rugas dinâmicas</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="hiperidrose">
+            <p>Hiperidrose ???</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="pescoco">
+            <p>Pescoço ???</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="olheiras">
+            <p>Olheiras</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="negra">
+            <p>Pele negra ???</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="papada">
+            <p>Papada</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="estrias">
+            <p>Estrias</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="melasma">
+            <p>Melasma</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="intimo">
+            <p>Tratamento íntimo</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="cicatrizes">
+            <p>Cicatrizes de acne</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button class="select" id="calvicie">
+            <p>Calvície e alopecia</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        
+    </div>
+    <a href="/tratamentos" class="blueButton"> 
+        <img src="../img/flecha-voltar.png" alt="">
+        <p>ver todos os tratamentos</p>
+    </a>
+</aside>
+
+<section class="content" id="content">
+    <div class="right-content">
+        <img src="../img/queixas/.png" alt="">
+        <div class="info-text">
+            <p>
+                As alopecias são um conjunto de doenças caracterizadas pela rápida perda de fios do couro cabeludo ou de qualquer outra região do corpo. Existem vários tipos de alopecia, cada uma delas com uma causa e, consequentemente, os tratamentos  serão feitos de acordo com a causa específica.
+            </p>
+            <p>
+                A alopecia androgenética (ou calvície) é um tipo de alopecia herdada geneticamente e se caracteriza pelo pareamento e afinamento progressivo dos cabelos. Pode estar presente em ambos os sexos, mas ela é bem mais comum entre os homens, afetando cerca de 50% da população masculina. A sua maior complicação é a perda permanente dos cabelos. Chegar a esse ponto, entretanto, é cada vez mais raro com os diversos tratamentos clínicos e cirúrgicos disponíveis. É fundamental que se busque o dermatologista logo aos primeiros sinais de alopecia.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+</section>
+</div>
+
+{% include 'footer.njk' %}
+
+<!-- Script que altera as paginas -->
+
+<script>
+  const section = document.getElementById("content");
+  const urlParams = new URLSearchParams(window.location.search);
+  let selected = urlParams.get("selection");
+  let padrao = "flacidez"
+  const title = document.getElementById("changeTitle")
+
+ window.onload = () => {
+    if (selected) {
+      selectById(selected);
+    } else {
+      selectById(padrao); // Carregar o padrão (miopia)
+    }
+};
+
+  // Função para resetar a seleção
+  function resetSelection() {
+    const items = document.querySelectorAll(".selected");
+    items.forEach((item) => item.classList.remove("selected"));
+  }
+
+  // Função para atualizar a seleção
+  const flacidez = document.getElementById("flacidez");
+  flacidez.addEventListener("click", () => {
+    resetSelection();
+    selected = "flacidez";
+    flacidez.classList.add("selected");
+    updateSection();
+  });
+
+  const rugas = document.getElementById("rugas");
+  rugas.addEventListener("click", () => {
+    resetSelection();
+    selected = "rugas";
+    rugas.classList.add("selected");
+    updateSection();
+  });
+
+  const hiperidrose = document.getElementById("hiperidrose");
+  hiperidrose.addEventListener("click", () => {
+    resetSelection();
+    selected = "hiperidrose";
+    hiperidrose.classList.add("selected");
+    updateSection();
+  });
+
+  const pescoco = document.getElementById("pescoco");
+  pescoco.addEventListener("click", () => {
+    resetSelection();
+    selected = "pescoco";
+    pescoco.classList.add("selected");
+    updateSection();
+  });
+
+  const olheiras = document.getElementById("olheiras");
+  olheiras.addEventListener("click", () => {
+    resetSelection();
+    selected = "olheiras";
+    olheiras.classList.add("selected");
+    updateSection();
+  });
+
+  const negra = document.getElementById("negra");
+  negra.addEventListener("click", () => {
+    resetSelection();
+    selected = "negra";
+    negra.classList.add("selected");
+    updateSection();
+  });
+
+  const papada = document.getElementById("papada");
+  papada.addEventListener("click", () => {
+    resetSelection();
+    selected = "papada";
+    papada.classList.add("selected");
+    updateSection();
+  });
+  const estrias = document.getElementById("estrias");
+  estrias.addEventListener("click", () => {
+    resetSelection();
+    selected = "estrias";
+    estrias.classList.add("selected");
+    updateSection();
+  });
+  const melasma = document.getElementById("melasma");
+  melasma.addEventListener("click", () => {
+    resetSelection();
+    selected = "melasma";
+    melasma.classList.add("selected");
+    updateSection();
+  });
+  const intimo = document.getElementById("intimo");
+  intimo.addEventListener("click", () => {
+    resetSelection();
+    selected = "intimo";
+    intimo.classList.add("selected");
+    updateSection();
+  });
+  const cicatrizes = document.getElementById("cicatrizes");
+  cicatrizes.addEventListener("click", () => {
+    resetSelection();
+    selected = "cicatrizes";
+    cicatrizes.classList.add("selected");
+    updateSection();
+  });
+  const calvicie = document.getElementById("calvicie");
+  calvicie.addEventListener("click", () => {
+    resetSelection();
+    selected = "calvicie";
+    calvicie.classList.add("selected");
+    updateSection();
+  });
+
+  function selectById(id) {
+    resetSelection();
+    selected = id;
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("selected");
+      updateSection();
+    }
+  }
+
+  // Função para atualizar o conteúdo da seção
+  function updateSection() {
+    switch (selected) {
+      case "flacidez":
+        title.innerText = "Flacidez"
+        section.innerHTML = `
+     <div class="right-content">
+        <img src="../img/queixas/flacidez.png" alt="">
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+  `
+  ;
+        break;
+      case "rugas":
+        title.innerText = "Tratamento de Rugas dinâmicas"
+        section.innerHTML = `
+            <div class="right-content">
+        <img src="../img/queixas/rugas.png" alt="">
+        <div class="info-text">
+           <p>
+               Não há como evitar totalmente o aparecimento das rugas, porém com os diversos tratamentos dermatológicos disponíveis podemos diminuir muito sua intensidade ou adiá-las um pouco, de forma natural.
+                <br/><br/>
+                É importante sabermos que existem dois tipos de rugas: as rugas dinâmicas e estáticas.
+                <br/><br/>
+                As rugas dinâmicas são as linhas que se formam pela contração muscular. Na nossa face, os músculos ficam ligados na pele, permitindo que realizemos os movimentos de expressão, como sorrir, chorar ou ficarmos bravos. Como consequência destas contrações, surgem rugas em locais como na testa, entre as sobrancelhas e os pés de galinha, que são visíveis somente com o rosto em movimento.
+                <br/><br/>
+                Já as rugas estáticas são aquelas rugas permanentes, que já marcaram a pele de forma definitiva e podem ser vistas mesmo quando o rosto está em repouso. Essas rugas aparecem por consequência de anos de repetição das rugas dinâmicas. Podemos usar como semelhança uma folha de papel, que de tanto ser dobrada, acaba criando um vinco permanente.
+                <br/><br/>
+                O Botox® é um tratamento eficaz no tratamento das rugas dinâmicas e, consequentemente, na prevenção das estáticas. A toxina botulínica pode ser aplicada em vários músculos específicos da nossa face, como:
+           </p>
+           <h2>
+               Pés de galinha
+           </h2>
+           <p>
+               Os pés de galinha ou rugas periorbitárias são uma das primeiras a surgirem no processo do envelhecimento. Em alguns pacientes, elas já podem ser notadas por volta dos 30 anos. Elas são causadas pelas contrações repetidas do músculo orbicular da pálpebra, um músculo com formato circular ao redor dos olhos. O uso da toxina botulínica nesta região ameniza os pés de galinha e eleva a cauda da sobrancelha, abrindo mais o olhar.
+           </p>
+           <h2>
+               Região da glabela
+           </h2>
+           <p>
+               A aplicação na região da glabela (entre as sobrancelhas), promove o relaxamento dos músculos, que quando contraídos causam rugas profundas, verticais ou horizontais. Tais rugas costumam causar a impressão de que a pessoa está “brava” e por isso são associadas a uma expressão negativa. O tratamento dessa área é fundamental e tem como resultado uma aparência mais relaxada e evita que esse vinco se instale entre as sobrancelhas.
+           </p>
+           <h2>
+               Região Frontal
+           </h2>
+           <p>
+               Quando aplicado na região da testa (músculo frontal), o Botox® permite a suavização das rugas horizontais, que costumam surgir na região com o passar do tempo. Além disso, o tratamento do músculo frontal permite a elevação ou arqueamento da sobrancelha e consequentemente maior abertura do olhar.
+           </p>
+           <h2>
+               Código de barras (rugas periorais)
+           </h2>
+           <p>
+               Mais conhecidas como “código de barras”, essas rugas que aparecem acima e ao redor dos lábios, surgem principalmente por causa dos constantes movimentos na região.  As rugas periorais se agravam com a perda da elasticidade da pele e hábitos inadequados, como o fumo, por exemplo.
+           </p>
+           <p>
+               A aplicação da toxina botulínica relaxa essa musculatura, principalmente no lábio superior, melhorando o aspecto das rugas. A dose adequada é muito baixa, para que não ocorram resultados artificiais e fique bem imperceptível. Quando as rugas já estão instaladas (estáticas), esse procedimento pode ser associado ao preenchimento com ácido hialurônico para melhores resultados.
+           </p>
+           <h2>
+               Celulite de queixo (rugas no mento)
+           </h2>
+           <p>
+               Os furinhos no queixo que algumas pessoas têm ao falar e dão aspecto de celulite no queixo podem ser tratados com toxina botulínica. O músculo mentoniano, quando se contrai com muita força, pode deixar o queixo com aspecto retraído, prejudicando a harmonia facial. O tratamento pode ser associado ao preenchimento com ácido hialurônico, caso se tenha a necessidade de melhorar a projeção do queixo.
+           </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+`;
+        break;
+      case "olheiras":
+        title.innerText = "Tratamento para Olheiras"
+        section.innerHTML = `
+              <div class="right-content">
+        <img src="../img/queixas/olheiras.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Tratamento para Olheiras?
+            </h2>
+            <p>
+                Ninguém quer ter um rosto com aspecto cansado e as olheiras podem fazer toda a diferença nessa aparência descansada ou não. Muitas vezes, mesmo com muito corretivo e maquiagem, elas continuam lá.
+            </p>
+            <p>
+                Aqui na clínica temos diversas opções de tratamento. Após uma avaliação médica, direcionamos o paciente para a opção de tratamento mais indicada para cada caso. É muito importante entendermos que as olheiras são multifatoriais e elas devem ser classificadas em seus subtipos:
+            </p>
+            <h2>
+                Olheiras com cor escura
+            </h2>
+            <p>
+                Geralmente esse tipo de olheiras tem origem genética ou aparece após inflamação no local. A cor escura é decorrente do excesso de melanina (o pigmento que dá a cor e o bronzeamento à pele). O tratamento de olheiras desse tipo se dá com clareadores usados em casa, lasers e peelings químicos específicos para olheiras.
+            </p>
+            <h2>
+                Olheiras com cor arroxeada
+            </h2>
+            <p>
+                Aparecem pelo afinamento dos tecidos das pálpebras (redução de colágeno e gordura), deixando aparecer, por transparência, a cor arroxeada das veias e músculos. Nesse caso, o tratamento é bem difícil, podendo ser  empregados alguns lasers para tratamento vascular.
+            </p>
+            <h2>
+                Olheiras causadas por olhos fundos
+            </h2>
+            <p>
+                Esse tipo de olheira é decorrente da falta de tecido (gordura e colágeno) na pálpebra, causando um “degrau” entre a pálpebra e a bochecha. Muitas vezes também, a parte mais funda está localizada abaixo das bolsas das pálpebras, causando também um “degrau” após as bolsas de gordura. Essas olheiras fundas, devido ao efeito de sombra no local, parecem ainda mais escuras, mesmo não havendo pigmento propriamente dito na olheira e só de se tratar a profundidade, as olheiras parecem mais claras.  
+            </p>
+            <p>
+                Muitas vezes não conseguimos disfarçar as olheiras de jeito nenhum, mesmo com muita maquiagem, principalmente quando são fundas. E pra isso não há creme nem maquiagem que dê jeito. Nestes casos, o tratamento mais indicado é o preenchimento com ácido hialurônico. Este procedimento irá “nivelar” a pele, diminuindo o aspecto fundo, cansado.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+        `;
+        break;
+      case "estrias":
+        title.innerText = "Tratamento para Estrias"
+        section.innerHTML = `
+                <div class="right-content">
+        <img src="../img/queixas/estrias.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Tratamento para Estrias?
+            </h2>
+            <p>
+                As estrias, comuns em mulheres, porém também vista em homens, são cicatrizes causadas por uma ruptura das fibras elásticas e colágenas presentes na derme e são motivo de incômodo para muitas pessoas.
+            </p>
+            <h2>
+                Quais as principais causas de estrias?
+            </h2>
+            <ul>
+                <li>
+                    Aumento rápido de peso;
+                </li>
+                <li>
+                    Gravidez;
+                </li>
+                <li>
+                    Colocação de próteses de silicone;
+                </li>
+                <li>
+                    Distúrbios hormonais;
+                </li>
+                <li>
+                    Uso de alguns medicamentos, principalmente de corticoides;
+                </li>
+                <li>
+                    Uso de anabolizantes ou hipertrofia muscular muito grande.
+                </li>
+            </ul>
+            <p>
+                Estes estiramentos abruptos da pele geram ruptura das fibras, deixando marcas lineares no local. Elas podem coçar e arder, mas em geral aparecem de forma silenciosa e sem nenhum sintoma aparente.
+            </p>
+            <p>
+                As estrias podem ser classificadas em recentes e antigas. As estrias recentes  são caracterizadas pela cor rósea ou arroxeada e geralmente respondem melhor aos tratamentos. Essa cor indica que o tecido não foi completamente prejudicado e há sangue circulando na região. Já o segundo tipo, as estrias antigas,  são caracterizadas pelo aspecto esbranquiçado e são mais difíceis de responder às medidas terapêuticas.
+            </p>
+            <h2>
+                Quais são as opções de tratamento?
+            </h2>
+            <ul>
+                <li>
+                    IPCA (Indução Percutânea de Colágeno com Agulhas) ou microagulhamento: um tratamento em que são usadas diversas agulhas esterilizadas e de aço cirúrgico, provocando pequenas punções, que induzirão o aumento da vasodilatação, estimularão a formação de colágeno e também aumentarão a absorção de alguns medicamentos aplicados direto na pele. Os resultados podem ser notados entre 15 e 30 dias após o procedimento e a quantidade de sessões varia de 1 a 3, dependendo de cada caso.
+                </li>
+                <li>
+                    Laser Fracionado Não Ablativo (Etherea): que promove microperfurações na camada superficial da pele, que se abre na camada mais profunda, destruindo e aquecendo as fibras de sustentação, melhorando a textura e alisando a pele. Os resultados são notados já na primeira sessão, o número de sessões varia entre 1 e 4, dependendo de cada caso.
+                </li>
+            </ul>
+            <h2>
+                Qual o melhor tratamento para mim?
+            </h2>
+            <p>
+                Isso realmente é uma pergunta difícil. Cada caso será avaliado individualmente pelo dermatologista, de acordo com a cor e o aspecto das estrias. Geralmente, associar as técnicas é a melhor solução. Esses tratamentos citados acima também podem ser associados aos peelings químicos em consultório e uso de medicamentos em domicílio.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "papada":
+        title.innerText = "Tratamento para Papada"
+        section.innerHTML = `
+                 <div class="right-content">
+        <img src="../img/queixas/papada.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Tratamento para Papada?
+            </h2>
+            <p>
+                A pele do pescoço perde força e elasticidade à medida que envelhecemos, resultando na formação de linhas horizontais na superfície dessa região, além de flacidez local, comumente referida como “papada”. A genética, a idade e o efeito sanfona são as causas mais comuns do volume e aspecto caído dessa área.  Além do envelhecimento, pessoas com alto índice de gordura corporal costumam ter papada, mas nesses casos nem sempre há flacidez.
+            </p>
+            <p>
+                Devido à sua localização, a papada é muito notada, causando muitas vezes insatisfações estéticas. A melhora da papada restitui uma aparência mais esbelta e define melhor o contorno facial. A gordura submentoniana (abaixo do queixo) e a flacidez da região cervical são queixas que até há pouco tempo só podiam ser tratadas através de procedimentos cirúrgicos. Atualmente, dispomos de procedimentos modernos e minimamente invasivos que atuam destruindo as células de gordura locais e estimulando a produção de colágeno com consequente efeito tensor dessa área.
+            </p>
+            <p>
+                Em geral, os tratamentos são indicados dependendo do tipo de papada: com depósito de gordura ou flacidez.
+            </p>
+            <h2>
+                Papadas por depósito de gordura:
+            </h2>
+            <p>
+                <strong>Mesoterapia de papada:</strong> Também conhecida como “lipo sem cortes”, ela se caracteriza por pequenas injeções de ácido desoxicólico no local com excesso de gordura.  Este ácido é feito a partir de uma molécula existente em nosso organismo, proveniente dos ácidos biliares e é usado para induzir a lipólise, ou seja, a destruição das células de gordura locais. Uma vez destruídos, os adipócitos não podem mais armazenar gordura.
+            </p>
+            <p>
+                Esse procedimento é  pouco doloroso, rápido e  realizado com anestésico tópico. O paciente pode retornar às suas atividades normais imediatamente. Os resultados ficam mais perceptíveis de 15 a 30 dias após a sessão. O dermatologista  indicará o  número de sessões necessárias: geralmente de 3 a 4 sessões com intervalos de 30 a 40 dias entre elas. Os resultados podem ser ainda melhores se associados ao preenchimento com ácido hialurônico, Sculptra e aplicação de Botox®, alcançando uma melhor harmonização facial.
+            </p>
+            <h2>
+                Papada por flacidez:
+            </h2>
+            <p>
+                Nesses casos, não adianta a destruição de células gordurosas, pois em geral os pacientes com flacidez são até magros. Nesse segundo tipo de papada, os tratamentos são voltados para o estímulo de colágeno na região, podendo ser feitos com Sculptra, Radiesse, Fio Silhouette ou Laser Ulthera.
+            </p>
+            <p>
+                É muito importante que a flacidez da face também seja tratada, pois a flacidez vem como um “bloco”, desde cima até embaixo. De nada adianta tratarmos somente o pescoço, se vem um excesso de pele caindo desde lá de cima.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "melasma":
+        title.innerText = "Tratamento para Melasma e Manchas"
+        section.innerHTML = `
+<div class="right-content">
+        <img src="../img/queixas/melasma.png" alt="">
+        <div class="info-text">
+            <p>
+                Aquelas manchas amarronzadas que surgem na pele, especialmente no rosto devido à exposição solar excessiva, durante a gravidez ou por quem fez uso de anticoncepcionais por muito tempo têm tratamento. Pode-se associar os tratamentos tópicos feitos em casa com procedimentos feitos em consultório pelo seu dermatologista, como peelings clareadores, lasers e a mais moderna tecnologia de Indução Percutânea de Colágeno com Agulhas (IPCA).
+            </p>
+            <h2>
+                O que é melasma? 
+            </h2>
+            <p>
+                O melasma consiste numa dermatose muito comum, caracterizada pelo aparecimento de manchas acastanhadas e irregulares na pele, principalmente na face, como nas maçãs do rosto, testa, nariz e lábio superior. Essas manchas surgem principalmente em mulheres, após os 30 anos, devido à exposição solar excessiva, durante a gravidez ou por quem fez uso de anticoncepcionais por muito tempo.
+            </p>
+            <h2>
+                Qual a sua causa?
+            </h2>
+            <p>
+                A causa  do melasma ainda é desconhecida, porém gera um aumento da atividade de uma forma desorganizada  dos melanócitos (células que produzem melanina na epiderme), estimulada por hormônios ou luz. Apesar de não evoluir para uma complicação mais grave, as pessoas que o têm sofrem com graves problemas de socialização e psicológico devido ao seu impacto na aparência facial.
+            </p>
+            <h2>
+                Quais são os tipos de melasma?
+            </h2>
+            <ul>
+                <li>
+                    Melasma epidérmico: acontece quando a formação de melanina se instala apenas na epiderme – primeira camada da pele, que tem a função de proteger o corpo das agressões externas;
+                </li>
+                <li>
+                    Melasma dérmico: neste caso, o melasma atinge a camada mais profunda da pele – a derme, localizada entre a epiderme e a hipoderme – o que torna as manchas mais difíceis de serem tratadas;
+                </li>
+                <li>
+                    Melasma misto: é quando as manchas afetam tanto a epiderme, quanto a derme. 
+                </li>
+            </ul>
+            <h2>
+                Como tratar o melasma?
+            </h2>
+            <p>
+                Mesmo sendo comum, o tratamento do melasma sempre foi um grande desafio para os dermatologistas em geral. Ao contrário do que muitas pessoas pensam, muitas vezes tratamentos agressivos e a laser, podem até piorar o melasma. Portanto, o tratamento deve sempre ser feito por dermatologista especialista. É muito importante que o tratamento seja uma combinação do tratamento domiciliar com procedimentos em consultório.
+            </p>
+            <h2>
+                Como prevenir o surgimento do melasma?
+            </h2>
+            <ul>
+                <li>
+                    Usar filtro solar com FPS 30, no mínimo;
+                </li>
+                <li>
+                    Usar o filtro solar sempre com cor para a face;
+                </li>
+                <li>
+                    Barreiras físicas como chapéus e bonés contendo proteção UV;
+                </li>
+                <li>
+                    Uso de antioxidantes, com orientação médica. 
+                </li>
+            </ul>
+            <h2>
+                Quais são as opções de tratamento em consultório?
+            </h2>
+            <ul>
+                <li>
+                    Peelings químicos superficiais;
+                </li>
+                <li>
+                    IPCA (Indução Percutânea de Colágeno com Agulhas) mais comumente conhecido como microagulhamento;
+                </li>
+                <li>
+                    Drug Delivery: introdução de substâncias através de pequenas agulhas nas camadas superficiais da pele;
+                </li>
+                <li>
+                    Luz Intensa Pulsada.
+                </li>
+                <li>
+                    Laser Acroma
+                </li>
+            </ul>
+            <p>
+                Esses tratamentos são capazes de clarear as manchas gradualmente e promover uma melhora significativa na textura da pele dos pacientes.
+            </p>
+
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "intimo":
+        title.innerText = "Rejuvenescimento Íntimo"
+        section.innerHTML = `
+<div class="right-content">
+        <img src="../img/queixas/intimo.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Rejuvenescimento Íntimo?
+            </h2>
+            <p>
+                A região genital feminina sofre modificações relacionadas à evolução natural do amadurecimento e do próprio envelhecimento. Associado a isso, fatores extras como gravidez, obesidade, nutrição, tabagismo e até a constituição genética podem resultar em um agravamento desse processo.
+            </p>
+            <p>
+                Tais mudanças podem levar à flacidez da região vulvar, ressecamento genital, perda da sensibilidade sexual, redução da libido e até mesmo dor e falta de lubrificação durante a relação sexual. Muitas mulheres hoje em dia têm essas queixas mas não sabem que tipo de profissional médico buscar.
+            </p>
+            <p>
+                Outras apenas gostariam de melhorar a flacidez vaginal, deixando a pele mais rosada e jovem. A novidade é que se pode fazer isso tudo sem cirurgia com os tratamentos de rejuvenescimento íntimo, que renovam a autoestima e ampliam a satisfação sexual. Atualmente alguns dermatologistas dispõem de métodos modernos e eficazes em consultório que podem rejuvenescer a região genital.
+
+            </p>
+            <h2>
+                O que podemos obter de resultados com as técnicas de rejuvenescimento íntimo?
+            </h2>
+            <ul>
+                <li>
+                    Melhora da flacidez dos grandes lábios;
+                </li>
+                <li>
+                    Recuperação do volume dos grandes lábios;
+                </li>
+                <li>
+                    Diminuição da aparência dos pequenos lábios;
+                </li>
+                <li>
+                    Melhora do tônus (força muscular e elasticidade) vaginal e consequentemente melhora da libido;
+                </li>
+                <li>
+                    Clareamendo das regiões vulvar/inguinal e perianal;
+                </li>
+                <li>
+                    Melhora do aspecto e textura da pele vulvar;
+                </li>
+                <li>
+                    Melhora da sudorese da região genital;
+                </li>
+                <li>
+                    Melhora da incontinência urinária de esforço;
+                </li>
+                <li>
+                    Melhora da lubrificação genital.
+                </li>
+            </ul>
+            <p>
+                Com intervenções minimamente invasivas, é possível remodelar e rejuvenescer a região genital da paciente, devolvendo-lhe suas características estéticas e funcionais.
+            </p>
+            <h2>
+                Quais são os procedimentos estéticos mais comumente realizados nesta região?
+            </h2>
+            <ul>
+                <li>
+                    Peelings químicos íntimos;
+                </li>
+                <li>
+                    Aplicação de ácido poliláctico para estímulo de colágeno;
+                </li>
+                <li>
+                    Preenchimento com ácido hialurônico dos grandes lábios e púbis;
+                </li>
+                <li>
+                    Aplicação de toxina botulínica para hiperidrose;
+                </li>
+            </ul>
+            <p>
+                Os procedimentos são seguros, feitos no próprio consultório do dermatologista, praticamente indolores e permitem à mulher retornar à sua rotina de trabalho normalmente no mesmo dia. São sempre feitos em parceria com o ginecologista, não doem e poupam o colo do útero. É preciso estar em dia com o preventivo ginecológico.
+            </p>
+            <p>
+                Como é a recuperação das pacientes após os procedimentos?
+            </p>
+            <p>
+                Pode haver descamação leve, arroxeamento leve do local, dependendo do procedimento que foi realizado, mas em todos eles a paciente está recuperada totalmente em no máximo uma semana, quando as atividades sexuais podem ser retomadas.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "cicatrizes":
+        title.innerText = "Tratamento para cicatrizes de acne"
+        section.innerHTML = `
+                <div class="right-content">
+        <img src="../img/queixas/cicatrizes.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Tratamento para Cicatrizes de Acne? 
+            </h2>
+            <p>
+                Embora a acne não cause efeitos graves ou sistêmicos, muitas vezes se torna grave por deixar sequelas. Alguns casos muito agressivos ou que não foram devidamente tratados podem deixar cicatrizes permanentes. Essas cicatrizes na face tendem a ser distróficas e profundas e podem afetar bastante a autoestima de algumas pessoas.
+            </p>
+            <p>
+                A melhor forma de não ter cicatrizes de acne é tratar agressivamente as espinhas, tão logo elas apareçam, principalmente em pessoas com tendência pessoal ou familiar a desenvolver cicatrizes de acne.
+            </p>
+            <p>
+                Uma vez instaladas, os tratamentos planejados precisam ser direcionados às camadas mais profundas da pele, pois as lesões são muito profundas. Por isso, apenas alguns tratamentos específicos, feitos por dermatologistas habilitados, alcançam esse êxito. Não podemos esquecer que tratam-se de cicatrizes, logo os tratamentos serão mais agressivos e demandam muita técnica.
+            </p>
+            <p>
+                O melhor tratamento para cada caso deve ser decidido pelo dermatologista, após detalhada avaliação dos tipos de cicatrizes presentes. Quando nos referimos, genericamente,  ao termo cicatriz de acne, estamos falando de pelo menos quatro tipos diferentes de lesões. Cada uma dessas lesões é abordada e tratada de forma diferente, uma da outra.
+            </p>
+            <h2>
+                Quais são os tratamentos mais indicados para as cicatrizes de acne? 
+            </h2>
+            <ul>
+                <li>
+                    Preenchimentos com ácido hialurônico ou bioestimuladores de colágeno;
+                </li>
+                <li>
+                    Técnica de Indução Percutânea de Colágeno com Agulhas (IPCA): realizada por meio de um equipamento em forma de rolo de policarbonato, constituído por microagulhas estéreis, alinhadas simetricamente em fileiras – o Dermaroller;
+                </li>
+                <li>
+                    Laser Fracionado: laser que tem alta afinidade pela água da nossa pele, promovendo sua destruição e consequente cicatrização, com estímulo à produção de colágeno;
+                </li>
+                <li>
+                    Microdermoabrasão (Peeling de Cristal): indicado para cicatrizes mais superficiais, casos mais leves.
+                </li>
+            </ul>
+            <h2>
+                Quantas sessões serão necessárias? 
+            </h2>
+            <p>
+                Seja qual tratamento for escolhido, serão necessárias pelo menos três sessões. A repetição dos tratamentos, o estímulo repetido, é receita de sucesso. A combinação de técnicas diferentes gera melhores resultados, pois cada uma delas gera um estímulo diferente, específico, para cada um dos diversos tipos de cicatrizes. O somatório de diferentes técnicas de tratamento é melhor do que uma única técnica, repetida várias vezes.
+            </p>
+
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+      break;
+      case "calvicie":
+        title.innerText = "Calvície e Alopecia"
+        section.innerHTML = `
+                 <div class="right-content">
+        <img src="../img/queixas/calvicie.png" alt="">
+        <div class="info-text">
+            <p>
+                As alopecias são um conjunto de doenças caracterizadas pela rápida perda de fios do couro cabeludo ou de qualquer outra região do corpo. Existem vários tipos de alopecia, cada uma delas com uma causa e, consequentemente, os tratamentos  serão feitos de acordo com a causa específica.
+            </p>
+            <p>
+                A alopecia androgenética (ou calvície) é um tipo de alopecia herdada geneticamente e se caracteriza pelo pareamento e afinamento progressivo dos cabelos. Pode estar presente em ambos os sexos, mas ela é bem mais comum entre os homens, afetando cerca de 50% da população masculina. A sua maior complicação é a perda permanente dos cabelos. Chegar a esse ponto, entretanto, é cada vez mais raro com os diversos tratamentos clínicos e cirúrgicos disponíveis. É fundamental que se busque o dermatologista logo aos primeiros sinais de alopecia.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+      break;
+        default:
+        title.innerText = ""
+        section.innerHTML = `
+        
+        `;
+        break;
+    }
+  }
+</script>

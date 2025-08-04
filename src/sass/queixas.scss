@@ -4,7 +4,7 @@ header{
     width: 100vw;
     height: 35rem;
     position: relative;
-    background-color: $background3;
+    background-color: $marrom;
     .header-title{
         display: flex;
         align-items: center;
@@ -14,8 +14,9 @@ header{
         h1{
             font-size: 3rem;
             line-height: 2.6rem;
-            letter-spacing: 5%;
+            letter-spacing: 10%;
             font-weight: 400;
+            color: $branco;
         }
     }
     @media screen and (max-width: 700px){
@@ -70,9 +71,6 @@ header{
         }
     }
     }
-}
-.header-tricologia{
-    background-color: #d1b19d;
 }
 
 #changeTitle{
