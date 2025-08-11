@@ -32,19 +32,19 @@ cssPath: "/css/home.css"
     <div class="left-back"></div>
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <a href="">
+        <a href="/tratamentos#dermatologia">
           <img src="../img/dermatologia.png" alt="">
           <h2>Dermatologia clínica e cirúrgica</h2>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="">
+        <a href="/tratamentos#tricologia">
           <img src="../img/tricologia.png" alt="">
           <h2>Tricologia</h2>
         </a>
       </div>
       <div class="swiper-slide">
-        <a href="">
+        <a href="/tratamentos#cosmiatria">
           <img src="../img/cosmiatria.png" alt="">
           <h2>Cosmiatria</h2>
         </a>
@@ -58,7 +58,7 @@ cssPath: "/css/home.css"
       <img src="../img/svg/next.svg" alt="">
     </div>
   </div>
-  <a href="" class="blueButton">conheça nossos setores</a>
+  <a href="tratamentos" class="blueButton">conheça nossos setores</a>
 </section>
 
 <section class="equipe">
@@ -66,7 +66,7 @@ cssPath: "/css/home.css"
   <div class="right-equipe">
     <h1>Nossa equipe</h1>
     <p>Sua pele merece um cuidado especializado e personalizado. Nossa clínica reúne um time de médicas especialistas que atende a todas as peles e gêneros, oferecendo tratamentos focados no gerenciamento do envelhecimento, com resultados naturais e baseados na dermatologia regenerativa, para restaurar e preservar a saúde da sua pele.</p>
-    <a href="" class="blueButton">conheça nossa equipe</a>
+    <a href="/equipe" class="blueButton">conheça nossa equipe</a>
   </div>
 </section>
 
@@ -148,16 +148,16 @@ cssPath: "/css/home.css"
 </section>
 
 <div class="pre-footer">
-  <img src="../../img/pre-footer.png" alt="">
+  <img id="changeImage" src="../../img/pre-footer.png" alt="">
     <div class="pre-right">
         <div class="right-title">
                 <h1><span class="salt2">Venha conhecer nosso espaço pensado para cuidar de você.</h1>
         </div>
-        <div class="right-info">
-                <p><strong>UNIDADE IPANEMA</strong></p>
-                <p>UNIDADE PRAÇA MAHATMA GHANDI</p>
+        <div class="right-info selector">
+                <p class="selected" id="ipanema">UNIDADE IPANEMA</p>
+                <p id="mahatma">UNIDADE PRAÇA MAHATMA GHANDI</p>
         </div>
-        <div class="right-info">
+        <div class="right-info" id="content">
                 <p><strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550 <br/>
                       Sala 313 | Rio de Janeiro, RJ | 22410-002
                 </p>
@@ -214,3 +214,75 @@ cssPath: "/css/home.css"
         },
       });
     </script>
+
+    <!-- script para troca de enderecos pre-footer -->
+    <script>
+      const section = document.getElementById("content");
+      const image = document.getElementById("changeImage");
+      let padrao = "ipanema"
+
+      // Função para resetar a seleção
+      function resetSelection() {
+        const items = document.querySelectorAll(".selected");
+        items.forEach((item) => item.classList.remove("selected"));
+      }
+
+      // Função para atualizar a seleção
+      const ipanema = document.getElementById("ipanema");
+      ipanema.addEventListener("click", () => {
+        resetSelection();
+        selected = "ipanema";
+        ipanema.classList.add("selected");
+        updateSection();
+      });
+
+      const mahatma = document.getElementById("mahatma");
+      mahatma.addEventListener("click", () => {
+        resetSelection();
+        selected = "mahatma";
+        mahatma.classList.add("selected");
+        updateSection();
+      });
+
+      function selectById(id) {
+        resetSelection();
+        selected = id;
+        const element = document.getElementById(id);
+        if (element) {
+          element.classList.add("selected");
+          updateSection();
+        }
+      }
+
+      // Função para atualizar o conteúdo da seção
+      function updateSection() {
+        switch (selected) {
+          case "ipanema":
+            image.src = "../img/pre-footer.png"
+            section.innerHTML = `
+      <p><strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550 <br/>
+                          Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+      `
+      ;
+            break;
+          case "mahatma":
+            image.src = "../img/pre-footer2.png"
+            section.innerHTML = `
+                  <p>
+              <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2 <br/>
+              Sala 621 | Edifício do Cinema Odeon <br/>
+              Rio de Janeiro, RJ | 20031-100
+            </p>
+    `;
+            break;
+            default:
+              section.innerHTML = `
+                <p><strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550 <br/>
+                          Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+              `
+        }
+      }
+    </script>
+

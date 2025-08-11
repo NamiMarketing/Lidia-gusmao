@@ -84,110 +84,166 @@ header{
     }
 }
 
-#changeTitle{
-    font-size: 4rem;
-    line-height: 6rem;
-    letter-spacing: 5%;
-    margin: 0 auto 8.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    padding-top: 11rem;
-}
-
-.wrap-content{
-        display: flex;
-        gap: 12.5rem;
-        width: 90%;
+.botulinica{
+    width: 85%;
+    margin: auto;
+    padding-top: 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+        font-weight: 700;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+    }
+    .botulinica-itens{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        grid-template-rows: repeat(2, 1fr);
+        .botulinica-item{
+            position: relative;
+            width: 40rem;
+            height: 50rem;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            h2{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3rem;
+                line-height: 4rem;
+                letter-spacing: 10%;
+                color: $branco;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-family: $articulat;
+                text-align: center;
+                width: 25rem;
+            }
+        }
+        .first{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .second{
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .third{
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .fourth{
+            grid-column: 3;
+            grid-row: 2;
+        }
+    }
+    a{
         margin: auto;
-        padding-bottom: 11rem;
-    .left-table{
-                width: 31%;
-                h3{
-                    font-size: 2rem;
-                    line-height: 2.8rem;
-                    letter-spacing: 5%;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    margin-bottom: 4.4rem
-                }
-                p{
-                    font-size: 2rem;
-                    line-height: 2rem;
-                    letter-spacing: 5%;
-                    font-weight: 300;
-                }
-                .table-itens{
-                    margin-bottom: 4.4rem;
-                    button{
-                        display: flex;
-                        justify-content: space-between;
-                        border: none;
-                        border-bottom: 1px solid $background2;
-                        padding: 2rem 0;
-                        transition: 0.3s;
-                        width: 100%;
-                        background-color: $background;
-                    }
-                    button:first-of-type{
-                        margin-top: -2rem;
-                    }
-                    button:hover{
-                        background-color: #CBB3A033;
-                        p{
-                            font-weight: 600;
-                            transition: 0.3s;
-                        }
-                    }
-                }
-                .selected{
-                    background-color: #CBB3A033 !important;
-                    p{
-                        font-weight: 600;
-                    };
-                }
-    }  
-    .content{
-        flex: 1;
-    }  
-    .right-content{
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-        width: 100%;
-        >img{
-                    aspect-ratio: 715/700;
-                    width: 715px;
-                    height: auto;
-                    object-fit: cover;
-                    margin-bottom: 5rem;
+    }
+}
+.hialuronico{
+    width: 85%;
+    margin: auto;
+    padding-top: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding-bottom: 15rem;
+    h1{
+        font-size: 4rem;
+        line-height: 4rem;
+        font-weight: 700;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+    }
+    .hialuronico-itens{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        grid-template-rows: repeat(5, 1fr);
+        .hialuronico-item{
+            position: relative;
+            width: 40rem;
+            height: 50rem;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            h2{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3rem;
+                line-height: 4rem;
+                letter-spacing: 10%;
+                color: $branco;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-family: $articulat;
+                text-align: center;
+                width: 32rem;
+            }
         }
-        h2{
-                    font-size: 2.4rem;
-                    line-height: 3rem;
-                    letter-spacing: 4%;
-                    font-weight: 600;
-                    text-transform: uppercase;
+        .first{
+            grid-column: 1;
+            grid-row: 1;
         }
-        p, li{
-                    font-size: 2rem;
-                    line-height: 3rem;
-                    letter-spacing: 5%;
+        .second{
+            grid-column: 2;
+            grid-row: 1;
         }
-        ul{
-                    list-style: disc;
-                    margin-left: 3rem;
+        .third{
+            grid-column: 3;
+            grid-row: 1;
         }
-        .info-text{
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-            width: 715px;
+        .fourth{
+            grid-column: 2;
+            grid-row: 2;
         }
-        .adress{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 3rem;
-                    width: 60%;
+        .fifth{
+            grid-column: 3;
+            grid-row: 2;
         }
+        .sixth{
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .seventh{
+            grid-column: 2;
+            grid-row: 3;
+        }
+        .eighth{
+            grid-column: 1;
+            grid-row: 4;
+        }
+        .ninth{
+            grid-column: 2;
+            grid-row: 4;
+        }
+        .tenth{
+            grid-column: 3;
+            grid-row: 4;
+        }
+        .eleventh{
+            grid-column: 2;
+            grid-row: 5;
+        }
+        .twelfth{
+            grid-column: 3;
+            grid-row: 5;
+        }
+    }
+    a{
+        margin: auto;
     }
 }

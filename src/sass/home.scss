@@ -327,6 +327,7 @@ header{
             top: 0;
             right: 0;
             z-index: 4;
+            cursor: pointer;
             .swiper-button-next2, .swiper-button-prev2{
               width: 1.6rem;
               height: 3rem;
@@ -483,6 +484,15 @@ header{
             line-height: 3rem;
             font-weight: 400;
             letter-spacing: 8%;
+        }
+        .selector{
+            p{
+                cursor: pointer;
+            }
+        }
+        .selected{
+            font-weight: bold;
+            pointer-events: none;
         }
         .right-info{
             display: flex;
