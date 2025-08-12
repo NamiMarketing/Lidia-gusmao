@@ -1,0 +1,150 @@
+@use 'index' as *;
+
+header{
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    .header-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 90vh;
+        z-index: 2;
+        object-fit: cover;
+    }
+    .right-text{
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        right: 7%;
+        p{
+            color: $branco;
+            font-size: 2.2rem;
+            line-height: 3rem;
+            letter-spacing: 5%;
+            font-family: $articulat;
+            font-weight: 400;
+        }
+    }
+    .left-text{
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        left: 7%;
+        transform: translateY(-25%);
+        h1{
+            font-size: 5.4rem;
+            line-height: 5.4rem;
+            letter-spacing: 2%;
+            color: $branco;
+            font-weight: 400;
+            margin-bottom: 2.8rem;
+        }
+    }
+   
+    @media screen and (max-width: 700px){
+        width: 100vw;
+        height: 60vh;
+        position: relative;
+        .header-img{
+            height: 60vh;
+            object-fit: cover;
+        }
+        .header-title{
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            z-index: 10;
+            text-shadow: 1px 1px 2px $preto;
+            h1{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                width: 65%;
+                margin-top: 1.6rem;
+            }
+        }
+    }
+    @media screen and (min-width:701px) and (max-width:1260px){
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+        .header-img{
+            height: 80vh;
+            object-fit: cover;
+        }
+    .header-title{
+        position: absolute;
+        top: 45%;
+        left: 7%;
+        z-index: 10;
+        text-shadow: 1px 1px 2px $preto;
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+        p{
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+            width: 70%;
+            margin-top: 2rem;
+        }
+    }
+    }
+}
+
+.equipe{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    padding: 12rem 0;
+    justify-content: center;
+    h1{
+        font-size: 5.8rem;
+        line-height: 7rem;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+    }
+    p{
+        font-size: 2rem;
+        line-height: 2.8rem;
+        letter-spacing: 5%;
+        width: 42rem;
+        margin: 2.5rem 0 10rem;
+    }
+    .wrap-equipe{
+        display: flex;
+        column-gap: 2rem;
+        row-gap: 5rem;
+        flex-wrap: wrap;
+        .equipe-item{
+            display: flex;
+            flex-direction: column;
+            width: 40rem;
+            height: 63rem;
+            h3{
+                font-size: 2.2rem;
+                line-height: 2.2rem;
+                letter-spacing: 5%;
+                text-transform: uppercase;
+                font-family: $articulat;
+                margin-top: 3rem;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+            h4{
+                font-size: 2rem;
+                line-height: 2rem;
+                letter-spacing: 5%;
+                color: $bege;
+                font-family: $articulat;
+                font-weight: 400;
+            }
+        }
+    }
+}

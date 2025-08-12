@@ -1,0 +1,467 @@
+---
+title: Lídia Gusmão - Médicos da pele. De verdade.
+layout: "base.njk"
+cssPath: "/css/cosmiatria.css"
+---
+
+{% include 'nav3.njk' %}
+<header>
+    <div class="header-title">
+        <img src="../img/cosmiatria/cosmiatria-header.svg" alt="">
+        <h1>cosmiatria</h1>
+    </div>
+</header>
+
+<h1 id="changeTitle">Fios de PDO</h1>
+
+<div class="wrap-content">
+    <!-- Não alterar essa parte -->
+<aside class="left-table">
+    <div class="table-itens">
+        <a href="/injetaveis">
+            <p>Injetáveis</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/bioestimuladores" class="chosen">
+            <p>Bioestimuladores</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/bioremodeladores">
+            <p>Bioremodeladores</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <button id="fios" class="selected">
+            <p>Fios de PDO</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button id="ipca">
+            <p>IPCA (Microagulhamento)</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button id="mmp">
+            <p>MMP Facial ???</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+        <button id="peelings">
+            <p>Peelings</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
+    </div>
+    <a href="/tratamentos" class="blueButton"> 
+        <img src="../img/flecha-voltar.png" alt="">
+        <p>ver todos os tratamentos</p>
+    </a>
+</aside>
+
+<section class="content" id="content">
+    <div class="right-content">
+        <img src="../img/cosmiatria/peelings.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Peeling Químico?
+            </h2>
+            <p>
+                Um peeling químico consiste na aplicação de substâncias que estimulam a renovação da pele, uma vez que promove uma descamação da mesma, trocando-a por uma pele “nova”.  
+            </p>
+            <h2>
+                Quais os tipos de peelings que existem?
+            </h2>
+            <p>
+                Os peelings podem ser químicos e físicos. Os químicos são realizados através da aplicação de diferentes ácidos no consultório do dermatologista. Já nos físicos ou mecânicos são utilizadas substâncias abrasivas e esfoliantes para renovar essa pele, como, por exemplo, os peelings de cristal e diamante.
+            </p>
+            <p>
+                Os peelings podem também ser classificados entre superficiais, médios e profundos, de acordo com a camada da pele que atingem. Os mais realizados atualmente são os peelings superficiais, uma vez que apresentam menos riscos aos pacientes.  Os peelings superficiais geralmente são feitos em séries e sua descamação costuma ser fina, enquanto os médios e profundos são realizados em aplicações únicas, com descamação intensa e formação de crostas. Já não são mais tão realizados atualmente peelings médios e profundos, pois podem causar manchas na pele e dispomos de tecnologias mais modernas e eficazes para atingir essas camadas mais profundas, como os tratamentos a  laser, por exemplo.
+            </p>
+            <p>
+                Alguns dos agentes utilizados para a realização dos peelings químicos são: ácido salicílico, solução de Jessner, ácido glicólico e ácido retinóico. Cada paciente deve ser avaliado previamente pelo seu dermatologista para a escolha da substância ideal em cada caso.
+            </p>
+            <h2>
+                Quais as indicações dos peelings superficiais?
+            </h2>
+            <ul>
+                <li>
+                    Sardas e melasma;
+                </li>
+                <li>
+                    Lesões pré-malignas, como as ceratoses actínicas;
+                </li>
+                <li>
+                    Auxílio no tratamento da acne;
+                </li>
+                <li>
+                    Poros e alterações na textura da pele.
+                </li>
+            </ul>
+            <h2>
+                Como é a recuperação da pele após os peelings?
+            </h2>
+            <p>
+                Após o peeling, a pele fica mais sensível, avermelhada e ressecada. Após dois dias, aproximadamente, se inicia a descamação e a pele se refaz entre 5 e 7 dias. Durante esse período é importante não se expor ao sol, não tentar “arrancar” as pelinhas que ficam se formando e seguir corretamente todas as indicações do dermatologista. É importante também evitar depilação com cera na face durante este período.
+            </p>
+            <h2>
+                Quais as contraindicações aos peelings?
+            </h2>
+            <ul>
+                <li>
+                    Exposição solar;
+                </li>
+                <li>
+                    Gravidez;
+                </li>
+                <li>
+                    Hábito de “cutucar” a pele.
+                </li>
+            </ul>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+</section>
+</div>
+
+{% include 'footer.njk' %}
+
+<!-- Script que altera as paginas -->
+
+<script>
+  const section = document.getElementById("content");
+  const urlParams = new URLSearchParams(window.location.search);
+  let selected = urlParams.get("selection");
+  let padrao = "fios"
+  const title = document.getElementById("changeTitle")
+
+ window.onload = () => {
+    if (selected) {
+      selectById(selected);
+    } else {
+      selectById(padrao);
+    }
+};
+
+  // Função para resetar a seleção
+  function resetSelection() {
+    const items = document.querySelectorAll(".selected");
+    items.forEach((item) => item.classList.remove("selected"));
+  }
+
+  // Função para atualizar a seleção
+  const fios = document.getElementById("fios");
+  fios.addEventListener("click", () => {
+    resetSelection();
+    selected = "fios";
+    fios.classList.add("selected");
+    updateSection();
+  });
+
+  const ipca = document.getElementById("ipca");
+  ipca.addEventListener("click", () => {
+    resetSelection();
+    selected = "ipca";
+    ipca.classList.add("selected");
+    updateSection();
+  });
+
+  const mmp = document.getElementById("mmp");
+  mmp.addEventListener("click", () => {
+    resetSelection();
+    selected = "mmp";
+    mmp.classList.add("selected");
+    updateSection();
+  });
+
+  const peelings = document.getElementById("peelings");
+  peelings.addEventListener("click", () => {
+    resetSelection();
+    selected = "peelings";
+    peelings.classList.add("selected");
+    updateSection();
+  });
+
+  function selectById(id) {
+    resetSelection();
+    selected = id;
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("selected");
+      updateSection();
+    }
+  }
+
+  // Função para atualizar o conteúdo da seção
+  function updateSection() {
+    switch (selected) {
+      case "fios":
+        title.innerText = "Fios de PDO"
+        section.innerHTML = `
+<div class="right-content">
+        <img src="../img/cosmiatria/fios.png" alt="">
+        <div class="info-text">
+            <p>
+                Sabe-se que as queixas de flacidez e rugas causam bastante incômodo com o passar dos anos. Por isso, felizmente, atualmente dispomos de diferentes técnicas para seu controle e prevenção! Uma das opções mais modernas de que dispomos é o tratamento com os fios de sustentação de PDO (polidioxanona). Esses fios, uma vez introduzidos na pele, são capazes de promover o efeito de reposicionamento dos tecidos, e também de estimular a produção local de colágeno pelo próprio organismo.
+            </p>
+            <p>
+                O procedimento é simples, realizado no consultório médico, com duração de cerca de uma hora e recuperação relativamente simples. Os fios são inseridos na pele após realização de anestesia local.
+            </p>
+            <p>
+                Diferentes áreas podem ser abordadas com diferentes finalidades. Os fios de sustentação de PDO podem ser indicados para tratamento da flacidez facial e do pescoço, e melhora de ruguinhas de difícil controle que são as rugas periorais e periorbitais ( em volta da boca e dos olhos ). É fundamental uma avaliação minuciosa de cada paciente a fim de definir quais as áreas que mais se beneficiariam desse tratamento.
+            </p>
+            <p>
+                Existe, atualmente, uma variedade de subtipos de fios de sustentação de PDO com diferentes estruturas e particularidades que permitem resultados cada vez mais precisos e naturais. Por isso, também, é fundamental que o procedimento seja realizado por um profissional treinado para tal. A aplicação de fios de sustentação de PDO é um procedimento interessante principalmente para aqueles que não desejam realizar tratamentos extremamente invasivos como os tratamentos cirúrgicos.
+            </p>
+            <p>
+                Outra vantagem da aplicação de fios de sustentação de PDO é a possibilidade de tratar áreas da pele que tenham pouca resposta a outras modalidades de tratamento como a área dos olhos. Diferente dos fios utilizados no passado, os fios de sustentação de PDO são completamente degradados pelo nosso organismo com o passar do tempo, não deixando nenhum material residual. Após o período de sua permanência nos tecidos, a grande mudança que nota-se diz respeito ao tão desejado colágeno que melhora em termos quantitativos e qualitativos.
+            </p>
+            <p>
+                Assim sendo, trata-se de um tratamento moderno e versátil que, principalmente, quando associado a outras técnicas pode mudar o ritmo do envelhecimento cutâneo de forma menos invasiva do que as usadas no passado.
+            </p>
+
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+  `
+  ;
+        break;
+      case "ipca":
+        title.innerText = "IPCA (Microagulhamento)"
+        section.innerHTML = `
+            <div class="right-content">
+        <img src="../img/cosmiatria/ipca.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o IPCA (Indução Percutânea de Colágeno com Agulhas)?
+            </h2>
+            <p>
+                A Indução Percutânea de Colágeno com Agulhas (IPCA), também conhecida como microagulhamento, é uma técnica muito eficaz no tratamento de diversas questões que podem incomodar homens e mulheres de várias idades.
+            </p>
+            <h2>
+                Como essa técnica é realizada?
+            </h2>
+            <p>
+                O Dermaroller é o aparelho usado nessa técnica. Ele consiste num dispositivo com mais de 80 agulhinhas estéreis, que podem ter diferentes tamanhos, variando de 0,5mm a 2,5 mm. Dependendo da indicação clínica de cada paciente, o dermatologista vai escolher o tamanho adequado do Dermaroller.
+            </p>
+            <p>
+                O procedimento deve ser feito com toda assepsia, em ambiente estéril, com aparelho descartável e individual. Atualmente temos visto muitos profissionais não qualificados realizando a técnica e até mesmo alguns pacientes comprando para uso domiciliar, o que traz enormes riscos de infecção e manchas.
+            </p>
+            <h2>
+                Quais suas principais indicações?
+            </h2>
+            <ul>
+                <li>
+                    Cicatrizes de acne;
+                </li>
+                <li>
+                    Cicatrizes cirúrgicas, como de cesariana, por exemplo;
+                </li>
+                <li>
+                    Poros dilatados;
+                </li>
+                <li>
+                    Estrias;
+                </li>
+                <li>
+                    Melasma;
+                </li>
+                <li>
+                    Queda de cabelo e calvície;
+                </li>
+                <li>
+                    Rugas finas.
+                </li>
+            </ul>
+            <h2>
+                Como age o Dermaroller na pele?
+            </h2>
+            <p>
+                A injúria das pequenas agulhas da IPCA estimula a produção de fibras de colágeno da camada mais profunda da pele para a mais superficial, regenerando-a e trazendo uma pele mais viçosa, firme e com menos marcas.
+            </p>
+            <h2>
+                Como é a recuperação após o procedimento?
+            </h2>
+            <p>
+                A recuperação é diretamente proporcional ao tipo de tratamento que foi feito. Dizemos que o IPCA pode ser um tratamento leve ou agressivo, dependendo de cada caso.
+            </p>
+            <p>
+                No tratamento mais superficial, a pele fica levemente vermelha no dia do procedimento, estando totalmente recuperada com cerca de 5 dias. No dia seguinte ao tratamento, já é possível o retorno às atividades, com o uso de filtro solar. Já no tratamento mais profundo, no dia do tratamento é necessário o paciente ir direto para casa e demora cerca de uma semana para a pele se recuperar.
+            </p>
+            <h2>
+                O IPCA pode ser feito em qualquer tipo de pele?
+            </h2>
+            <p>
+                Sim! Pode também ser utilizado em peles negras, essa é uma dúvida frequente. É contraindicado em peles com lesões de acne ativas (espinhas) no dia da sessão.
+            </p>
+            <h2>
+                Quantas sessões serão necessárias?
+            </h2>
+            <p>
+                O número de sessões vai variar de acordo com o tipo de pele, idade e o “problema” que o paciente tem. O intervalo entre as sessões é de 30 a 45 dias.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+`;
+        break;
+      case "mmp":
+        title.innerText = "MMP"
+        section.innerHTML = `
+             <div class="right-content">
+                <img src="../img/.png" alt="">
+                <div class="info-text">
+                    
+                </div>
+            
+                <!-- não retirar -->
+                <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+                <div class="adress">
+                    <p>
+                        <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                        Rio de Janeiro, RJ | 20031-100
+                    </p>
+                    <p>
+                        <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                        Sala 313 | Rio de Janeiro, RJ | 22410-002
+                    </p>
+                    <p>
+                        <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                        +55 21 2232-5778 | +55 2 3852-4678
+                    </p>
+            
+                </div>
+            </div>
+        `;
+        break;
+      case "peelings":
+        title.innerText = "Peelings"
+        section.innerHTML = `
+                <div class="right-content">
+        <img src="../img/cosmiatria/peelings.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é o Peeling Químico?
+            </h2>
+            <p>
+                Um peeling químico consiste na aplicação de substâncias que estimulam a renovação da pele, uma vez que promove uma descamação da mesma, trocando-a por uma pele “nova”.  
+            </p>
+            <h2>
+                Quais os tipos de peelings que existem?
+            </h2>
+            <p>
+                Os peelings podem ser químicos e físicos. Os químicos são realizados através da aplicação de diferentes ácidos no consultório do dermatologista. Já nos físicos ou mecânicos são utilizadas substâncias abrasivas e esfoliantes para renovar essa pele, como, por exemplo, os peelings de cristal e diamante.
+            </p>
+            <p>
+                Os peelings podem também ser classificados entre superficiais, médios e profundos, de acordo com a camada da pele que atingem. Os mais realizados atualmente são os peelings superficiais, uma vez que apresentam menos riscos aos pacientes.  Os peelings superficiais geralmente são feitos em séries e sua descamação costuma ser fina, enquanto os médios e profundos são realizados em aplicações únicas, com descamação intensa e formação de crostas. Já não são mais tão realizados atualmente peelings médios e profundos, pois podem causar manchas na pele e dispomos de tecnologias mais modernas e eficazes para atingir essas camadas mais profundas, como os tratamentos a  laser, por exemplo.
+            </p>
+            <p>
+                Alguns dos agentes utilizados para a realização dos peelings químicos são: ácido salicílico, solução de Jessner, ácido glicólico e ácido retinóico. Cada paciente deve ser avaliado previamente pelo seu dermatologista para a escolha da substância ideal em cada caso.
+            </p>
+            <h2>
+                Quais as indicações dos peelings superficiais?
+            </h2>
+            <ul>
+                <li>
+                    Sardas e melasma;
+                </li>
+                <li>
+                    Lesões pré-malignas, como as ceratoses actínicas;
+                </li>
+                <li>
+                    Auxílio no tratamento da acne;
+                </li>
+                <li>
+                    Poros e alterações na textura da pele.
+                </li>
+            </ul>
+            <h2>
+                Como é a recuperação da pele após os peelings?
+            </h2>
+            <p>
+                Após o peeling, a pele fica mais sensível, avermelhada e ressecada. Após dois dias, aproximadamente, se inicia a descamação e a pele se refaz entre 5 e 7 dias. Durante esse período é importante não se expor ao sol, não tentar “arrancar” as pelinhas que ficam se formando e seguir corretamente todas as indicações do dermatologista. É importante também evitar depilação com cera na face durante este período.
+            </p>
+            <h2>
+                Quais as contraindicações aos peelings?
+            </h2>
+            <ul>
+                <li>
+                    Exposição solar;
+                </li>
+                <li>
+                    Gravidez;
+                </li>
+                <li>
+                    Hábito de “cutucar” a pele.
+                </li>
+            </ul>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+    }
+  }
+</script>

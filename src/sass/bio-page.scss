@@ -1,0 +1,238 @@
+@use 'index' as *;
+
+header{
+    width: 100vw;
+    height: 35rem;
+    position: relative;
+    background-color: #A4867d;
+    .header-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.3rem;
+        margin-top: 17.5rem;
+        h1{
+            font-size: 4rem;
+            line-height: 2.6rem;
+            letter-spacing: 10%;
+            font-weight: 400;
+            color: $branco;
+        }
+    }
+    h2{
+        position: absolute;
+        top: 23rem;
+        color: $branco;
+        font-size: 2.6rem;
+        line-height: 3rem;
+        letter-spacing: 15%;
+        font-weight: 300;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media screen and (max-width: 700px){
+        width: 100vw;
+        height: 60vh;
+        position: relative;
+        .header-img{
+            height: 60vh;
+            object-fit: cover;
+        }
+        .header-title{
+            position: absolute;
+            top: 45%;
+            left: 5%;
+            z-index: 10;
+            text-shadow: 1px 1px 2px $preto;
+            h1{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                width: 65%;
+                margin-top: 1.6rem;
+            }
+        }
+    }
+    @media screen and (min-width:701px) and (max-width:1260px){
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+        .header-img{
+            height: 80vh;
+            object-fit: cover;
+        }
+    .header-title{
+        position: absolute;
+        top: 45%;
+        left: 7%;
+        z-index: 10;
+        text-shadow: 1px 1px 2px $preto;
+        h1{
+            font-size: 5rem;
+            line-height: 5rem;
+        }
+        p{
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+            width: 70%;
+            margin-top: 2rem;
+        }
+    }
+    }
+}
+
+.bio{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10rem 0 4rem;
+    gap: 6rem;
+    h1{
+        font-size: 4.4rem;
+        line-height: 6rem;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+    }
+    >p{
+        font-size: 2rem;
+        line-height: 3.2rem;
+        letter-spacing: 5%;
+        width: 82rem;
+        text-align: center;
+    }
+    .wrap-bio{
+        display: flex;
+        gap: 7rem;
+        .item{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+            a{
+                width: 19rem;
+                height: 19rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                h2{
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                    letter-spacing: 4%;
+                    text-transform: uppercase;
+                    width: 12rem;
+                    text-align: center;
+                    font-weight: 400;
+                }
+            }
+            .claro{
+                background-color: $claro;
+            }
+            .back2{
+                background-color: $background2;
+            }
+            .escuro{
+                background-color: $escuro;
+                h2{
+                    color: $branco;
+                }
+            }
+            .marrom{
+                background-color: $marrom;
+                h2{
+                    color: $branco;
+                }
+            }
+            p{
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                letter-spacing: 2%;
+                text-transform: uppercase;
+                text-align: center;
+                width: 19rem;
+            }
+        }
+    }
+}
+.bio2{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10rem 0 20rem;
+    gap: 6rem;
+    h1{
+        font-size: 4.4rem;
+        line-height: 6rem;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+    }
+    >p{
+        font-size: 2rem;
+        line-height: 3.2rem;
+        letter-spacing: 5%;
+        width: 82rem;
+        text-align: center;
+    }
+    .wrap-bio{
+        display: flex;
+        gap: 7rem;
+        .item{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+            a{
+                width: 19rem;
+                height: 19rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                h2{
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                    letter-spacing: 4%;
+                    text-transform: uppercase;
+                    width: 12rem;
+                    text-align: center;
+                    font-weight: 400;
+                }
+            }
+            .claro{
+                background-color: $claro;
+            }
+            .back2{
+                background-color: $background2;
+            }
+            .escuro{
+                background-color: $escuro;
+                h2{
+                    color: $branco;
+                }
+            }
+            .marrom{
+                background-color: $marrom;
+                h2{
+                    color: $branco;
+                }
+            }
+            p{
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                letter-spacing: 2%;
+                text-transform: uppercase;
+                text-align: center;
+                width: 22.5rem;
+            }
+        }
+    }
+}

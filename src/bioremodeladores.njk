@@ -1,0 +1,299 @@
+---
+title: Lídia Gusmão - Médicos da pele. De verdade.
+layout: "base.njk"
+cssPath: "/css/bioestimuladores.css"
+---
+
+{% include 'nav3.njk' %}
+<header>
+    <div class="header-title">
+        <img src="../img/cosmiatria/cosmiatria-header.svg" alt="">
+        <h1>cosmiatria</h1>
+    </div>
+    <h2>bioremodeladores</h2>
+</header>
+
+<section class="select-itens">
+    <h1>Bioremodeladores</h1>
+    <div class="selector-circles">
+        <div class="selection-item selected claro" id="profhilo">
+            <h3>Profhilo ???</h3>
+        </div>
+        <div class="selection-item back2" id="pdrn">
+            <h3>Pdrn ???</h3>
+        </div>
+        <div class="selection-item escuro" id="nctf">
+            <h3>NCTF ???</h3>
+        </div>
+        <div class="selection-item marrom" id="exossomos">
+            <h3>Exossomos ???</h3>
+        </div>
+    </div>
+</section>
+
+<h1 id="changeTitle">Profhilo</h1>
+
+<div class="wrap-content">
+    <!-- Não alterar essa parte -->
+<aside class="left-table">
+    <div class="table-itens">
+        <a href="/injetaveis">
+            <p>Injetáveis</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/bioestimuladores">
+            <p>Bioestimuladores</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/bioremodeladores" class="chosen">
+            <p>Bioremodeladores</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/cosmiatria/?selection=fios">
+            <p>Fios de PDO</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/cosmiatria/?selection=ipca">
+            <p>IPCA (Microagulhamento)</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/cosmiatria/?selection=mmp">
+            <p>MMP Facial</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+        <a href="/cosmiatria/?selection=peelings">
+            <p>Peelings</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </a>
+    </div>
+    <a href="/tratamentos" class="blueButton"> 
+        <img src="../img/flecha-voltar.png" alt="">
+        <p>ver todos os tratamentos</p>
+    </a>
+</aside>
+
+<section class="content" id="content">
+    <div class="right-content">
+        <img src="../img/bioremodeladores/profhilo.png">
+
+        <div class="info-text">
+       
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+</section>
+</div>
+
+{% include 'footer.njk' %}
+
+<!-- Script que altera as paginas -->
+
+
+ 
+<script>
+  const section = document.getElementById("content");
+  const urlParams = new URLSearchParams(window.location.search);
+  let selected = urlParams.get("selection");
+  let padrao = "profhilo"
+  const title = document.getElementById("changeTitle")
+
+ window.onload = () => {
+    if (selected) {
+      selectById(selected);
+    } else {
+      selectById(padrao);
+    }
+};
+
+  // Função para resetar a seleção
+  function resetSelection() {
+    const items = document.querySelectorAll(".selected");
+    items.forEach((item) => item.classList.remove("selected"));
+  }
+
+  // Função para atualizar a seleção
+  const profhilo = document.getElementById("profhilo");
+  profhilo.addEventListener("click", () => {
+    resetSelection();
+    selected = "profhilo";
+    profhilo.classList.add("selected");
+    updateSection();
+  });
+
+  const pdrn = document.getElementById("pdrn");
+  pdrn.addEventListener("click", () => {
+    resetSelection();
+    selected = "pdrn";
+    pdrn.classList.add("selected");
+    updateSection();
+  });
+
+  const nctf = document.getElementById("nctf");
+  nctf.addEventListener("click", () => {
+    resetSelection();
+    selected = "nctf";
+    nctf.classList.add("selected");
+    updateSection();
+  });
+
+  const exossomos = document.getElementById("exossomos");
+  exossomos.addEventListener("click", () => {
+    resetSelection();
+    selected = "exossomos";
+    exossomos.classList.add("selected");
+    updateSection();
+  });
+
+  function selectById(id) {
+    resetSelection();
+    selected = id;
+    const element = document.getElementById(id);
+    if (element) {
+      element.classList.add("selected");
+      updateSection();
+    }
+  }
+
+  // Função para atualizar o conteúdo da seção
+  function updateSection() {
+    switch (selected) {
+      case "profhilo":
+        title.innerText = "Profhilo"
+        section.innerHTML = `
+<div class="right-content">
+        <img src="../img/bioremodeladores/profhilo.png">
+
+        <div class="info-text">
+            
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+  `
+  ;
+        break;
+      case "pdrn":
+        title.innerText = "PDRN"
+        section.innerHTML = `
+            <div class="right-content">
+        <img src="../img/bioremodeladores/pdrn.png">
+
+        <div class="info-text">
+            
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+`;
+        break;
+      case "nctf":
+        title.innerText = "NCTF"
+        section.innerHTML = `
+              <div class="right-content">
+        <img src="../img/bioremodeladores/nctf.png" alt="">
+        <div class="info-text">
+                 
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+        `;
+        break;
+      case "exossomos":
+        title.innerText = "Exossomos"
+        section.innerHTML = `
+                 <div class="right-content">
+        <img src="../img/bioremodeladores/exossomos.png" alt="">
+        <div class="info-text">
+            
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+    }
+  }
+</script>
+
