@@ -22,7 +22,7 @@ header{
             color: $branco;
             font-size: 2.2rem;
             line-height: 3rem;
-            letter-spacing: 5%;
+            letter-spacing: 2%;
             font-family: $articulat;
             font-weight: 400;
         }
@@ -133,9 +133,8 @@ header{
     .wrap-dermatologia{
         display: flex;
         justify-content: space-between;
-        width: 85vw;
         margin: auto;
-        padding-bottom: 6rem;
+        padding:0 10rem 6rem;
         p{
             font-size: 2rem;
             line-height: 3rem;
@@ -147,10 +146,13 @@ header{
             flex-direction: column;
             gap: 7rem;
             h1{
-                font-size: 5rem;
-                line-height: 5rem;
+                font-size: 4.6rem;
+                line-height: 5.3rem;
                 letter-spacing: 5%;
                 text-transform: uppercase;
+            }
+            p{
+                width: 50rem;
             }
         }
         .dermatologia-right{
@@ -265,7 +267,7 @@ header{
         margin:4.4rem 5% 9rem;
     }
     .table{
-        width: 85%;
+        width: 90%;
         margin: auto;
         border: 1px solid $background2;
         border-radius: 20px;
@@ -314,4 +316,8 @@ header{
     .no-right{
         border-right: none;
     }
+}
+
+.no-info{
+    pointer-events: none;
 }

@@ -29,6 +29,7 @@ header{
             font-weight: 400;
             animation: show 9s ease-in;
             position: absolute;
+            width: 51rem;
         }
         img{
             animation: disappear 5s both;
@@ -51,22 +52,23 @@ header{
             height: 60vh;
             object-fit: cover;
         }
-        .header-title{
-            position: absolute;
-            top: 45%;
-            left: 5%;
-            z-index: 10;
-            text-shadow: 1px 1px 2px $preto;
-            h1{
-                font-size: 3rem;
-                line-height: 3rem;
-            }
-            p{
-                font-size: 1.6rem;
-                line-height: 1.9rem;
-                width: 65%;
-                margin-top: 1.6rem;
-            }
+        .text-box{
+            right: unset;
+           h1{
+               display: none;
+           }
+           img{
+               animation: none;
+               width: 18rem;
+           }
+           &:hover{
+               h1{
+                   animation: none;
+               }
+               img{
+                   animation: none
+               }
+           }
         }
     }
     @media screen and (min-width:701px) and (max-width:1260px){
@@ -128,9 +130,42 @@ header{
         line-height: 3.2rem;
         font-weight: 400;
         color: $marrom;
+        letter-spacing: 5%;
         width: 82rem;
         text-align: center;
         margin-top: 7rem;
+    }
+    @media screen and (max-width: 700px) {
+
+        padding: 6rem 0;
+        h2{
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            letter-spacing: 0%;
+            color: $marrom;
+            width: 61rem;
+            text-align: center;
+            margin-bottom: 5.5rem;
+        }
+        .right-image{
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateY(-50%);
+        }
+        a{
+            margin-bottom: 12rem;
+        }
+        p{
+            font-size: 2rem;
+            line-height: 3.2rem;
+            font-weight: 400;
+            color: $marrom;
+            letter-spacing: 5%;
+            width: 82rem;
+            text-align: center;
+            margin-top: 7rem;
+        }
     }
 }
 
@@ -151,6 +186,7 @@ header{
         color: $marrom;
         text-align: center;
         margin-bottom: 8rem;
+        letter-spacing: 5%;
     }
     >a{
         margin: 8rem auto 17rem;
@@ -228,11 +264,12 @@ header{
                 h2{
                     position: absolute;
                     bottom: 0;
+                    font-weight: 700;
                     left: 0;
                     width: 100%;
-                    font-size: 4.2rem;
-                    line-height: 5rem;
-                    letter-spacing: 10%;
+                    font-size: 3.6rem;
+                    line-height: 4.6rem;
+                    letter-spacing: 5%;
                     color: $branco;
                     height: 18rem;
                     display: flex;
@@ -258,7 +295,7 @@ header{
         flex-direction: column;
         justify-content: center;
         h1{
-            font-size: 6rem;
+            font-size: 5.6rem;
             line-height: 6rem;
             color: $marrom;
             text-transform: uppercase;
@@ -282,9 +319,9 @@ header{
   margin: auto;
   .depoimentos-left{
     h2{
-      font-size: 6rem;
+      font-size: 5.6rem;
       line-height: 6rem;
-      width: 50rem;
+      width: 43rem;
       letter-spacing: 5%;
     }
   }
@@ -319,6 +356,9 @@ header{
             line-height: 3rem;
             letter-spacing: 5%;
             margin-top: 4rem;
+            font-family: $articulat;
+            color: $marrom;
+            font-weight: 600;
         }
         .swiper-nav{
             display: flex;
@@ -475,24 +515,33 @@ header{
         background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(246, 237, 226, 0.7) 32%, #F5ECDE 100%);
         padding: 9rem 7% 9rem 25%;
         h1{
-            font-size: 5rem;
-            line-height: 5.6rem;
+            font-size: 4rem;
+            line-height: 4.8rem;
             font-weight: 400;
+            width: 42rem;
+            letter-spacing: 5%;
         }
         p{
             font-size: 2rem;
             line-height: 3rem;
             font-weight: 400;
-            letter-spacing: 8%;
+            letter-spacing: 5%;
         }
         .selector{
             p{
                 cursor: pointer;
+                padding-bottom: 5px;
+                width: fit-content;
+                letter-spacing: 8%;
+            }
+            p:hover{
+                border-bottom: 1px solid;
             }
         }
         .selected{
             font-weight: bold;
             pointer-events: none;
+            border-bottom: 1px solid;
         }
         .right-info{
             display: flex;

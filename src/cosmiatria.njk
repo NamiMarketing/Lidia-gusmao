@@ -46,6 +46,10 @@ cssPath: "/css/cosmiatria.css"
             <p>Peelings</p>
             <img src="../img/svg/right-arrow.svg" alt="">
         </button>
+        <button id="limpeza">
+            <p>Limpeza de pele</p>
+            <img src="../img/svg/right-arrow.svg" alt="">
+        </button>
     </div>
     <a href="/tratamentos" class="blueButton"> 
         <img src="../img/flecha-voltar.png" alt="">
@@ -58,60 +62,46 @@ cssPath: "/css/cosmiatria.css"
         <img src="../img/cosmiatria/peelings.png" alt="">
         <div class="info-text">
             <h2>
-                O que é o Peeling Químico?
+                O que é a Limpeza de Pele?
             </h2>
             <p>
-                Um peeling químico consiste na aplicação de substâncias que estimulam a renovação da pele, uma vez que promove uma descamação da mesma, trocando-a por uma pele “nova”.  
-            </p>
-            <h2>
-                Quais os tipos de peelings que existem?
-            </h2>
-            <p>
-                Os peelings podem ser químicos e físicos. Os químicos são realizados através da aplicação de diferentes ácidos no consultório do dermatologista. Já nos físicos ou mecânicos são utilizadas substâncias abrasivas e esfoliantes para renovar essa pele, como, por exemplo, os peelings de cristal e diamante.
+                A limpeza de pele é um procedimento estético realizado no consultório dermatológico, que tem como objetivo remover impurezas causadas geralmente pela poluição e uso de maquiagem frequente. Ela pode ser feita em todos os tipos de pele: secas, oleosas, normais e mistas.  
             </p>
             <p>
-                Os peelings podem também ser classificados entre superficiais, médios e profundos, de acordo com a camada da pele que atingem. Os mais realizados atualmente são os peelings superficiais, uma vez que apresentam menos riscos aos pacientes.  Os peelings superficiais geralmente são feitos em séries e sua descamação costuma ser fina, enquanto os médios e profundos são realizados em aplicações únicas, com descamação intensa e formação de crostas. Já não são mais tão realizados atualmente peelings médios e profundos, pois podem causar manchas na pele e dispomos de tecnologias mais modernas e eficazes para atingir essas camadas mais profundas, como os tratamentos a  laser, por exemplo.
+                As principais indicações da limpeza de pele são:
             </p>
-            <p>
-                Alguns dos agentes utilizados para a realização dos peelings químicos são: ácido salicílico, solução de Jessner, ácido glicólico e ácido retinóico. Cada paciente deve ser avaliado previamente pelo seu dermatologista para a escolha da substância ideal em cada caso.
-            </p>
-            <h2>
-                Quais as indicações dos peelings superficiais?
-            </h2>
             <ul>
                 <li>
-                    Sardas e melasma;
+                    Remoção de cravos abertos (pontos pretos);
                 </li>
                 <li>
-                    Lesões pré-malignas, como as ceratoses actínicas;
+                    Remoção de comedões fechados (pontos brancos);
                 </li>
                 <li>
-                    Auxílio no tratamento da acne;
-                </li>
-                <li>
-                    Poros e alterações na textura da pele.
+                    Remoção de miliuns (pequenos cistos epidérmicos causados pelo acúmulo de óleo e pele nos poros).
                 </li>
             </ul>
-            <h2>
-                Como é a recuperação da pele após os peelings?
-            </h2>
             <p>
-                Após o peeling, a pele fica mais sensível, avermelhada e ressecada. Após dois dias, aproximadamente, se inicia a descamação e a pele se refaz entre 5 e 7 dias. Durante esse período é importante não se expor ao sol, não tentar “arrancar” as pelinhas que ficam se formando e seguir corretamente todas as indicações do dermatologista. É importante também evitar depilação com cera na face durante este período.
+                Além da remoção dos comedões, que são mais comuns nas peles oleosas, a limpeza de pele também remove as células mortas e mantém a pele macia e saudável. Uma limpeza profunda e profissional tem ação antisséptica, anti-inflamatória, preventiva, relaxante e nutritiva. Ele é um aliado importante nos tratamentos dermatológicos para acne e rejuvenescimento pois aumenta a penetração dos ativos prescritos pelo dermatologista.  
             </p>
-            <h2>
-                Quais as contraindicações aos peelings?
-            </h2>
+            <p>
+                A frequência deste procedimento depende de cada caso. Enquanto algumas peles se beneficiam de limpezas mensais, em alguns casos, uma vez a cada semestre já é o bastante. O dermatologista ou o esteticista farão essa análise. É muito importante que o procedimento seja feito por profissionais capacitados. Esteticistas que trabalham em clínicas dermatológicas são capazes de realizar um trabalho com maior eficácia, já que possuem o suporte médico nas avaliações.
+            </p>
+            <p>
+                Não existem contraindicações e sim situações que exigem maior cuidado, como:
+            </p>
             <ul>
                 <li>
-                    Exposição solar;
+                    Em peles muito sensíveis, que costumam desenvolver alergia e/ou irritação com facilidade, a limpeza de pele deve ser feita com muita cautela e com produtos específicos para esse tipo de pele;
                 </li>
                 <li>
-                    Gravidez;
+                    Outro caso que merece atenção são os pacientes com muitas espinhas. As espinhas, se forem “espremidas” ou manuseadas, podem deixar cicatrizes. Por isso, é muito importante a seleção de um profissional capacitado e cuidadoso.
                 </li>
                 <li>
-                    Hábito de “cutucar” a pele.
+                    A limpeza de pele pode ser realizada em qualquer período do ano, devendo-se evitar porém a exposição ao sol logo após o procedimento, porque devido a esfoliação, a pele pode afinar um pouco, aumentando a chance de manchar. Em locais onde a exposição ao sol e calor é maior, a formação de cravos e a oleosidade da pele aumentam, por isso, esse é um período muito indicado para o procedimento.
                 </li>
             </ul>
+
         </div>
     
         <!-- não retirar -->
@@ -190,6 +180,14 @@ cssPath: "/css/cosmiatria.css"
     resetSelection();
     selected = "peelings";
     peelings.classList.add("selected");
+    updateSection();
+  });
+
+  const limpeza = document.getElementById("limpeza");
+  limpeza.addEventListener("click", () => {
+    resetSelection();
+    selected = "limpeza";
+    limpeza.classList.add("selected");
     updateSection();
   });
 
@@ -440,6 +438,75 @@ cssPath: "/css/cosmiatria.css"
                     Hábito de “cutucar” a pele.
                 </li>
             </ul>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+            `;
+        break;
+      case "limpeza":
+        title.innerText = "Limpeza de Pele"
+        section.innerHTML = `
+                 <div class="right-content">
+        <img src="../img/cosmiatria/limpeza.png" alt="">
+        <div class="info-text">
+            <h2>
+                O que é a Limpeza de Pele?
+            </h2>
+            <p>
+                A limpeza de pele é um procedimento estético realizado no consultório dermatológico, que tem como objetivo remover impurezas causadas geralmente pela poluição e uso de maquiagem frequente. Ela pode ser feita em todos os tipos de pele: secas, oleosas, normais e mistas.  
+            </p>
+            <p>
+                As principais indicações da limpeza de pele são:
+            </p>
+            <ul>
+                <li>
+                    Remoção de cravos abertos (pontos pretos);
+                </li>
+                <li>
+                    Remoção de comedões fechados (pontos brancos);
+                </li>
+                <li>
+                    Remoção de miliuns (pequenos cistos epidérmicos causados pelo acúmulo de óleo e pele nos poros).
+                </li>
+            </ul>
+            <p>
+                Além da remoção dos comedões, que são mais comuns nas peles oleosas, a limpeza de pele também remove as células mortas e mantém a pele macia e saudável. Uma limpeza profunda e profissional tem ação antisséptica, anti-inflamatória, preventiva, relaxante e nutritiva. Ele é um aliado importante nos tratamentos dermatológicos para acne e rejuvenescimento pois aumenta a penetração dos ativos prescritos pelo dermatologista.  
+            </p>
+            <p>
+                A frequência deste procedimento depende de cada caso. Enquanto algumas peles se beneficiam de limpezas mensais, em alguns casos, uma vez a cada semestre já é o bastante. O dermatologista ou o esteticista farão essa análise. É muito importante que o procedimento seja feito por profissionais capacitados. Esteticistas que trabalham em clínicas dermatológicas são capazes de realizar um trabalho com maior eficácia, já que possuem o suporte médico nas avaliações.
+            </p>
+            <p>
+                Não existem contraindicações e sim situações que exigem maior cuidado, como:
+            </p>
+            <ul>
+                <li>
+                    Em peles muito sensíveis, que costumam desenvolver alergia e/ou irritação com facilidade, a limpeza de pele deve ser feita com muita cautela e com produtos específicos para esse tipo de pele;
+                </li>
+                <li>
+                    Outro caso que merece atenção são os pacientes com muitas espinhas. As espinhas, se forem “espremidas” ou manuseadas, podem deixar cicatrizes. Por isso, é muito importante a seleção de um profissional capacitado e cuidadoso.
+                </li>
+                <li>
+                    A limpeza de pele pode ser realizada em qualquer período do ano, devendo-se evitar porém a exposição ao sol logo após o procedimento, porque devido a esfoliação, a pele pode afinar um pouco, aumentando a chance de manchar. Em locais onde a exposição ao sol e calor é maior, a formação de cravos e a oleosidade da pele aumentam, por isso, esse é um período muito indicado para o procedimento.
+                </li>
+            </ul>
+
         </div>
     
         <!-- não retirar -->
