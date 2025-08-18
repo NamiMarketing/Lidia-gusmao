@@ -137,34 +137,40 @@ header{
     }
     @media screen and (max-width: 700px) {
 
-        padding: 6rem 0;
+        padding: 6.5rem 0;
         h2{
             font-size: 1.8rem;
             line-height: 2.4rem;
             letter-spacing: 0%;
-            color: $marrom;
-            width: 61rem;
+            width: 85%;
             text-align: center;
-            margin-bottom: 5.5rem;
+            margin-bottom: 1.5rem;
         }
         .right-image{
             position: absolute;
             right: 0;
             top: 0;
             transform: translateY(-50%);
+            width: 20rem;
+            height: 50rem;
+
+        }
+        .realce-image{
+            aspect-ratio: 31/33;
+            width: 90%;
+            height: auto;
+            object-fit: cover;
+            margin: auto;
         }
         a{
-            margin-bottom: 12rem;
+            margin-bottom: 7.2rem;
         }
         p{
-            font-size: 2rem;
-            line-height: 3.2rem;
-            font-weight: 400;
-            color: $marrom;
-            letter-spacing: 5%;
-            width: 82rem;
-            text-align: center;
-            margin-top: 7rem;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 2%;
+            width: 90%;
+            margin-top: 4.6rem;
         }
     }
 }
@@ -284,6 +290,70 @@ header{
     
         }
     }
+    @media screen and (max-width: 700px) {
+        h1{
+            font-size: 2.8rem;
+            line-height: 2.8rem;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 2%;
+            width: 90%;
+            margin: 0 auto 4.5rem;
+        }
+        >a{
+            margin: 3rem auto 5.5rem;
+        }
+        .swiper1{
+            position: relative;
+            .left-back{
+                width: 9rem;
+            }
+            .right-back{
+                width: 9rem;
+            }
+            .swiper-button-prev1{
+                left: 1.6rem;
+                width: 4rem;
+                height: 4rem;
+                img{
+                    width: 2rem;
+                }
+            }
+            .swiper-button-next1{
+                right: 1.6rem;
+                width: 4rem;
+                height: 4rem;
+                img{
+                    width: 2rem;
+                }
+            }
+            .swiper-slide{
+                aspect-ratio: 36/38;
+                width: 100%;
+                height: auto;
+                a{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    h2{
+                        font-size: 2rem;
+                        line-height: 2.4rem;
+                        letter-spacing: 10%;
+                        height: 10rem;
+                    }
+        
+                }
+        
+            }
+        }
+    }
 }
 
 .equipe{
@@ -308,6 +378,43 @@ header{
             letter-spacing: 5%;
             width: 50rem;
             margin: 12rem 0 6.5rem;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 5.5rem;
+        h1{
+            font-size: 3rem;
+            line-height: 3.2rem;
+            color: $marrom;
+            text-transform: uppercase;
+            width: 15rem;
+            font-weight: 700;
+            letter-spacing: 5%;
+            margin-left: 8%;
+        }
+        >img{
+            aspect-ratio: 1/1;
+            width: 94%;
+            height: auto;
+            object-fit: cover;
+        }
+        .right-equipe{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p{
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                letter-spacing: 2%;
+                width: 86%;
+                margin: 1rem auto 4rem;
+            }
+            a{
+                margin-left: 7%;
+            }
         }
     }
 }
@@ -378,58 +485,71 @@ header{
             }
         }
   }
-//   @media screen and (max-width:700px) {
-//     display: flex;
-//     flex-direction: column;
-//     padding: 9rem 0 8rem;
-//     gap: 5rem;
-//     .depoimentos-left{
-//       display: flex;
-//       flex-direction: column;
-//       gap: 1.6rem;
-//       h3{
-//         font-size: 1.4rem;
-//         line-height: 1.5rem;
-//       }
-//       h2{
-//         font-size: 2.1rem;
-//         line-height: 2.8rem;
-//         text-transform: uppercase;
-//       }
-//       strong{
-//         font-weight: 600;
-//       }
-//     }
-//     .depoimentos-right{
-//         display: flex;
-//         gap: 5rem;
-//         width: 100%;
-//         height: 30rem;
-//         .swiper{
-//             width: 100%;
-//             height: 100%;
-//             margin-top: 1.5rem;
-//         }
-//         p{
-//               font-size: 1.6rem;
-//               line-height: 2.4rem;
-//         }
-//         h4{
-//               font-size: 1.6rem;
-//               line-height: 1.5rem;
-//               letter-spacing: 0%;
-//               margin-top: 3rem;
-//         }
-//         .swiper-nav{
-//             gap: 2rem;
-//             .swiper-button-next, .swiper-button-prev{
-//               width: 1.6rem;
-//               height: 1.3rem;
-//               position: unset;
-//             }
-//         }
-//     }
-//   }
+  @media screen and (max-width:700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    .depoimentos-left{
+        h2{
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        width: 23rem;
+        }
+    }
+    .depoimentos-right{
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        width: 100%;
+        height: 44rem;
+        overflow: hidden;
+        position: relative;
+        .depoimentos-meio{
+        width: 3.1rem;
+        height: 2.7rem;
+        margin-top: 4rem;
+            img{
+                width: 100%;
+            }
+        }
+        .swiper2{
+          width: 100%;
+          height: 100%;
+          margin-top: 0rem;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            width: 100%;
+            letter-spacing: 0%;
+            padding-left: 5rem;
+        }
+        h4{
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            letter-spacing: 2%;
+            margin-top: 2.5rem;
+            padding-left: 5rem;
+        }
+        .swiper-nav{
+            gap: 2.2rem;
+            top: unset;
+            bottom: 0;
+            z-index: 4;
+            cursor: pointer;
+            .swiper-button-next2, .swiper-button-prev2{
+              width: 0.9rem;
+              height: 1.8rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+  }
 }
 
 .voce{
@@ -446,6 +566,17 @@ header{
         letter-spacing: 5%;
         width: 82rem;
     }
+    @media screen and (max-width: 700px) {
+        margin: 6rem auto;
+        gap: 3.2rem;
+        p{
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            text-align: center;
+            width: 90%;
+
+        }
+    }
 }
 
 .espaco{
@@ -457,7 +588,7 @@ header{
         width: 100%;
         height: 100%;
         object-fit: cover;
-    };
+    }
     h1{
         position: absolute;
         top: 5rem;
@@ -484,6 +615,46 @@ header{
         .swiper-pagination-bullet-active{
             background-color: $gelo;
         }
+    }
+    @media screen and (max-width: 700px) {
+        position: relative;
+        aspect-ratio: 1/1;
+        width: 100vw;
+        height: auto;
+        .swiper-slide{
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h1{
+            position: absolute;
+            top: 2.8rem;
+            left: 2.4rem;
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+            letter-spacing: 4%;
+        }
+        .swiper-pagination{
+            position: absolute;
+            top: 6.7rem !important;
+            left: 0 !important;
+            bottom: unset !important;
+            z-index: 3;
+            width: 100%  !important;
+            .swiper-pagination-bullet{
+                width: 50px;
+                height: 2px;
+                background-color: #FCF4E8CC;
+                border-radius: 0;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: $gelo;
+            }
+        } 
     }
 }
 

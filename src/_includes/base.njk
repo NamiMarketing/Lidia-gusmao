@@ -28,7 +28,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Lídia Gusmão - Médicos da pele. De verdade.",
-        "url": "https://confeitariaholandesa.com.br/"
+        "url": "https://clinicalidiagusmao.com.br/"
       }
     </script> -->
 
@@ -55,3 +55,27 @@
     });
   </script>
 </html>
+
+ <!-- script para o menu que abre do mobile -->
+<script>
+    const checkbox = document.querySelector('.menu-btn');
+    const menu = document.querySelector('.menu');
+  
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      // Abrir o menu suavemente
+      menu.classList.add('open');
+      const fullHeight = window.innerHeight + 'px';
+      menu.style.maxHeight = fullHeight;
+    } else {
+      // Fechar o menu suavemente
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        menu.style.maxHeight = '0';
+      });
+      menu.addEventListener('transitionend', () => {
+        menu.classList.remove('open');
+      }, { once: true });
+    }
+  });
+  </script>
