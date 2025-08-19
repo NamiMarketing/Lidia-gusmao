@@ -17,8 +17,17 @@ cssPath: "/css/dermatologia.css"
 <div class="wrap-content">
     <!-- Não alterar essa parte -->
 <aside class="left-table">
-    <h3>Tricologia</h3>
+    <h3 class="tablet-desktop"">Tricologia</h3>
+    <label>
+      <input type="checkbox" />
+      <span class="side-menu">
+        <span class="hamburger only-mobile">
+            <p class="abrir">Menu</p>
+        </span>
+    </span>
     <div class="table-itens">
+        <img src="../../img/logo.png" class="logo only-mobile" />
+        <img src="../../img/svg/fechar.svg" class="fechar only-mobile" />
         <button class="select selected" id="tricoscopia">
             <p>Exame de Tricoscopia</p>
             <img src="../img/svg/right-arrow.svg" alt="">
@@ -43,11 +52,16 @@ cssPath: "/css/dermatologia.css"
             <p>Laser</p>
             <img src="../img/svg/right-arrow.svg" alt="">
         </button>
+        <a href="/tratamentos" class="blueButton tablet-desktop"> 
+            <img src="../img/flecha-voltar.png" alt="">
+            <p>ver todos os tratamentos</p>
+        </a>
     </div>
-    <a href="/tratamentos" class="blueButton"> 
+    <a href="/tratamentos" class="blueButton tablet-desktop"> 
         <img src="../img/flecha-voltar.png" alt="">
         <p>ver todos os tratamentos</p>
     </a>
+    </label>
 </aside>
 
 <section class="content" id="content">
