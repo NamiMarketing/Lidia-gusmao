@@ -46,10 +46,12 @@ header{
    
     @media screen and (max-width: 700px){
         width: 100vw;
-        height: 60vh;
+        aspect-ratio: 36/48;
+        height: auto;
         position: relative;
         .header-img{
-            height: 60vh;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
         }
         .text-box{
@@ -305,7 +307,7 @@ header{
             margin: 0 auto 4.5rem;
         }
         >a{
-            margin: 3rem auto 5.5rem;
+            margin: 3rem auto 7rem;
         }
         .swiper1{
             position: relative;
@@ -666,7 +668,7 @@ header{
     width: 100%;
     height: auto;
     margin-top: -5px;
-    img{
+    >img{
         position:absolute;
         width: 100%;
         top: 0;
@@ -720,33 +722,92 @@ header{
             display: flex;
             flex-direction: column;
             gap: 3rem;
+            a{
+                width: 4rem;
+                img{
+                    width: 100%;
+                }
+            }
         }
     }
-    @media screen and (max-width: 700px){
-        flex-direction: column;
-        gap: 6.8rem;
-        margin: 6rem auto;
-        width: 85%;
+    @media screen  and (max-width: 700px) {
         position: relative;
-        .pre-left{
-            margin: 0;
+        aspect-ratio: 36/56;
+        width: 100%;
+        height: auto;
+        margin-top: -5px;
+        >img{
+            position:absolute;
             width: 100%;
-            gap: 6rem;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            filter: linear-gradient(180deg, rgba(255, 255, 255, 0) 27.68%, rgba(246, 237, 226, 0.8) 45.76%, #F5ECDF 89.06%, #F5ECDE 100%);            
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 27.68%, rgba(246, 237, 226, 0.8) 45.76%, #F5ECDF 89.06%, #F5ECDE 100%);            
+        }
+        .pre-right{
+            aspect-ratio: unset;
+            display: flex;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 25rem;
+            z-index: 5;
+            justify-content: center;
+            gap: 3.4rem;
+            width: 100%;
+            height: auto;
+            padding: 0rem 5%;
+            background: none;
             h1{
-                font-size: 3.2rem;
-                line-height: 3.2rem;
+                font-size: 2rem;
+                line-height: 2.4rem;
+                font-weight: 400;
+                width: 23rem;
+                letter-spacing: 5%;
             }
             p{
-                font-size: 1.6rem;
-                line-height: 2rem;
+                font-size: 1.5rem;
+                line-height: 2.2rem;
+                font-weight: 300;
+                letter-spacing: 2%;
             }
-            .left-info{
-                gap: 2.5rem;
+            .selector{
+                p{
+                    cursor: pointer;
+                    padding-bottom: 5px;
+                    width: fit-content;
+                    letter-spacing: 8%;
+                }
+                p:hover{
+                    border-bottom: 1px solid;
+                }
             }
-        }
-        img{
-            width: 100%;  
-            margin-right: -10%;          
+            .selected{
+                font-weight: bold;
+                pointer-events: none;
+                border-bottom: 1px solid;
+            }
+            .right-info{
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                a{
+                    width: 2.4rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

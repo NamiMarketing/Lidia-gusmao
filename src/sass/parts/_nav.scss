@@ -50,7 +50,6 @@
     }
     .menu {
       clear: both;      
-      max-height: 0;
       display: flex;
       justify-content: center;
       gap: 3.6rem;
@@ -154,10 +153,12 @@
     z-index: 999;
     margin: 0;
     transition: 0.5s;
-    height: 7rem;
+    height: 8rem;
     .logo{
       img{
         width: 2.6rem;
+        position: relative;
+        z-index: 1000;
       }
     }
     .nav-right{
@@ -167,17 +168,36 @@
       justify-content: flex-end;
       padding-right: 5rem;
       width: 100vw;
-    }
-    label .menu {
-      position: absolute;
-      z-index: 1000;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      right: 5%;
-      top: 3rem;
-      img{
-        width: 100%;
+        ul {
+        gap: 1.6rem;
+        background-color: $marrom;
+        padding: 0rem 2.5rem;
+        align-items: flex-start;
+        padding-top: 30vh;
+
+        li {
+          position: relative;
+          padding-bottom: 1rem;
+
+          a {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            letter-spacing: 2%;
+          }
+        }
+         .menu-icons{
+          display: flex !important;
+          gap: 1.2rem;
+          margin-top: 25vh;
+          a{
+            width: 2.6rem;
+            height: 2.6rem;
+            img{
+            width: 100%;
+            height: 100%;
+            }
+          }  
+        }
       }
     }
 
@@ -185,14 +205,7 @@
       display: none;
     }
 
-    label input:checked {
-      height: 100vh;
-      width: 100vw;
-      margin-bottom: 0;
-      padding-left: 0;
-      top: -7.8rem;
-    }
-    label input:checked + .menu + ul {
+    input:checked + .menu {
       opacity: 1;
       flex-direction: column;
       display: flex;
@@ -204,20 +217,7 @@
       padding-left: 2rem;
       padding-top: 15vh;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 20px 0px 0px 20px;
-      .icons{
-        display: flex;
-        gap: 1.2rem;
-        
-        a{
-          width: 3rem;
-          height: 3rem;
-          img{
-          width: 100%;
-          height: 100%;
-          };
-        }  
-      }
+     
     }
 
     label ul {
@@ -232,29 +232,7 @@
       animation: appear 1s ease-in;
     }
 
-    ul {
-      gap: 0;
-
-      li {
-        position: relative;
-        padding-bottom: 1rem;
-
-        a {
-          h3{
-            font-weight: 400;
-            font-size: 2rem;
-            line-height: 100%;
-            letter-spacing: 4%;
-          }
-        }
-        p{
-          margin-top: 7vh;
-          font-size: 1.6rem;
-          line-height: 2.6rem;
-          letter-spacing: 4%;
-        }
-      }
-    }
+    
        .menu-icon{
         position: absolute;      
         right: 2rem;

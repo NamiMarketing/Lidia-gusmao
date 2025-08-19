@@ -131,19 +131,24 @@ cssPath: "/css/home.css"
         <img class="only-mobile" src="../img/espaco1-mob.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="../img/espaco1-mob.png" alt="">
+        <img class="only-desktop" src="../img/espaco2.png" alt="">
+        <img class="only-mobile" src="../img/espaco2-mob.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="../img/espaco1-mob.png" alt="">
+        <img class="only-desktop" src="../img/espaco3.png" alt="">
+        <img class="only-mobile" src="../img/espaco3-mob.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="../img/espaco1-mob.png" alt="">
+        <img class="only-desktop" src="../img/espaco4.png" alt="">
+        <img class="only-mobile" src="../img/espaco4-mob.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="../img/espaco1-mob.png" alt="">
+        <img class="only-desktop" src="../img/espaco5.png" alt="">
+        <img class="only-mobile" src="../img/espaco5-mob.png" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="../img/espaco1-mob.png" alt="">
+        <img class="only-desktop" src="../img/espaco6.png" alt="">
+        <img class="only-mobile" src="../img/espaco6-mob.png" alt="">
       </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -151,7 +156,8 @@ cssPath: "/css/home.css"
 </section>
 
 <div class="pre-footer">
-  <img id="changeImage" src="../../img/pre-footer.png" alt="">
+  <img class="only-desktop" id="changeImage" src="../../img/pre-footer.png" alt="">
+  <img class="only-mobile" id="changeImageMob" src="../../img/pre-footer-mob.png" alt="">
     <div class="pre-right">
         <div class="right-title">
                 <h1 data-aos="fade">Venha conhecer nosso espaço pensado para cuidar de você.</h1>
@@ -164,6 +170,7 @@ cssPath: "/css/home.css"
                 <p><strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550 <br/>
                       Sala 313 | Rio de Janeiro, RJ | 22410-002
                 </p>
+                <a href=""><img src="../../img/svg/whats-azul.svg" alt=""></a>
         </div>
     </div>
 </div>
@@ -222,6 +229,7 @@ cssPath: "/css/home.css"
     <script>
       const section = document.getElementById("content");
       const image = document.getElementById("changeImage");
+      const imageMob = document.getElementById("changeImageMob");
       let padrao = "ipanema"
 
       // Função para resetar a seleção
@@ -262,6 +270,7 @@ cssPath: "/css/home.css"
         switch (selected) {
           case "ipanema":
             image.src = "../img/pre-footer.png"
+            imageMob.src = "../img/pre-footer-mob.png"
             section.innerHTML = `
       <p><strong>IPANEMA</strong> R. Visc. de Pirajá, nº 550 <br/>
                           Sala 313 | Rio de Janeiro, RJ | 22410-002
@@ -271,6 +280,7 @@ cssPath: "/css/home.css"
             break;
           case "mahatma":
             image.src = "../img/pre-footer2.png"
+            imageMob.src = "../img/pre-footer2-mob.png"
             section.innerHTML = `
                   <p>
               <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2 <br/>
