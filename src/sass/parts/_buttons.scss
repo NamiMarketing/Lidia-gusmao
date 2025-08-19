@@ -55,16 +55,14 @@
   align-items: center;
   z-index: 50;
   width: fit-content;
+  cursor: pointer;
   &:hover {
-    filter: brightness(0.7);
+    color: $bege;
+    background-color: $branco;
+    transition: 0.5s;
   }
   @media screen and (max-width: 700px){
-    padding: 1.2rem 0;
-    font-size: 1.4rem;
-    width: 20rem;
-    gap: 6px;
-    img{
-      width: 4px;
-  }
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
   }
 }

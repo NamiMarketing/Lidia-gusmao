@@ -45,27 +45,35 @@ header{
    
     @media screen and (max-width: 700px){
         width: 100vw;
-        height: 60vh;
+        aspect-ratio: 36/48;
+        height: auto;
         position: relative;
         .header-img{
-            height: 60vh;
+            height: 100%;
+            width: 100%;
             object-fit: cover;
         }
-        .header-title{
-            position: absolute;
-            top: 45%;
-            left: 5%;
-            z-index: 10;
-            text-shadow: 1px 1px 2px $preto;
-            h1{
-                font-size: 3rem;
-                line-height: 3rem;
-            }
+        .right-text{
+            z-index: 4;
+            top: 60%;
+            right: unset;
+            left: 7%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
             p{
+                color: $branco;
                 font-size: 1.6rem;
-                line-height: 1.9rem;
-                width: 65%;
-                margin-top: 1.6rem;
+                line-height: 2.2rem;
+            }
+        }
+        .left-text{
+            top: 52%;
+            h1{
+                font-size: 2.6rem;
+                line-height: 2.6rem;
+                letter-spacing: 2%;
+                margin-bottom: 2.8rem;
             }
         }
     }
@@ -123,6 +131,28 @@ header{
             text-transform: uppercase;
         }
     }
+    @media screen and (max-width: 700px){
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 4rem auto 6rem;
+
+        a{
+            gap: 1.2rem;
+            img{
+                width: 6.5rem;
+                height: 6.5rem;
+            }
+            p{
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                width: 15rem;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 .dermatologia{
@@ -177,12 +207,77 @@ header{
                 }
             }
         }
-    
     }
     .wrap-images{
         display: flex;
         gap: 2rem;
         justify-content: space-between;
+    }
+    @media screen and (max-width: 700px){
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        .wrap-dermatologia{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding:0 7% 6rem;
+            width: 100%;
+            p{
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                letter-spacing: 2%;
+            }
+            .dermatologia-left{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: 3.4rem;
+                h1{
+                    font-size: 2.8rem;
+                    line-height: 3.2rem;
+                    width: 24rem;
+                }
+                p{
+                    width: 31rem;
+                }
+            }
+            .dermatologia-right{
+                flex: 1;
+                padding-left: 0;
+                margin-top: 5rem;
+                margin-bottom: 4rem;
+                a{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    border-bottom: 1px solid $background2;
+                    padding: 1.2rem 0;
+                    transition: 0.3s;
+                    img{
+                        width: 12px;
+                    }
+                }
+                a:first-of-type{
+                    margin-top: 0rem;
+                }
+                a:hover{
+                    background-color: #CBB3A033;
+                    p{
+                        font-weight: 600;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        .wrap-images{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1.6rem;
+        }   
     }
 }
 
@@ -239,11 +334,70 @@ header{
             }
         }
     }
+    @media screen and (max-width:700px){
+        width: 100%;
+        margin: 6rem auto 0;
+        h1{
+            font-size: 2.8rem;
+            line-height: 3.2rem;
+            margin:  0 auto 4.6rem;
+        }
+        .wrap-tricologia{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            width: 100%;
+            gap: 4rem;
+            .tricologia-left{
+                flex: 1;
+                width: 100%;
+            }
+            .tricologia-right{
+                flex: 1;
+                width: 85%;
+                margin: auto;
+                p{
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    letter-spacing: 2%;
+                }
+                .item{
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    border-bottom: 1px solid $background2;
+                    padding: 1.2rem 0;
+                    transition: 0.3s;
+                    img{
+                        width: 12px;
+                    }
+                }
+                .item:first-of-type{
+                    margin-top: -2rem;
+                }
+                .item:hover{
+                    background-color: #CBB3A033;
+                    p{
+                        font-weight: 600;
+                        transition: 0.3s;
+                    }
+                }
+                .blueButton{
+                    margin-top: 4rem;
+                }
+            }
+        }
+    }
 }
 
 .reverse{
     margin-right: 0;
     margin-left: auto;
+    @media screen and (max-width:700px){
+        .wrap-tricologia{
+            flex-direction: column;       
+        }
+    }
 }
 
 .queixas{
@@ -315,5 +469,69 @@ header{
     }
     .no-right{
         border-right: none;
+    }
+    @media screen and (max-width:700px){
+        padding-top: 6rem;
+        margin-top: 0rem;
+        padding-bottom: 6rem;
+        h1{
+            font-size: 2.4rem;
+            line-height: 2.6rem;
+            letter-spacing: 4%;
+            margin-left: 5%;
+            width: 23rem;
+        }
+        >p{
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 2%;
+            margin: 2.8rem 5% 4rem;
+        }
+        .table{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .table-item{
+            display: grid;
+            padding: 2.4rem 1.5rem;
+            height: 21.6rem;
+            gap: 1.2rem;
+            h3{
+                font-size: 1.8rem;
+                line-height: 2rem;
+                letter-spacing: 2%;
+                height: 2.5rem;
+            }
+            >p{
+                font-size: 1.6rem;
+                line-height: 2rem;
+                letter-spacing: 0%;
+                height: 10rem;
+            }
+            a{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                p{
+                    font-size: 1.6rem;
+                    line-height: 2rem;   
+                    padding-bottom: 2px;
+                }
+                img{
+                    width: 1rem;
+                }
+            }
+        }
+        .no-bottom{
+            border-bottom: 1px solid $background2;
+        }
+        .no-right{
+            border-right: 1px solid $background2;
+        }
+        .no-bottom-mob{
+            border-bottom: none;
+        }
+        .no-right-mob{
+            border-right: none;
+        }
     }
 }
