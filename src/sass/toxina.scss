@@ -93,6 +93,9 @@ header{
     .swiper{
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6.5rem;
     }
     h1{
         font-size: 3.6rem;
@@ -102,14 +105,11 @@ header{
         text-transform: uppercase;
     }
     .selector-circles{
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
+        height: auto;
         .swiper-slide{
             position: relative;
-            width: 295px;
-            height: 295px;
+            width: 295px !important;
+            height: 295px !important;
             border-radius: 50%;
             cursor: pointer;
             img{
@@ -164,15 +164,18 @@ header{
             line-height: 2rem;
             letter-spacing: 4%;
         }
-        .swiper-wrapper{
+        .swiper{
+            width: 100%;
+            height: 100%;
             display: flex;
-            gap: 0.5rem;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        .swiper-wrapper{
             .swiper-slide{
                 position: relative;
-                width: 95px;
-                height: 95px;
+                width: 95px !important;
+                height: 95px !important; 
                 img{
                     width: 100%;
                     height: 100%;
