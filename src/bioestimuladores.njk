@@ -14,19 +14,21 @@ cssPath: "/css/bioestimuladores.css"
 </header>
 
 <section class="select-itens">
-    <h1>Bioestimuladores</h1>
-    <div class="selector-circles">
-        <div class="selection-item selected claro" id="radiesse">
-            <h3>Radiesse</h3>
-        </div>
-        <div class="selection-item back2" id="sculptra">
-            <h3>Sculptra e elleva</h3>
-        </div>
-        <div class="selection-item escuro no-info" id="harmonyca">
-            <h3>harmonyca</h3>
-        </div>
-        <div class="selection-item marrom no-info" id="ellanse">
-            <h3>Ellansé</h3>
+    <div class="swiper">
+        <h1>Bioestimuladores</h1>
+        <div class="selector-circles swiper-wrapper">
+            <div class="selection-item selected claro swiper-slide" id="radiesse">
+                <h3>Radiesse</h3>
+            </div>
+            <div class="selection-item back2 swiper-slide" id="sculptra">
+                <h3>Sculptra e elleva</h3>
+            </div>
+            <div class="selection-item escuro no-info swiper-slide" id="harmonyca">
+                <h3>harmonyca</h3>
+            </div>
+            <div class="selection-item marrom no-info swiper-slide" id="ellanse">
+                <h3>Ellansé</h3>
+            </div>
         </div>
     </div>
 </section>
@@ -36,40 +38,54 @@ cssPath: "/css/bioestimuladores.css"
 <div class="wrap-content">
     <!-- Não alterar essa parte -->
 <aside class="left-table">
-    <div class="table-itens">
-        <a href="/injetaveis">
-            <p>Injetáveis</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
+    <label>
+        <input type="checkbox" />
+        <span class="side-menu">
+            <span class="hamburger only-mobile">
+                <p class="abrir">Menu</p>
+            </span>
+        </span>
+        <div class="table-itens">
+            <img src="../../img/logo.png" class="logo only-mobile" />
+            <img src="../../img/svg/fechar.svg" class="fechar only-mobile" />
+            <a class="button" href="/injetaveis">
+                <p>Injetáveis</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button chosen" href="/bioestimuladores">
+                <p>Bioestimuladores</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button no-info" href="/bioremodeladores">
+                <p>Bioremodeladores</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=fios">
+                <p>Fios de PDO</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=ipca">
+                <p>IPCA (Microagulhamento)</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button no-info" href="/cosmiatria/?selection=mmp">
+                <p>MMP Facial</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=peelings">
+                <p>Peelings</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a href="/tratamentos" class="blueButton only-mobile"> 
+                <img src="../img/flecha-voltar.png" alt="">
+                <p>ver todos os tratamentos</p>
+            </a>
+        </div>
+        <a href="/tratamentos" class="blueButton tablet-desktop"> 
+            <img src="../img/flecha-voltar.png" alt="">
+            <p>ver todos os tratamentos</p>
         </a>
-        <a href="/bioestimuladores" class="chosen">
-            <p>Bioestimuladores</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/bioremodeladores" class="no-info">
-            <p>Bioremodeladores</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=fios">
-            <p>Fios de PDO</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=ipca">
-            <p>IPCA (Microagulhamento)</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=mmp" class="no-info">
-            <p>MMP Facial</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=peelings">
-            <p>Peelings</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-    </div>
-    <a href="/tratamentos" class="blueButton"> 
-        <img src="../img/flecha-voltar.png" alt="">
-        <p>ver todos os tratamentos</p>
-    </a>
+    </label>
 </aside>
 
 <section class="content" id="content">
@@ -146,8 +162,6 @@ cssPath: "/css/bioestimuladores.css"
 {% include 'footer.njk' %}
 
 <!-- Script que altera as paginas -->
-
-
  
 <script>
   const section = document.getElementById("content");
@@ -398,3 +412,21 @@ cssPath: "/css/bioestimuladores.css"
   }
 </script>
 
+<!-- script para swiper dos itens -->
+     <script>
+      const swiper = new Swiper(".swiper", {
+        spaceBetween: 5,
+        grabCursor: true,
+        loop: true,
+        loopedSlides: 4,
+        breakpoints: {
+            300: {
+                slidesPerView: 3.5,
+            },
+            700: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        }
+      });
+    </script>

@@ -46,6 +46,14 @@ header{
                 width: 16rem;
             }
         }
+        h2{
+            top: 12.5rem;
+            font-size: 1.3rem;
+            line-height: 1.15rem;
+            letter-spacing: 5%;
+            left: 28%;
+            transform: translateX(-10%);
+        }
     }
     @media screen and (min-width:701px) and (max-width:1260px){
         width: 100vw;
@@ -150,6 +158,44 @@ header{
             }
         }
     }
+    @media screen and (max-width: 700px){
+        padding: 6rem 0 4rem;
+        gap: 4rem;
+        h1{
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        >p{
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 2%;
+            width: 100%;
+        }
+        .wrap-bio{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            justify-content: space-between;
+            .item{
+                gap: 1.6rem;
+                a{
+                    width: 15rem;
+                    height: 15rem;
+                    h2{
+                        font-size: 1.4rem;
+                        line-height: 1.7rem;
+                        letter-spacing: 2%;
+                        width: 10rem;
+                    }
+                }
+                p{
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    width: 14rem;
+                }
+            }
+        }
+    }
 }
 .bio2{
     width: 85%;
@@ -223,6 +269,44 @@ header{
                 text-transform: uppercase;
                 text-align: center;
                 width: 22.5rem;
+            }
+        }
+    }
+    @media screen and (max-width: 700px){
+        padding: 3rem 0 8rem;
+        gap: 4rem;
+        h1{
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        >p{
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            letter-spacing: 2%;
+            width: 100%;
+        }
+        .wrap-bio{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            justify-content: space-between;
+            .item{
+                gap: 1.6rem;
+                a{
+                    width: 15rem;
+                    height: 15rem;
+                    h2{
+                        font-size: 1.4rem;
+                        line-height: 1.7rem;
+                        letter-spacing: 2%;
+                        width: 10rem;
+                    }
+                }
+                p{
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    width: 14rem;
+                }
             }
         }
     }
