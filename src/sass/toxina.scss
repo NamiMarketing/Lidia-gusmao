@@ -232,11 +232,11 @@ header{
 }
 
 .wrap-content{
-        display: flex;
-        gap: 12.5rem;
-        width: 90%;
-        margin: auto;
-        padding-bottom: 11rem;
+    display: flex;
+    gap: 12.5rem;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 11rem;
     .left-table{
         width: 31%;
         h3{
@@ -291,28 +291,28 @@ header{
         gap: 5rem;
         width: 100%;
         >img{
-                    aspect-ratio: 715/700;
-                    width: 715px;
-                    height: auto;
-                    object-fit: cover;
-                    margin-bottom: 5rem;
+            aspect-ratio: 715/700;
+            width: 715px;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 5rem;
         }
         h2{
-                    font-size: 2.4rem;
-                    line-height: 3rem;
-                    letter-spacing: 4%;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    font-family: $articulat;
+            font-size: 2.4rem;
+            line-height: 3rem;
+            letter-spacing: 4%;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: $articulat;
         }
         p, li{
-                    font-size: 2rem;
-                    line-height: 3rem;
-                    letter-spacing: 5%;
+            font-size: 2rem;
+            line-height: 3rem;
+            letter-spacing: 5%;
         }
         ul{
-                    list-style: disc;
-                    margin-left: 3rem;
+            list-style: disc;
+            margin-left: 3rem;
         }
         .info-text{
             display: flex;
@@ -321,10 +321,10 @@ header{
             width: 715px;
         }
         .adress{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 3rem;
-                    width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            width: 60%;
         }
     }
   @media screen and (max-width: 700px){
@@ -465,10 +465,10 @@ header{
                 margin-bottom: 0rem;
             }
             h2{
-                font-size: 1.8rem;
-                line-height: 2.4rem;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
                 letter-spacing: 2%;
-                font-weight: 600;
+                font-weight: 700;
                 text-transform: uppercase;
                 width: 30rem;
             }

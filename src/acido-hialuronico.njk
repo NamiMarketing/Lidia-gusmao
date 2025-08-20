@@ -13,9 +13,14 @@ cssPath: "/css/hialuronico.css"
     <h2>injetáveis</h2>
 </header>
 
-<section class="select-itens swiper">
-    <h1>Ácido Hialurônico</h1>
-    <div class="selector-circles swiper-wrapper">
+<section class="select-itens">
+    <div class="swiper">
+        <h1>Ácido Hialurônico</h1>
+        <div class="swiper-nav">
+            <img class="swiper-button-prev1" src="../img/svg/left-arrow.svg" alt="">
+            <img  class="swiper-button-next1"src="../img/svg/right-arrow.svg" alt="">
+        </div>  
+        <div class="selector-circles swiper-wrapper">
             <div class="selected swiper-slide" id="labios">
                 <img src="../img/hialuronico/labios.png" alt="">
                 <h3>lábios</h3>
@@ -64,6 +69,8 @@ cssPath: "/css/hialuronico.css"
                 <img src="../img/hialuronico/maos.png" alt="">
                 <h3>Mãos</h3>
             </div>    
+        </div>
+
     </div>
 </section>
 
@@ -72,40 +79,54 @@ cssPath: "/css/hialuronico.css"
 <div class="wrap-content">
     <!-- Não alterar essa parte -->
 <aside class="left-table">
-    <div class="table-itens">
-        <a href="/injetaveis">
-            <p>Injetáveis</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
+    <label>
+        <input type="checkbox" />
+        <span class="side-menu">
+            <span class="hamburger only-mobile">
+                <p class="abrir">Menu</p>
+            </span>
+        </span>
+        <div class="table-itens">
+            <img src="../../img/logo.png" class="logo only-mobile" />
+            <img src="../../img/svg/fechar.svg" class="fechar only-mobile" />
+            <a class="button" href="/injetaveis">
+                <p>Injetáveis</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/bioestimuladores">
+                <p>Bioestimuladores</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/bioremodeladores" class="no-info">
+                <p>Bioremodeladores</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=fios">
+                <p>Fios de PDO</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=ipca">
+                <p>IPCA (Microagulhamento)</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=mmp" class="no-info">
+                <p>MMP Facial</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a class="button" href="/cosmiatria/?selection=peelings">
+                <p>Peelings</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </a>
+            <a href="/tratamentos" class="blueButton only-mobile"> 
+                <img src="../img/flecha-voltar.png" alt="">
+                <p>ver todos os tratamentos</p>
+            </a>
+        </div>
+        <a href="/tratamentos" class="blueButton tablet-desktop"> 
+            <img src="../img/flecha-voltar.png" alt="">
+            <p>ver todos os tratamentos</p>
         </a>
-        <a href="/bioestimuladores">
-            <p>Bioestimuladores</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/bioremodeladores" class="no-info">
-            <p>Bioremodeladores</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=fios">
-            <p>Fios de PDO</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=ipca">
-            <p>IPCA (Microagulhamento)</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=mmp" class="no-info">
-            <p>MMP Facial</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-        <a href="/cosmiatria/?selection=peelings">
-            <p>Peelings</p>
-            <img src="../img/svg/right-arrow.svg" alt="">
-        </a>
-    </div>
-    <a href="/tratamentos" class="blueButton"> 
-        <img src="../img/flecha-voltar.png" alt="">
-        <p>ver todos os tratamentos</p>
-    </a>
+    </label>
 </aside>
 
 <section class="content" id="content">
@@ -961,12 +982,21 @@ cssPath: "/css/hialuronico.css"
 </script>
 
 <!-- script para swiper dos itens -->
-     <script>
+      <script>
       const swiper = new Swiper(".swiper", {
-        spaceBetween: 20,
-        slidesPerView: "auto",
+        spaceBetween: 5,
         grabCursor: true,
         loop: true,
+        loopedSlides: 4,
+        breakpoints: {
+            300: {
+                slidesPerView: 3.5,
+            },
+            700: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        },
         navigation: {
           nextEl: ".swiper-button-next1",
           prevEl: ".swiper-button-prev1",
