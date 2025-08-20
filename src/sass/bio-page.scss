@@ -32,27 +32,18 @@ header{
     }
     @media screen and (max-width: 700px){
         width: 100vw;
-        height: 60vh;
+        height: 20rem;
         position: relative;
-        .header-img{
-            height: 60vh;
-            object-fit: cover;
-        }
         .header-title{
             position: absolute;
             top: 45%;
-            left: 5%;
-            z-index: 10;
-            text-shadow: 1px 1px 2px $preto;
+            left: 7%;
+            margin-top: 0;
+            gap: 1.1rem;
             h1{
-                font-size: 3rem;
-                line-height: 3rem;
-            }
-            p{
-                font-size: 1.6rem;
-                line-height: 1.9rem;
-                width: 65%;
-                margin-top: 1.6rem;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+                width: 16rem;
             }
         }
     }
