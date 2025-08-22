@@ -75,6 +75,7 @@
       requestAnimationFrame(() => {
         menu.style.maxHeight = '0';
       });
+      nav.style.zIndex = '9'
       menu.addEventListener('transitionend', () => {
         menu.classList.remove('open');
       }, { once: true });
