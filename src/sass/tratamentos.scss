@@ -406,7 +406,7 @@ header{
     margin-top: 20rem;
     padding-bottom: 17rem;
     h1, p, h3, a{
-        color: $background2;
+        color: $background;
     }
     h1{
         font-size: 6rem;
@@ -423,7 +423,7 @@ header{
     .table{
         width: 90%;
         margin: auto;
-        border: 1px solid $background2;
+        border: 1px solid $background;
         border-radius: 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -431,8 +431,8 @@ header{
     .table-item{
         display: grid;
         padding: 3rem;
-        border-bottom: 1px solid $background2;
-        border-right: 1px solid $background2;
+        border-bottom: 1px solid $background;
+        border-right: 1px solid $background;
         height: 25rem;
         gap: 2.5rem;
         h3{
