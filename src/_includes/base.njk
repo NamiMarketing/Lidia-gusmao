@@ -60,6 +60,7 @@
 <script>
     const checkbox = document.querySelector('.menu-btn');
     const menu = document.querySelector('.menu');
+    const nav = document.querySelector('nav');
   
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
@@ -67,6 +68,7 @@
       menu.classList.add('open');
       const fullHeight = window.innerHeight + 'px';
       menu.style.maxHeight = fullHeight;
+      nav.style.zIndex = '11'; // Aumentar o z-index do nav para ficar acima do menu
     } else {
       // Fechar o menu suavemente
       menu.style.maxHeight = menu.scrollHeight + 'px';
