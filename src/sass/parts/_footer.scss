@@ -9,7 +9,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .footer-content{
+
+  .footer-content {
     width: 80%;
     margin: auto;
     display: flex;
@@ -17,44 +18,58 @@ footer {
     justify-content: space-between;
     padding-bottom: 7rem;
   }
-  .right{
+
+  .right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .info-footer{
+
+    .info-footer {
       display: flex;
       flex-direction: column;
-      gap: 2.2rem;
-      p{
+      gap: 1.6rem;
+
+      p {
         font-size: 2rem;
         line-height: 3rem;
         color: $marrom;
         letter-spacing: 5%;
       }
-      .icons{
+
+      a {
+        color: $marrom;
+        font-size: 2rem;
+      }
+
+      .icons {
         display: flex;
         gap: 2rem;
-        a{
+
+        a {
           width: 5.2rem;
-          img{
+
+          img {
             width: 100%;
           }
         }
       }
     }
   }
-  >a{
+
+  >a {
     font-size: 1.8rem;
     line-height: 2rem;
     color: $marrom;
     text-align: center;
     margin: auto;
   }
-  @media screen and (max-width: 700px){
+
+  @media screen and (max-width: 700px) {
     padding-top: 6.8rem;
     padding-bottom: 3rem;
     align-items: center;
-    .footer-content{
+
+    .footer-content {
       width: 85%;
       margin: auto;
       flex-direction: column-reverse;
@@ -62,38 +77,46 @@ footer {
       align-items: flex-start;
       gap: 5rem;
     }
-    .left{
-      a{
+
+    .left {
+      a {
         display: inline-block;
         width: 60%;
-        img{
+
+        img {
           width: 100%;
         }
       }
     }
-    .right{
-      .info-footer{
+
+    .right {
+      .info-footer {
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
-        p{
+
+        p {
           font-size: 1.5rem;
           line-height: 2.1rem;
           letter-spacing: 2%;
         }
-        .icons{
+
+        .icons {
           display: flex;
           gap: 1.4rem;
-          a{
+
+          a {
             width: 2.6rem;
-            img{
+
+            img {
               width: 100%;
             }
           }
         }
       }
     }
-    >a{
+
+    >a {
       font-size: 1.4rem;
       line-height: 1.5rem;
     }
