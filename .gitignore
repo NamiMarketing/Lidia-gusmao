@@ -2,4 +2,5 @@ webp.js
 /node_modules
 /public
 src/css/build
+src/css
 .vscode
