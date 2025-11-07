@@ -2,15 +2,16 @@
 permalink: /404.html
 eleventyExcludeFromCollections: true
 layout: base.njk  
-cssPath: "/css/home.css"
+cssPath: "/css/erro.css"
 ---
 
-{% include 'nav.njk' %}
-
-<body>
-    <h1>404</h1>
-    <p>Ops! A página que você procura não existe.</p>
-    <a href="/">Voltar para a página inicial</a>
-</body>
+<div class="error">
+    <h1>Ops! Esse link não foi encontrado</h1>
+    <a href="/"> 
+        <p>
+            Voltar para a página inicial
+        </p>
+    </a>
+</div>
 
 {% include 'footer.njk' %}
