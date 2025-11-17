@@ -26,21 +26,13 @@ header{
             letter-spacing: 5%;
             font-family: $articulat;
             font-weight: 400;
-            animation: show 9s ease-in;
+            animation: show 7s ease-in;
             position: absolute;
             width: 51rem;
         }
         img{
-            animation: disappear 5s both;
+            animation: disappear 4s both;
             width: 44rem;
-        }
-        &:hover{
-            h1{
-                animation: noshow 4s both;
-            }
-            img{
-                animation: appear 4s;
-            }
         }
     }
    
