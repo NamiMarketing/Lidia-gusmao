@@ -3,24 +3,28 @@
 
   <url>
     <loc>https://grupolidiagusmao.com.br</loc>
+    <lastmod>2025-09-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://grupolidiagusmao.com.br/tratamentos</loc>
+    <lastmod>2025-09-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://grupolidiagusmao.com.br/equipe</loc>
+    <lastmod>2025-09-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://grupolidiagusmao.com.br/contato</loc>
+    <lastmod>2025-09-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
