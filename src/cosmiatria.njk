@@ -43,6 +43,10 @@ cssPath: "/css/cosmiatria.css"
                 <p>Fios de PDO</p>
                 <img src="../img/svg/right-arrow.svg" alt="">
             </button>
+            <button id="aptos">
+                <p>Fios APTOS</p>
+                <img src="../img/svg/right-arrow.svg" alt="">
+            </button>
             <button id="ipca">
                 <p>IPCA (Microagulhamento)</p>
                 <img src="../img/svg/right-arrow.svg" alt="">
@@ -73,48 +77,26 @@ cssPath: "/css/cosmiatria.css"
 
 <section class="content" id="content">
     <div class="right-content">
-        <img src="../img/cosmiatria/peelings.webp" alt="">
+        <img src="../img/cosmiatria/fios.webp" alt="">
         <div class="info-text">
-            <h2>
-                O que é a Limpeza de Pele?
-            </h2>
             <p>
-                A limpeza de pele é um procedimento estético realizado no consultório dermatológico, que tem como objetivo remover impurezas causadas geralmente pela poluição e uso de maquiagem frequente. Ela pode ser feita em todos os tipos de pele: secas, oleosas, normais e mistas.  
+                Sabe-se que as queixas de flacidez e rugas causam bastante incômodo com o passar dos anos. Por isso, felizmente, atualmente dispomos de diferentes técnicas para seu controle e prevenção! Uma das opções mais modernas de que dispomos é o tratamento com os fios de sustentação de PDO (polidioxanona). Esses fios, uma vez introduzidos na pele, são capazes de promover o efeito de reposicionamento dos tecidos, e também de estimular a produção local de colágeno pelo próprio organismo.
             </p>
             <p>
-                As principais indicações da limpeza de pele são:
-            </p>
-            <ul>
-                <li>
-                    Remoção de cravos abertos (pontos pretos);
-                </li>
-                <li>
-                    Remoção de comedões fechados (pontos brancos);
-                </li>
-                <li>
-                    Remoção de miliuns (pequenos cistos epidérmicos causados pelo acúmulo de óleo e pele nos poros).
-                </li>
-            </ul>
-            <p>
-                Além da remoção dos comedões, que são mais comuns nas peles oleosas, a limpeza de pele também remove as células mortas e mantém a pele macia e saudável. Uma limpeza profunda e profissional tem ação antisséptica, anti-inflamatória, preventiva, relaxante e nutritiva. Ele é um aliado importante nos tratamentos dermatológicos para acne e rejuvenescimento pois aumenta a penetração dos ativos prescritos pelo dermatologista.  
+                O procedimento é simples, realizado no consultório médico, com duração de cerca de uma hora e recuperação relativamente simples. Os fios são inseridos na pele após realização de anestesia local.
             </p>
             <p>
-                A frequência deste procedimento depende de cada caso. Enquanto algumas peles se beneficiam de limpezas mensais, em alguns casos, uma vez a cada semestre já é o bastante. O dermatologista ou o esteticista farão essa análise. É muito importante que o procedimento seja feito por profissionais capacitados. Esteticistas que trabalham em clínicas dermatológicas são capazes de realizar um trabalho com maior eficácia, já que possuem o suporte médico nas avaliações.
+                Diferentes áreas podem ser abordadas com diferentes finalidades. Os fios de sustentação de PDO podem ser indicados para tratamento da flacidez facial e do pescoço, e melhora de ruguinhas de difícil controle que são as rugas periorais e periorbitais ( em volta da boca e dos olhos ). É fundamental uma avaliação minuciosa de cada paciente a fim de definir quais as áreas que mais se beneficiariam desse tratamento.
             </p>
             <p>
-                Não existem contraindicações e sim situações que exigem maior cuidado, como:
+                Existe, atualmente, uma variedade de subtipos de fios de sustentação de PDO com diferentes estruturas e particularidades que permitem resultados cada vez mais precisos e naturais. Por isso, também, é fundamental que o procedimento seja realizado por um profissional treinado para tal. A aplicação de fios de sustentação de PDO é um procedimento interessante principalmente para aqueles que não desejam realizar tratamentos extremamente invasivos como os tratamentos cirúrgicos.
             </p>
-            <ul>
-                <li>
-                    Em peles muito sensíveis, que costumam desenvolver alergia e/ou irritação com facilidade, a limpeza de pele deve ser feita com muita cautela e com produtos específicos para esse tipo de pele;
-                </li>
-                <li>
-                    Outro caso que merece atenção são os pacientes com muitas espinhas. As espinhas, se forem “espremidas” ou manuseadas, podem deixar cicatrizes. Por isso, é muito importante a seleção de um profissional capacitado e cuidadoso.
-                </li>
-                <li>
-                    A limpeza de pele pode ser realizada em qualquer período do ano, devendo-se evitar porém a exposição ao sol logo após o procedimento, porque devido a esfoliação, a pele pode afinar um pouco, aumentando a chance de manchar. Em locais onde a exposição ao sol e calor é maior, a formação de cravos e a oleosidade da pele aumentam, por isso, esse é um período muito indicado para o procedimento.
-                </li>
-            </ul>
+            <p>
+                Outra vantagem da aplicação de fios de sustentação de PDO é a possibilidade de tratar áreas da pele que tenham pouca resposta a outras modalidades de tratamento como a área dos olhos. Diferente dos fios utilizados no passado, os fios de sustentação de PDO são completamente degradados pelo nosso organismo com o passar do tempo, não deixando nenhum material residual. Após o período de sua permanência nos tecidos, a grande mudança que nota-se diz respeito ao tão desejado colágeno que melhora em termos quantitativos e qualitativos.
+            </p>
+            <p>
+                Assim sendo, trata-se de um tratamento moderno e versátil que, principalmente, quando associado a outras técnicas pode mudar o ritmo do envelhecimento cutâneo de forma menos invasiva do que as usadas no passado.
+            </p>
 
         </div>
     
@@ -170,6 +152,14 @@ cssPath: "/css/cosmiatria.css"
     resetSelection();
     selected = "fios";
     fios.classList.add("selected");
+    updateSection();
+  });
+
+  const aptos = document.getElementById("aptos");
+  aptos.addEventListener("click", () => {
+    resetSelection();
+    selected = "aptos";
+    aptos.classList.add("selected");
     updateSection();
   });
 
@@ -266,6 +256,128 @@ cssPath: "/css/cosmiatria.css"
   `
   ;
         break;
+      case "aptos":
+        title.innerText = "Fios Aptos"
+        section.innerHTML = `
+        <div class="right-content">
+        <img src="../img/cosmiatria/aptos.png" alt="">
+        <div class="info-text">
+            <p>
+               Os Fios APTOS são uma tecnologia avançada voltada para o tratamento da flacidez facial e reposicionamento dos tecidos, sendo atualmente uma das principais referências quando o assunto é sustentação e melhora da qualidade da pele. O procedimento promove um efeito de lifting natural, ajudando a redefinir o contorno facial e melhorar áreas de perda de firmeza sem gerar volume excessivo ou comprometer a naturalidade da face.
+            </p>
+            <p>
+                Seu diferencial está na tecnologia de sua composição, desenvolvida com duas substâncias bioestimuladoras de colágeno: ácido poliláctico e policaprolactona. Essa combinação permite que, além do efeito imediato de sustentação e reposicionamento dos tecidos, os fios também atuem estimulando intensamente a produção de colágeno, contribuindo para melhora progressiva da qualidade da pele e maior durabilidade dos resultados.
+            </p>
+            <p>
+                Ao serem introduzidos na pele, os fios funcionam como uma rede de sustentação interna, promovendo um reposicionamento dos tecidos flácidos e um efeito lifting de maneira precisa e natural. O tratamento é especialmente indicado para pacientes que desejam melhorar a flacidez, redefinir contornos e suavizar sulcos faciais de forma elegante, sem artificialidade e sem aumento de volume facial.
+            </p>
+            <p>
+                Além do reposicionamento tecidual, os Fios APTOS também auxiliam na prevenção e tratamento dos sinais iniciais do envelhecimento, podendo ser utilizados inclusive em pacientes mais jovens que desejam atuar preventivamente em regiões onde começam a surgir sinais sutis de flacidez ou perda de sustentação.
+            </p>
+            <p>
+                Um dos grandes diferenciais do procedimento é justamente sua capacidade de entregar resultados visíveis e eficientes preservando a naturalidade facial. Por isso, os Fios APTOS são frequentemente procurados por pacientes que desejam tratar a flacidez e melhorar o contorno do rosto, mas têm receio de resultados exagerados, artificiais ou padronizados.Não existem contraindicações e sim situações que exigem maior cuidado, como:
+            </p>
+            <p>
+                A recuperação após o procedimento costuma ser tranquila, e os resultados já podem começar a ser percebidos na primeira semana, com melhora progressiva conforme ocorre o estímulo contínuo de colágeno.
+            </p>
+            <p>
+                Ainda como diferencial, comparado aos fios mais antigos, a recuperação é mais tolerável e mais rápida. Eles estimulam mais quantidade de colágeno e têm maior durabilidade, quando comparados aos fios de PDO, por exemplo. 
+            </p>
+            <p>
+                No Grupo Lídia Gusmão, os procedimentos com Fios APTOS são realizados por médicas dermatologistas especialistas, com profundo conhecimento em anatomia facial e técnicas avançadas em cosmiatria, garantindo máxima segurança, precisão técnica e excelência na condução de cada tratamento.
+            </p>
+            <p>
+                <strong>
+                    Para quem é indicado?
+                </strong>
+            </p>
+            <p>
+                Em geral, o procedimento é indicado para pessoas em processo de emagrecimento, com sinais de flacidez ou histórico familiar de flacidez. É um tratamento buscado principalmente por pessoas entre 30 e 40 anos, mas pode ser realizado em qualquer idade, mediante avaliação prévia.
+            </p>
+            <p>
+                Os fios APTOS são eficientes para tratar diferentes graus de flacidez, tanto para prevenção quanto em casos mais avançados.
+            </p>
+            <p>
+                <strong>
+                    Em quais regiões pode ser aplicado?
+                </strong>
+            </p>
+            <p>
+                Os fios APTOS são indicados para a face, em regiões como: sulco nasogeniano (bigode chinês), contorno da face (mandíbula), jowls (efeito buldogue) e também para a melhora da papada e pescoço.
+            </p>
+            <p>
+                <strong>
+                    Como é realizado o procedimento?
+                </strong>
+            </p>
+            <p>
+                O procedimento é realizado em consultório, com tempo médio de realização de 50 minutos. É feito com anestesia local, sem necessidade de preparo prévio.
+            </p>
+            <p>
+                <strong>
+                    Como é o pós-procedimento?
+                </strong>
+            </p>
+            <p>
+                O pós-procedimento requer alguns cuidados, como evitar trauma local, atividades físicas intensas e abrir muito a boca. O ideal é dormir de barriga para cima na primeira semana e dar preferência a alimentos de fácil mastigação. A sua rotina usual pode ser retornada em poucos dias (entre 7 a 15 dias).
+            </p>
+            <p>
+                <strong>
+                    Quanto tempo dura o resultado?
+                </strong>
+            </p>
+            <p>
+                O efeito do procedimento pode chegar a 18 meses.
+            </p>
+            <p>
+                Hoje falamos “mais duradouro”, mas sem prazo concreto.
+            </p>
+            <p>
+                <strong>
+                    Combinação com outros tratamentos
+                </strong>
+            </p>
+            <p>
+                Em casos de flacidez mais intensa, pode ser indicada a associação a outros procedimentos, previamente realizados ou concomitante aos fios APTOS:
+            </p>
+            <ul>
+                <li>UF</li>
+                <li>Bioestimuladores</li>
+                <li>Preenchedores para sustentação</li>
+            </ul>
+            <p>
+                Mas esse tipo de combinação só pode ser realizado mediante a avaliação e indicação da dermatologista.
+            </p>
+            <p>
+                <strong>
+                    Por que fazer os fios APTOS no Grupo Lídia Gusmão?
+                </strong>
+            </p>
+            <p>
+                O Grupo Lídia Gusmão trabalha com o que há de melhor e mais moderno no mercado, oferecendo fios APTOS da melhor qualidade. Além disso, nossa equipe é composta por médicas dermatologistas especializadas, com anos de experiência, que realizam avaliações personalizadas para entender detalhadamente o seu caso.
+            </p>
+        </div>
+    
+        <!-- não retirar -->
+        <p>Marque sua consulta e venha viver uma experiência dermatológica feita para você.</p>
+        <div class="adress">
+            <p>
+                <strong>CENTRO</strong> Praça Mahatma Gandhi, nº 2, sala 621 | Edifício do Cinema Odeon
+                Rio de Janeiro, RJ | 20031-100
+            </p>
+            <p>
+                <strong>IPANEMA</strong> R. Visconde de Pirajá, nº 550
+                Sala 313 | Rio de Janeiro, RJ | 22410-002
+            </p>
+            <p>
+                <strong>whatsapp</strong> +55 21 98585-3637 |<br/>
+                +55 21 2232-5778 | +55 2 3852-4678
+            </p>
+    
+        </div>
+    </div>
+        `
+        break
       case "ipca":
         title.innerText = "IPCA (Microagulhamento)"
         section.innerHTML = `
