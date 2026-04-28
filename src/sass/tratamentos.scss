@@ -353,11 +353,13 @@ header{
             .tricologia-left{
                 flex: 1;
                 width: 100%;
+              max-width: 100%;
             }
             .tricologia-right{
                 flex: 1;
                 width: 85%;
                 margin: auto;
+              max-width:85%;
                 p{
                     font-size: 1.6rem;
                     line-height: 2.2rem;
